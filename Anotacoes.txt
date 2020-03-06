@@ -1,0 +1,60 @@
+Curso cs
+begin
+  29/02/20
+Textpad
+  codigo ksa20483
+  
+.net Core
+  Multiplos ambientes
+    windows
+    linux
+    mac
+    etc
+.net framework
+  somente windows
+  
+WCF -> Soap
+
+Arrays
+  Single
+  Multiple
+  Jagged -> pouco usado por ser complexo
+  
+Tab Tab
+   para completar algumas estruturas como for, try catch, etc
+   
+Regex
+
+Void -> Não tem retorno
+
+C# é fortemente tipada
+
+Metodo com nome iniciado com _ em javascript é para declarar como privado
+
+StringBuilder
+
+Passagem de parametros por referencia
+  deve usar ref na chamada e na declaracao do metodo
+  ex: static int Somar(ref int n1, int n2
+  
+ A passagem de parametros pode ser fora da ordem
+ ex: Console.WriteLine(Somar(n2 : 5, n1 : 3));
+ 
+Parametros não obrigatorios:
+  ex: Somar(int n1 = 0...
+  
+Modificadores
+  Public  - usado em classes
+  Private
+  Internal - usado em classes (visivel somente dentro do mesmo namespace)
+  Protect   
+  
+ Virtual x abstract
+   Virtual se implementa na classe mae
+   Abstract não se implementa na classe mae
+   
+Sealed -> Para que o metodo não seja implementado, fica fechado para herança, encapsulado
+
+Extract Method -> No menu popup do botao direito apos selecionar parte do codigo para gerar um metodo
+
+EventViewer do windows para mostrar dados do log
