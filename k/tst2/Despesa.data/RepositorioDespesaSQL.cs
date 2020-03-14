@@ -8,10 +8,10 @@ namespace Despesa.data
     public class RepositorioDespesaSQL : IRepositorioDespesas
     {      
 
-        int IRepositorioDespesas.GravarDespesa(Despesa despesa)
+        /*int IRepositorioDespesas.GravarDespesa(Despesa despesa)
         {
             throw new NotImplementedException();
-        }
+        }*/
 
         void IRepositorioDespesas.ExcluirDespesa(int codigo)
         {

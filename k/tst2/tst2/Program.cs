@@ -11,7 +11,7 @@ namespace tst2
             int num2 = 2;
             Console.WriteLine(Somar(n2: num2, n1: ref num1));
 
-            Console.WriteLine(s.sabado.);
+            Console.WriteLine(s.sabado);
 
             Console.ReadKey();
             
