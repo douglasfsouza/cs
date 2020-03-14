@@ -17,8 +17,8 @@ namespace Lab81
 
         public void AddStudent(Aluno student)
         {
-            var servicoAluno = new ServicoAluno();
-            //servicoAluno.
+            var servicoAluno = new Lab07.ServicoAluno();
+            servicoAluno.CriarAluno(student.CPF, student.Nome);
         }
                 
 

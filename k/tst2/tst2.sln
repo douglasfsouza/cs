@@ -23,6 +23,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlunoService", "AlunoServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab8", "Lab81\Lab8.csproj", "{B69C8FAF-148C-46F8-9227-FC451AB41729}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumirSvc", "ConsumirSvc\ConsumirSvc.csproj", "{6B666B64-94FA-4C6F-A4A3-37A5CDB0E3EF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B69C8FAF-148C-46F8-9227-FC451AB41729} = {B69C8FAF-148C-46F8-9227-FC451AB41729}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +74,10 @@ Global
 		{B69C8FAF-148C-46F8-9227-FC451AB41729}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B69C8FAF-148C-46F8-9227-FC451AB41729}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B69C8FAF-148C-46F8-9227-FC451AB41729}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B666B64-94FA-4C6F-A4A3-37A5CDB0E3EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B666B64-94FA-4C6F-A4A3-37A5CDB0E3EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B666B64-94FA-4C6F-A4A3-37A5CDB0E3EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B666B64-94FA-4C6F-A4A3-37A5CDB0E3EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

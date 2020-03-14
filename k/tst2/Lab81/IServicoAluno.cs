@@ -12,7 +12,8 @@ namespace Lab81
     [ServiceContract]
     public interface IServicoAluno
     {
-        [OperationContract]
+        //isOneWay p/ não ter retorno
+        [OperationContract(IsOneWay =true)]
         void AddStudent(Aluno student );
         [OperationContract]
         List<Aluno> GetAlunos(bool showPerformance);

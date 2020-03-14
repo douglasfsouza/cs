@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Lab07" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Lab07" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50804/ServicoAluno.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Aluno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CPF" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Desempenho" nillable="true" type="tns:ArrayOfDesempenho" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Aluno" nillable="true" type="tns:Aluno" />
+  <xs:complexType name="ArrayOfDesempenho">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Desempenho" nillable="true" type="tns:Desempenho" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDesempenho" nillable="true" type="tns:ArrayOfDesempenho" />
+  <xs:complexType name="Desempenho">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aluno" nillable="true" type="tns:Aluno" />
+      <xs:element minOccurs="0" name="Ano" type="xs:int" />
+      <xs:element minOccurs="0" name="Bimestre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Mareria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nota" type="xs:decimal" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Desempenho" nillable="true" type="tns:Desempenho" />
+  <xs:complexType name="ArrayOfAluno">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Aluno" nillable="true" type="tns:Aluno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAluno" nillable="true" type="tns:ArrayOfAluno" />
+</xs:schema>
