@@ -1,0 +1,34 @@
+Passos usar db code first EntityFramework:
+1-Criar um projeto console
+2-Instalar nuget EntityFramework
+3-Criar uma classe tstContexto
+4-incluir heranca :DBContext na classe contexto
+5-Incluir classe Cliente
+6-Incluir as propriedades (campos)
+7-Incluir DBSet na classe contexto
+   DBSet<Cliente> Clientes{Get;Set;}
+8-Ativar migrations no console nuGet
+   enable-migrations
+9-Criar string de conexao em app.config
+<connectionStrings>
+    <add name ="con" connectionString="Data Source=(localdb)\MSSQLLocalDB;Initial;Integrated Security=True" providerName="System.Data.SqlClient"></add>
+  </connectionStrings>   
+10-Adicionar migration no console nuGet
+  add-migration
+11-criar o banco de dados no console nuGet
+  update-database      
+12-Incluir um registro:
+   using (dgContexto c = new dgContexto())
+            {
+                c.Clientes.Add(new dgCodeFirst.Cliente()
+                {
+                    Nome = "douglas",
+                    Idade = 43
+                });
+                c.SaveChanges();
+            };
+
+            Console.WriteLine("Cliente adicionado");
+            Console.ReadKey();
+        }  
+  
