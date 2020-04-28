@@ -21,7 +21,7 @@ namespace dgCodeFirst
             };
 
             Console.WriteLine("Cliente adicionado");
-            
+            Console.ReadKey();
         }
     }
 }
