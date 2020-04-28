@@ -1,0 +1,4 @@
+map.Add("Banco","U_BANCO");
+map.Add("Cod_oco_ban","U_COD_OCO_BAN");
+map.Add("Descricao","U_DESCRICAO");
+map.Add("Acao","U_ACAO");

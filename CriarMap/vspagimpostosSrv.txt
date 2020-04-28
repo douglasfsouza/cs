@@ -1,0 +1,48 @@
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Code_titulo",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    size = 20,
+                    description = "Associacao com o titulo"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Cod_imposto",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    size = 20,
+                    description = "Codigo Imposto"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Valbase",
+                    dataType = "db_Float",
+                    dataTypeSub = "st_Price",
+                    mandatory = true,
+                    size = 17,
+                    description = "Valor Base"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Valimp",
+                    dataType = "db_Float",
+                    dataTypeSub = "st_Price",
+                    mandatory = true,
+                    size = 17,
+                    description = "Valor Imposto"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Valret",
+                    dataType = "db_Float",
+                    dataTypeSub = "st_Price",
+                    mandatory = true,
+                    size = 17,
+                    description = "Valor retido"
+                });

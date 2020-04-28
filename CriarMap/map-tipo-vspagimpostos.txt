@@ -1,0 +1,5 @@
+map.Add("Code_titulo","T");
+map.Add("Cod_imposto","T");
+map.Add("Valbase","N");
+map.Add("Valimp","N");
+map.Add("Valret","N");

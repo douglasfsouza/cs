@@ -1,0 +1,201 @@
+try
+            {
+                lista.Add(new TableColumn()
+                {
+                    name = "Code_titulo",
+                    dataType = "db_Alpha",
+                    size = 20,
+                    mandatory = true,
+                    description = "Associacao Titulo"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Filial",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    size = 15,
+                    description = "Filial"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Banco",
+                    dataType = "db_Numeric",
+                    size = 3,
+                    mandatory = true,
+                    description = "Banco"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Cnpj_forne",
+                    dataType = "db_Alpha",
+                    size = 14,
+                    mandatory = true,
+                    description = "CNPJ Forne"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Cnpj_forpri",
+                    dataType = "db_Alpha",
+                    size = 14,
+                    mandatory = true,
+                    description = "CNPJ Forn Pr"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Cnpj_sacav",
+                    dataType = "db_Alpha",
+                    size = 14,
+                    mandatory = false,
+                    description = "CNPJ Avalista"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Cod_forne",
+                    dataType = "db_Alpha",
+                    size = 15,
+                    mandatory = false,
+                    description = "Codigo Fornecedor"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Cod_forpri",
+                    dataType = "db_Alpha",
+                    size = 15,
+                    mandatory = false,
+                    description = "Codigo Forn Pri"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Cod_sacav",
+                    dataType = "db_Alpha",
+                    size = 15,
+                    mandatory = false,
+                    description = "Codigo S Avalista"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Nome_forne",
+                    dataType = "db_Alpha",
+                    size = 30,
+                    mandatory = false,
+                    description = "Nome Fornec"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Nome_forpri",
+                    dataType = "db_Alpha",
+                    size = 30,
+                    mandatory = false,
+                    description = "Nome For Pri"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Nome_sacav",
+                    dataType = "db_Alpha",
+                    size = 30,
+                    mandatory = false,
+                    description = "Nome S Avalista"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Vencto",
+                    dataType = "db_Date",
+                    mandatory = false,
+                    description = "Vencimento"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "DtEmis",
+                    dataType = "db_Date",
+                    mandatory = false,
+                    description = "Emissao"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "DtCan",
+                    dataType = "db_Date",
+                    mandatory = false,
+                    description = "Dt Cancelamento"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Numdoc",
+                    dataType = "db_Alpha",
+                    size = 20,
+                    mandatory = false,
+                    description = "Nro Docto"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Valbruto",
+                    dataType = "db_Float",
+                    dataTypeSub = "st_Price",
+                    size = 17,
+                    mandatory = false,
+                    description = "Valor Bruto"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Desconto",
+                    dataType = "db_Float",
+                    dataTypeSub = "st_Price",
+                    size = 17,
+                    mandatory = false,
+                    description = "Desconto"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Abatimento",
+                    dataType = "db_Float",
+                    dataTypeSub = "st_Price",
+                    size = 17,
+                    mandatory = false,
+                    description = "Abatimento"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Valliq",
+                    dataType = "db_Float",
+                    dataTypeSub = "st_Price",
+                    size = 17,
+                    mandatory = false,
+                    description = "Valor Liquido"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Linarq",
+                    dataType = "db_Alpha",
+                    size = 240,
+                    mandatory = false,
+                    description = "Linha arquivo"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Status",
+                    dataType = "db_Numeric",
+                    size = 1,
+                    mandatory = false,
+                    description = "Status"
+                });
+            }

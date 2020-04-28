@@ -1,0 +1,14 @@
+map.Add("Tipo_conta","N");
+map.Add("Conta_razao","T");
+map.Add("Conta_controle","T");
+map.Add("Meio_pagto","T");
+map.Add("Descricao","T");
+map.Add("Dt_criacao","T");
+map.Add("Dt_lancto","T");
+map.Add("Dt_pagto","T");
+map.Add("Dt_liquidacao","T");
+map.Add("Qtde","N");
+map.Add("Valliq","X");
+map.Add("Status","T");
+map.Add("Cheque","T");
+map.Add("Recibo","T");

@@ -1,0 +1,5 @@
+map.Add("Code_pag","T");
+map.Add("Code_rec","T");
+map.Add("Transacao","N");
+map.Add("Data_aba","T");
+map.Add("Usuario","T");

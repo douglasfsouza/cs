@@ -1,0 +1,5 @@
+map.Add("Code_pag","U_CODE_PAG");
+map.Add("Code_rec","U_CODE_REC");
+map.Add("Transacao","U_TRANSACAO");
+map.Add("Data_aba","U_DATA_ABA");
+map.Add("Usuario","U_USUARIO");

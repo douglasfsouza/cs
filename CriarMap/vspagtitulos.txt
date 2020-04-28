@@ -1,0 +1,636 @@
+
+                name = "TransId",
+                dataType = "db_Alpha",
+                mandatory = true,
+                size = 15,
+                description = "Id do lançamento contabil"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Cod_Forne",
+                dataType = "db_Alpha",
+                mandatory = true,
+                size = 15,
+                description = "Codigo do Fornecedor"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Cod_Forne_Ori",
+                dataType = "db_Alpha",
+                mandatory = true,
+                size = 15,
+                description = "Codigo do Fornecedor Original"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Nota",
+                dataType = "db_Numeric",
+                mandatory = true,
+                size = 11,
+                description = "Numero da Nota"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Serie",
+                dataType = "db_Alpha",
+                mandatory = true,
+                size = 3,
+                description = "Serie da Nota"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Parcela",
+                dataType = "db_Numeric",
+                mandatory = false,
+                size = 2,
+                description = "Parcela"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Vencto",
+                dataType = "db_Date",
+                mandatory = true,
+                description = "Vencimento"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Vencto_Ori",
+                dataType = "db_Date",
+                mandatory = true,
+                description = "Vencimento Original"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Dt_Recepcao",
+                dataType = "db_Date",
+                mandatory = true,              
+                description = "Data de Recepcao"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Dt_Emissao",
+                dataType = "db_Date",
+                mandatory = true,
+                description = "Data de Emissao"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Dt_Agendamento",
+                dataType = "db_Date",
+                mandatory = false,
+                description = "Data de Agendamento"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Dt_Pagto",
+                dataType = "db_Date",
+                mandatory = false,
+                description = "Data de Pagamento"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Dt_Liquida",
+                dataType = "db_Date",
+                mandatory = false,
+                description = "Data de Liquidacao"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Dt_Lancto",
+                dataType = "db_Date",
+                mandatory = true,
+                description = "Data de Lancamento"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Dt_Prev_Pagto",
+                dataType = "db_Date",
+                mandatory = false,
+                description = "Data de Previsao de Pagamento"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Conta_Controle",
+                dataType = "db_Alpha",
+                mandatory = true,
+                size = 15,
+                description = "Conta Controle"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Banco",
+                dataType = "db_Numeric",
+                mandatory = false,
+                size = 3,
+                description = "Banco"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Banco_For",
+                dataType = "db_Numeric",
+                mandatory = false,
+                size = 3,
+                description = "Banco do Fornecedor"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Empresa",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 15,
+                description = "Empresa"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Filial",
+                dataType = "db_Alpha",
+                mandatory = true,
+                size = 15,
+                description = "Codigo da Filial"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Bloqueado",
+                dataType = "db_Numeric",
+                mandatory = false,
+                size = 1,
+                description = "Status de Bloqueio"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Usuario_Liberacao",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 25,
+                description = "Usuario que liberou"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Dt_Liberacao",
+                dataType = "db_Date",
+                mandatory = false,
+                description = "Data da Liberacao"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Dt_Bloqueio",
+                dataType = "db_Date",
+                mandatory = false,
+                description = "Data de Bloqueio"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Condicao_Pagto",
+                dataType = "db_Numeric",
+                mandatory = false,
+                size = 6,
+                description = "Condicao de Pagamento"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Status",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 1,
+                description = "Status"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Situacao",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 3,
+                description = "Situacao"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Meio_Pagto",
+                dataType = "db_Numeric",
+                mandatory = false,
+                size = 1,
+                description = "Meio de Pagamento"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Forma_Pagto",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 15,
+                description = "Forma de Pagamento"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Tipo_Conta",
+                dataType = "db_Numeric",
+                mandatory = false,
+                size = 1,
+                description = "Tipo da Conta"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Numero_Conta",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 15,
+                description = "Numero da Conta"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Dig_Conta",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 2,
+                description = "Digito da Conta"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Dig_Agencia",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 2,
+                description = "Digito da Agencia"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Agencia",
+                dataType = "db_Numeric",
+                mandatory = false,
+                size = 5,
+                description = "Agencia"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Dig_Agencia_For",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 2,
+                description = "Digito da Agencia do Fornecedor"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Agencia_For",
+                dataType = "db_Numeric",
+                mandatory = false,
+                size = 5,
+                description = "Agencia do Fornecedor"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Dig_Conta_Banc_For",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 2,
+                description = "Digito da Conta Bancaria do Fornecedor"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Conta_Banc_For",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 15,
+                description = "Conta Bancaria do Fornecedor"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Valor_Bruto",
+                dataType = "db_Float",
+                mandatory = false,
+                size = 17,
+                description = "Valor Bruto"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Abat_Manual",
+                dataType = "db_Float",
+                mandatory = false,
+                size = 17,
+                description = "Abatimento Manual"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Abat_Receber",
+                dataType = "db_Float",
+                mandatory = false,
+                size = 17,
+                description = "Abatimento Associado ao Recebimento"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Desconto_Acordo",
+                dataType = "db_Float",
+                mandatory = false,
+                size = 17,
+                description = "Desconto referente Acordos"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Desconto",
+                dataType = "db_Float",
+                mandatory = false,
+                size = 17,
+                description = "Desconto"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Acrescimos",
+                dataType = "db_Float",
+                mandatory = false,
+                size = 17,
+                description = "Acrescimos"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Retencoes",
+                dataType = "db_Float",
+                mandatory = false,
+                size = 17,
+                description = "Retencoes"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Funrural",
+                dataType = "db_Float",
+                mandatory = false,
+                size = 17,
+                description = "Funrural"
+            });
+
+
+            lista.Add(new TableColumn()
+            {
+                name = "Juros",
+                dataType = "db_Float",
+                mandatory = false,
+                size = 17,
+                description = "Juros"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Multa",
+                dataType = "db_Float",
+                mandatory = false,
+                size = 17,
+                description = "Multa"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Valor Pago",
+                dataType = "db_Float",
+                mandatory = false,
+                size = 17,
+                description = "Valor Pago"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Codigo_Moeda",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 5,
+                description = "Codigo da Moeda de Compra"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Valor_Moeda_Cmp",
+                dataType = "db_Float",
+                mandatory = false,
+                size = 17,
+                description = "Valor na Moeda de Compra"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Moeda_Pagto",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 17,
+                description = "Moeda de Pagamento"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Valor_Moeda_Pagto",
+                dataType = "db_Float",
+                mandatory = false,
+                size = 17,
+                description = "Valor na Moeda de Pagamento"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Valor_Bruto_Moeda",
+                dataType = "db_Float",
+                mandatory = false,
+                size = 17,
+                description = "Valor Bruto em Moeda"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Variacao_Cambial",
+                dataType = "db_Float",
+                mandatory = false,
+                size = 17,
+                description = "Variacao Cambial"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Juros_Moeda",
+                dataType = "db_Float",
+                mandatory = false,
+                size = 17,
+                description = "Valor de Juros em Moeda"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Tipcodbar",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 1,
+                description = "Tipo do Codigo de Barras"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Codbar",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 48,
+                description = "Codigo de Barras"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Code_Pagto",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 20,
+                description = "Id de Pagamento"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Seu_Numero",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 20,
+                description = "Seu Numero"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Instr_Pagto",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 2,
+                description = "Instrucao de Pagamento"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Arquivo_Gerado",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 20,
+                description = "Arquivo Gerado"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Arquivo_Importado",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 20,
+                description = "Arquivo Importado"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Usu_Gerou_Arquivo",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 20,
+                description = "Usuario que gerou o arquivo"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Usu_Importou_Conf",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 20,
+                description = "Usuario que importou a Confirmacao"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Usu_Importou_Liq",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 20,
+                description = "Usuario que importou a Liquidacao"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Motivo_Baixa",
+                dataType = "db_Number",
+                mandatory = false,
+                size = 3,
+                description = "Motivo de Baixa"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Numero_Boleto",
+                dataType = "db_Numeric",
+                mandatory = false,
+                size = 10,
+                description = "Numero do Boleto Agrupado"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Lote_EDI",
+                dataType = "db_Numeric",
+                mandatory = false,
+                size = 10,
+                description = "Numero do Lote EDI"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Code_Antecipa",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 20,
+                description = "Id de Antecipacao"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Modelo_NF",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 6,
+                description = "Modelo da NF"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "Code_Obs",
+                dataType = "db_Alpha",
+                mandatory = false,
+                size = 20,
+                description = "Id da Observação"
+            });

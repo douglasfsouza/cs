@@ -1,0 +1,8 @@
+map.Add("Code_pag","U_CODE_PAG");
+map.Add("Transacao","U_TRANSACAO");
+map.Add("Campo","U_CAMPO");
+map.Add("Valor_de","U_VALOR_DE");
+map.Add("Valor_para","U_VALOR_PARA");
+map.Add("Usuario","U_USUARIO");
+map.Add("Data","U_DATA");
+map.Add("Hora","U_HORA");

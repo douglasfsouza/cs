@@ -1,0 +1,14 @@
+map.Add("Tipo_conta","U_TIPO_CONTA");
+map.Add("Conta_razao","U_CONTA_RAZAO");
+map.Add("Conta_controle","U_CONTA_CONTROLE");
+map.Add("Meio_pagto","U_MEIO_PAGTO");
+map.Add("Descricao","U_DESCRICAO");
+map.Add("Dt_criacao","U_DT_CRIACAO");
+map.Add("Dt_lancto","U_DT_LANCTO");
+map.Add("Dt_pagto","U_DT_PAGTO");
+map.Add("Dt_liquidacao","U_DT_LIQUIDACAO");
+map.Add("Qtde","U_QTDE");
+map.Add("Valliq","U_VALLIQ");
+map.Add("Status","U_STATUS");
+map.Add("Cheque","U_CHEQUE");
+map.Add("Recibo","U_RECIBO");

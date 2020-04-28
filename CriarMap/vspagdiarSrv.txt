@@ -1,0 +1,120 @@
+ lista.Add(new TableColumn()
+                {
+                    name = "Tipo_conta",
+                    dataType = "db_Numeric",
+                    mandatory = true,
+                    size = 1,
+                    description = "Tipo conta"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Conta_razao",
+                    dataType = "db_Alpha",
+                    size = 15,
+                    mandatory = true,
+                    description = "Conta Razao"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Conta_controle",
+                    dataType = "db_Alpha",
+                    size = 15,
+                    mandatory = true,
+                    description = "Conta controle"
+                }); ;
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Meio_pagto",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    size = 3,
+                    description = "Meio pagamento"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Descricao",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    size = 40,
+                    description = "Descricao pagamento"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Dt_criacao",
+                    dataType = "db_Date",
+                    mandatory = true,                    
+                    description = "Data criacao"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Dt_lancto",
+                    dataType = "db_Date",
+                    mandatory = true,
+                    description = "Data lancamento"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Dt_pagto",
+                    dataType = "db_Date",
+                    mandatory = true,
+                    description = "Data pagamento"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Dt_liquidacao",
+                    dataType = "db_Date",
+                    mandatory = false,
+                    description = "Data liquidacao"
+                });
+                lista.Add(new TableColumn()
+                {
+                    name = "Qtde",
+                    dataType = "db_Numeric",
+                    mandatory = true,
+                    size = 3,
+                    description = "Quantidade"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Valliq",
+                    dataType = "db_Number",
+                    dataTypeSub = "st_Price",
+                    size = 17,
+                    mandatory = true,
+                    description = "Valor liquido"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Status",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    size = 3,
+                    description = "Status"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Cheque",
+                    dataType = "db_Alpha",
+                    size = 15,
+                    mandatory = true,
+                    description = "Cheque"
+                });
+                lista.Add(new TableColumn()
+                {
+                    name = "Recibo",
+                    dataType = "db_Alpha",
+                    size = 15,
+                    mandatory = true,
+                    description = "Recibo"
+                });

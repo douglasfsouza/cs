@@ -1,0 +1,4 @@
+map.Add("Banco","N");
+map.Add("Cod_oco_ban","T");
+map.Add("Descricao","T");
+map.Add("Acao","N");

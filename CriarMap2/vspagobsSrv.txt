@@ -1,0 +1,51 @@
+lista.Add(new TableColumn()
+                {
+                    name = "Code_titulo",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    size = 20,
+                    description = "Associacao com o titulo"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Dt_inclusao",
+                    dataType = "db_Date",
+                    mandatory = true,
+                    description = "Data Inclusao"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Dt_alteracao",
+                    dataType = "db_Date",
+                    mandatory = false,                    
+                    description = "Data alteracao"
+                }); ;
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Usu_inclusao",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    size = 25,
+                    description = "Usuario Inclusao"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Usu_alteracao",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    size = 25,
+                    description = "Usuario Alteracao"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Texto",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    size = 200,
+                    description = "Texto Observacao"
+                });

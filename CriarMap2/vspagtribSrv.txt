@@ -1,0 +1,226 @@
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Code_pag",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    size = 20,
+                    description = "Associacao com o titulo"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Tributo",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    size = 20,
+                    description = "Codigo do Tributo"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Receita",
+                    dataType = "db_Alpha",                   
+                    mandatory = false,
+                    size = 10,
+                    description = "Codigo da Receita"
+                }); ;
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Periodo_apur",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    description = "Periodo Apuracao"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Controle",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    size = 20,
+                    description = "Numero de Controle"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Declaracao",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    size = 20,
+                    description = "Numero da Declaracao"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Div_ativa_etq",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    size = 20,
+                    description = "Numero Div Ativo ou Etq"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Parcela_notificacao",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    size = 20,
+                    description = "Numero Parcela Notif"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Tip_inscri_contribu",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    size = 2,
+                    description = "Tipo Inscricao Contribuinte"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Num_inscri_contribu",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    size = 14,
+                    description = "Numero Inscricao Contribuinte"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Nome_contribu",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    size = 40,
+                    description = "Nome do Contribuinte"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Inscri_est_mun_dec",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    size = 20,
+                    description = "Tipo Inscricao Contribuinte"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Ref_dori_djud",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    size = 30,
+                    description = "Ref Doc origem ou dep jud"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Val_rec_bru_a",
+                    dataType = "db_Float",
+                    dataTypeSub = "st_Price,",
+                    mandatory = false,
+                    size = 15,
+                    description = "Valor rec bruta acum"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Per_receita",
+                    dataType = "db_Float",
+                    dataTypeSub = "st_Price,",
+                    mandatory = false,
+                    size = 15,
+                    description = "Perc receita"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Uf_licenca",
+                    dataType = "db_Alpha",                    
+                    mandatory = false,
+                    size = 2,
+                    description = "UF licenciamento"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Cod_munic",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    size = 10,
+                    description = "Codigo Municipio"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Placa",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    size = 10,
+                    description = "Placa licenciamento"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Renavam",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    size = 10,
+                    description = "Renavam licenciamento"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Opc_pagto",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    size = 1,
+                    description = "Opcao pagto licenciamento"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Crlv",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    size = 20,
+                    description = "Numero CRLV licenciamento"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Depos_ident",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    size = 30,
+                    description = "Deposito Identificado"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Ident_fgts",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    size = 20,
+                    description = "Numero ident FGTS"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Lacre_fgts",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    size = 10,
+                    description = "Lacre FGTS"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "D_lacre_fgts",
+                    dataType = "db_Alpha",
+                    mandatory = false,
+                    size = 2,
+                    description = "Digito Lacre FGTS"
+                });

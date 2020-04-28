@@ -1,0 +1,6 @@
+map.Add("Code_titulo","U_CODE_TITULO");
+map.Add("Dt_inclusao","U_DT_INCLUSAO");
+map.Add("Dt_alteracao","U_DT_ALTERACAO");
+map.Add("Usu_inclusao","U_USU_INCLUSAO");
+map.Add("Usu_alteracao","U_USU_ALTERACAO");
+map.Add("Texto","U_TEXTO");

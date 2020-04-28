@@ -1,0 +1,4 @@
+public long Banco { get; set; }
+public string Cod_oco_ban { get; set; }
+public string Descricao { get; set; }
+public long Acao { get; set; }

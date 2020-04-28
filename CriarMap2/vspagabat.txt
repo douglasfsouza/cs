@@ -1,0 +1,44 @@
+lista.Add(new TableColumn()
+                {
+                    name = "Code_pag",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    size = 20,
+                    description = "Associacao com o pagar"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Code_rec",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    size = 20,
+                    description = "Associacao com o receber"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Transacao",
+                    dataType = "db_Float",
+                    dataTypeSub = "st_Price",
+                    mandatory = true,
+                    size = 15,
+                    description = "Valor do Abatimento"
+                }); ;
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Data_aba",
+                    dataType = "db_Date",
+                    mandatory = true,                    
+                    description = "Data do Abatimento"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Usuario",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    size = 25,
+                    description = "Usuario"
+                }); 

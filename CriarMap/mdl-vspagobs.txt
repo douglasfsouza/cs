@@ -1,0 +1,6 @@
+public string Code_titulo { get; set; }
+public DateTime Dt_inclusao { get; set; }
+public DateTime Dt_alteracao { get; set; }
+public string Usu_inclusao { get; set; }
+public string Usu_alteracao { get; set; }
+public string Texto { get; set; }

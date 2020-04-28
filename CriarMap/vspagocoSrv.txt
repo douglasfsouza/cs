@@ -1,0 +1,50 @@
+ private List<TableColumn> createColumns()
+        {
+            List<TableColumn> lista = new List<TableColumn>();
+
+            try
+            {
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Banco",
+                    dataType = "db_Numeric",
+                    mandatory = true,
+                    size = 3,
+                    description = "Codigo Banco"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Cod_oco_ban",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    description = "Codigo Ocorrencia"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Descricao",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    description = "Descricao"
+                }); ;
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Acao",
+                    dataType = "db_Numeric",
+                    mandatory = true,
+                    size = 3,
+                    description = "Acao"
+                });              
+
+            }
+            catch (Exception)
+            {
+                return null;
+                throw;
+            }
+
+            return lista;
+        }

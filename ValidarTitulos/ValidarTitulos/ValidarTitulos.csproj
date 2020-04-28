@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9FDF0808-9381-417D-9FF9-FC70745B3CEF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ValidarTitulos</RootNamespace>
+    <AssemblyName>ValidarTitulos</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBolFor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBolFor.Designer.cs">
+      <DependentUpon>frmBolFor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCLRV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCLRV.Designer.cs">
+      <DependentUpon>FrmCLRV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDarf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDarf.Designer.cs">
+      <DependentUpon>frmDarf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDarj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDarj.Designer.cs">
+      <DependentUpon>FrmDarj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDepIdent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDepIdent.Designer.cs">
+      <DependentUpon>FrmDepIdent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDepJud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDepJud.Designer.cs">
+      <DependentUpon>FrmDepJud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDPVAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDPVAT.Designer.cs">
+      <DependentUpon>FrmDPVAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFGTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFGTS.Designer.cs">
+      <DependentUpon>FrmFGTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGareSp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGareSp.Designer.cs">
+      <DependentUpon>FrmGareSp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGareSPDR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGareSPDR.Designer.cs">
+      <DependentUpon>FrmGareSPDR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGareSpItcmd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGareSpItcmd.Designer.cs">
+      <DependentUpon>FrmGareSpItcmd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGPS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGPS.Designer.cs">
+      <DependentUpon>FrmGPS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIPVA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIPVA.Designer.cs">
+      <DependentUpon>FrmIPVA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBolFor.resx">
+      <DependentUpon>frmBolFor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCLRV.resx">
+      <DependentUpon>FrmCLRV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDarf.resx">
+      <DependentUpon>frmDarf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDarj.resx">
+      <DependentUpon>FrmDarj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDepIdent.resx">
+      <DependentUpon>FrmDepIdent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDepJud.resx">
+      <DependentUpon>FrmDepJud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDPVAT.resx">
+      <DependentUpon>FrmDPVAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFGTS.resx">
+      <DependentUpon>FrmFGTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGareSp.resx">
+      <DependentUpon>FrmGareSp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGareSPDR.resx">
+      <DependentUpon>FrmGareSPDR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGareSpItcmd.resx">
+      <DependentUpon>FrmGareSpItcmd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGPS.resx">
+      <DependentUpon>FrmGPS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIPVA.resx">
+      <DependentUpon>FrmIPVA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

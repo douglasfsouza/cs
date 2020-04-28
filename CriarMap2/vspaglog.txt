@@ -1,0 +1,69 @@
+lista.Add(new TableColumn()
+                {
+                    name = "Code_pag",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    size = 20,
+                    description = "Associacao com o titulo"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Transacao",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    size = 20,
+                    description = "A transacao que originou o alteracao"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Campo",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    size = 20,
+                    description = "O nome do campo alterado"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Valor_de",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    size = 50,
+                    description = "Valor anterior"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Valor_para",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    size = 50,
+                    description = "Valor apos a alteracao"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Usuario",
+                    dataType = "db_Alpha",
+                    mandatory = true,
+                    size = 25,
+                    description = "Usuario que alterou"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Data",
+                    dataType = "db_Date",
+                    mandatory = true,
+                    description = "Data da alteracao"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "Hora",
+                    dataType = "db_Numeric",
+                    mandatory = true,
+                    description = "Horário da alteração"
+                });
