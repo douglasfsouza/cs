@@ -1,0 +1,37 @@
+<mvc:View 
+	controllerName="s3rial.www.global.controller.MasterPage"
+	class="sapUiSizeCompact"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:tnt="sap.tnt"
+	displayBlock="true">
+	<tnt:ToolPage id="toolPage">
+		<tnt:header>
+			<tnt:ToolHeader
+				style="Clear"
+				design="Transparent"
+			>
+				<Button id="sideNavigationToggleButton"
+					icon="sap-icon://menu2"
+					type="Transparent"
+					press="onSideNavButtonPress" />
+				<Image src="{/logo}" height="24px" press="navigateToHome"/>
+				<ToolbarSpacer />
+				<FormattedText htmlText='&lt;h3&gt;{i18n>appTitle}&lt;/h3&gt;' />
+				<ToolbarSpacer />
+				<Button text="{jsonModel>/recipient/name}"
+					type="Transparent"
+					press="onUserNamePress" />
+			</tnt:ToolHeader>
+		</tnt:header>
+		<tnt:sideContent>
+			<tnt:SideNavigation id="sideNavigation" expanded="false" itemSelect=".onItemSelect">
+				<tnt:NavigationList id="navigationList">
+				</tnt:NavigationList>
+			</tnt:SideNavigation>
+		</tnt:sideContent>
+		<tnt:mainContents>
+			<App id="app" />
+		</tnt:mainContents>
+	</tnt:ToolPage>
+</mvc:View>

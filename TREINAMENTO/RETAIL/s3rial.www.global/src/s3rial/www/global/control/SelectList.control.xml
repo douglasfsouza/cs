@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout">
+    <Input
+        id="_inputSelect"
+        type="Text"
+        placeholder="Selecione ..."
+        textFormatMode="Value"
+        showValueHelp="true"
+        showSuggestion="true"
+        suggestionItemSelected="suggestionItemSelected"
+        valueHelpRequest="handleValueHelp"
+    >
+    </Input>	
+</core:FragmentDefinition>

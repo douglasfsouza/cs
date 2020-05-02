@@ -1,0 +1,5 @@
+{
+    "tokenName": "s3rial_token",
+    "urlBaseAzure": "https://varsis-api.azurewebsites.net/finance/api",
+    "urlBase":  "http://localhost/varsis.api.finance/api"
+}

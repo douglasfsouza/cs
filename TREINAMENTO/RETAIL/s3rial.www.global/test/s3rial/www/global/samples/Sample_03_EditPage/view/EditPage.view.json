@@ -1,0 +1,563 @@
+{
+    "Pagina": {
+        "Titulo": "Detalhe Nota Fiscal"
+    },
+    "Formulario": [
+        {
+            "Nome": "Geral",
+            "Dados": [
+                {
+                    "Nome": "",
+                    "Detalhe": [
+                        {
+                            "Grupo": "Empresa",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Descrição",
+                                    "masc": "Text",
+                                    "bdName": "entityName",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Filial",
+                                    "masc": "Text",
+                                    "bdName": "branchName",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "UF",
+                                    "masc": "Text",
+                                    "bdName": "stateId",
+                                    "icon": "sap-icon://add-document"
+                                }
+
+                            ]
+                        },
+						{
+                            "Grupo": "Fornecedor",
+                            "Campos": [
+                                {
+                                    "tipo": "text",
+                                    "texto": "Código",
+                                    "masc": "Text",
+                                    "bdName": "vendorId",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Descrição",
+                                    "masc": "Text",
+                                    "bdName": "vendorName",
+                                    "icon": "sap-icon://add-document"
+                                }
+
+                            ]
+                        },
+						{
+                            "Grupo": "Titulo",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Data de Emissão",
+                                    "masc": "date",
+                                    "bdName": "issueDate",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Data de Recepção",
+                                    "masc": "rms7",
+                                    "bdName": "invoiceDate",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Data de Lançamento",
+                                    "masc": "Text",
+                                    "bdName": "createdOn",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Numero do Titulo",
+                                    "masc": "Text",
+                                    "bdName": "invoiceId",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Série",
+                                    "masc": "Text",
+                                    "bdName": "invoiceSeries",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Modelo da Nota",
+                                    "masc": "Text",
+                                    "bdName": "invoiceModel",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Condição de Pagamento",
+                                    "masc": "Text",
+                                    "bdName": "paymentMode",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Chave de Acesso",
+                                    "masc": "Text",
+                                    "bdName": "nfeAccessKey",
+                                    "icon": "sap-icon://add-document"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Nome": "Complementos",
+            "Dados": [
+                {
+                    "Nome": "",
+                    "Detalhe": [
+                        {
+                            "Grupo": "Frete (destacado na nota/com conhecimento)",
+                            "Campos": [
+                                {
+                                    "tipo": "text",
+                                    "texto": "Comprador",
+                                    "masc": "Text",
+                                    "bdName": "buyerName",
+                                    "icon": "sap-icon://add-document"
+                                },
+                                {
+                                    "tipo": "text",
+                                    "texto": "Numero do Pedido",
+                                    "masc": "c",
+                                    "bdName": "orderNumber",
+                                    "icon": "sap-icon://add-document"
+                                },
+                                {
+                                    "tipo": "text",
+                                    "texto": "Numero do Conhecimento",
+                                    "masc": "c",
+                                    "bdName": "freightNumber",
+                                    "icon": "sap-icon://add-document"
+                                },
+                                {
+                                    "tipo": "text",
+                                    "texto": "Série",
+                                    "masc": "c",
+                                    "bdName": "freightSeries",
+                                    "icon": "sap-icon://add-document"
+                                },
+                                {
+                                    "tipo": "text",
+                                    "texto": "Transportadora",
+                                    "masc": "c",
+                                    "bdName": "transporterName",
+                                    "icon": "sap-icon://add-document"
+                                },
+                                {
+                                    "tipo": "text",
+                                    "texto": "Data da Emissão",
+                                    "masc": "c",
+                                    "bdName": "freightIssueDate",
+                                    "icon": "sap-icon://add-document"
+                                },
+                                {
+                                    "tipo": "text",
+                                    "texto": "Código Fiscal",
+                                    "masc": "c",
+                                    "bdName": "freightCFOP",
+                                    "icon": "sap-icon://add-document"
+                                },
+                                {
+                                    "tipo": "text",
+                                    "texto": "Base de Calculo",
+                                    "masc": "c",
+                                    "bdName": "freightBaseCalc",
+                                    "icon": "sap-icon://add-document"
+                                },
+                                {
+                                    "tipo": "text",
+                                    "texto": "ICMS",
+                                    "masc": "c",
+                                    "bdName": "freightICMS",
+                                    "icon": "sap-icon://add-document"
+                                }
+                            ]
+                        },
+						{
+                            "Grupo": "Razão",
+                            "Campos": [
+                                {
+                                    "tipo": "text",
+                                    "texto": "Tipo de Operação",
+                                    "masc": "Text",
+                                    "bdName": "invoiceOperation",
+                                    "icon": "sap-icon://add-document"
+                                },
+                                {
+                                    "tipo": "text",
+                                    "texto": "CFOP",
+                                    "masc": "c",
+                                    "bdName": "invoiceCFOP",
+                                    "icon": "sap-icon://add-document"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },        
+		{
+            "Nome": "GNRE",
+            "Dados": [
+			   {
+                    "Nome": "",
+                    "Detalhe": [
+                        {
+                            "Grupo": "Dados da Nota",
+                            "Campos": [
+                                {
+                                    "tipo": "text",
+                                    "texto": "Numero Série",
+                                    "masc": "Text",
+                                    "bdName": "gnre_numeroSerie",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Data de Emissão",
+                                    "masc": "Text",
+                                    "bdName": "gnre_issueDate",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Origem",
+                                    "masc": "Text",
+                                    "bdName": "gnre_origem",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Destino",
+                                    "masc": "Text",
+                                    "bdName": "gnre_destino",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Chave de acesso da NFE",
+                                    "masc": "Text",
+                                    "bdName": "gnre_key",
+                                    "icon": "sap-icon://add-document"
+                                }
+                            ]
+                        },
+						{
+                            "Grupo": "Documentos Referenciados",
+                            "Campos": [
+                                {
+                                    "tipo": "text",
+                                    "texto": "Tipo",
+                                    "masc": "Text",
+                                    "bdName": "ref_tipo",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Numero de Documento",
+                                    "masc": "Text",
+                                    "bdName": "ref_documento",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Origem",
+                                    "masc": "Text",
+                                    "bdName": "ref_origem_ref",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "UF",
+                                    "masc": "Text",
+                                    "bdName": "ref_uf_ref",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Valor",
+                                    "masc": "Text",
+                                    "bdName": "ref_valor",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Referencia",
+                                    "masc": "Text",
+                                    "bdName": "ref_ref",
+                                    "icon": "sap-icon://add-document"
+                                }
+								
+                            ]
+                        },
+						{
+                            "Grupo": "Dados da Guia",
+                            "Campos": [
+                                {
+                                    "tipo": "text",
+                                    "texto": "Tipo",
+                                    "masc": "Text",
+                                    "bdName": "guia_tipo",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Banco",
+                                    "masc": "Text",
+                                    "bdName": "guia_banco",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Agencia",
+                                    "masc": "Text",
+                                    "bdName": "guia_agencia",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Numero autenticação",
+                                    "masc": "Text",
+                                    "bdName": "guia_aut",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Data do Pagamento",
+                                    "masc": "Text",
+                                    "bdName": "guia_pay_date",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Data do Vencimento",
+                                    "masc": "Text",
+                                    "bdName": "guia_due_date",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Fato Gerador",
+                                    "masc": "Text",
+                                    "bdName": "guia_fato",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Mes e Ano",
+                                    "masc": "Text",
+                                    "bdName": "guia_mesano",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Convenio",
+                                    "masc": "Text",
+                                    "bdName": "guia_conv",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Código da Receita",
+                                    "masc": "Text",
+                                    "bdName": "guia_receita",
+                                    "icon": "sap-icon://add-document"
+                                }
+								
+                            ]
+                        },
+						{
+                            "Grupo": "Dados do Substituto",
+                            "Campos": [
+                                {
+                                    "tipo": "text",
+                                    "texto": "CNPJ/CPF",
+                                    "masc": "Text",
+                                    "bdName": "subst_cnpj",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Estado",
+                                    "masc": "Text",
+                                    "bdName": "subst_uf",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Inscrição Estadual",
+                                    "masc": "Text",
+                                    "bdName": "subst_ie",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Base de Calculo da ST",
+                                    "masc": "Text",
+                                    "bdName": "subst_basest",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Imposto",
+                                    "masc": "Text",
+                                    "bdName": "subst_tax",
+                                    "icon": "sap-icon://add-document"
+                                }
+                            ]
+                        },
+						{
+                            "Grupo": "Outros Documentos",
+                            "Campos": [
+                                {
+                                    "tipo": "text",
+                                    "texto": "Operação",
+                                    "masc": "Text",
+                                    "bdName": "outros_operacao",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Emitente",
+                                    "masc": "Text",
+                                    "bdName": "outros_emitente",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Data de Emissão",
+                                    "masc": "Text",
+                                    "bdName": "outros_issuedate",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Origem",
+                                    "masc": "Text",
+                                    "bdName": "outros_origem",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Código do Documento",
+                                    "masc": "Text",
+                                    "bdName": "outros_documento",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Numero do Documento",
+                                    "masc": "Text",
+                                    "bdName": "outros_numdocumento",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Série",
+                                    "masc": "Text",
+                                    "bdName": "outros_serie",
+                                    "icon": "sap-icon://add-document"
+                                },
+								{
+                                    "tipo": "text",
+                                    "texto": "Subsérie",
+                                    "masc": "Text",
+                                    "bdName": "outros_subserie",
+                                    "icon": "sap-icon://add-document"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+		{
+            "Nome": "Totais",
+            "Dados": [
+                               {
+                    "Nome": "",
+                    "Detalhe": [
+                        {
+                            "Grupo": "Tabela",
+                            "Campos": [
+                                {
+                                    "tipo": "text",
+                                    "texto": "",
+                                    "masc": "Text",
+                                    "bdName": "outros_total",
+                                    "icon": "sap-icon://add-document"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+		{
+            "Nome": "Financeiro",
+            "Dados": [
+                               {
+                    "Nome": "",
+                    "Detalhe": [
+                        {
+                            "Grupo": "Tabela",
+                            "Campos": [
+                                {
+                                    "tipo": "text",
+                                    "texto": "",
+                                    "masc": "Text",
+                                    "bdName": "fin_tabela",
+                                    "icon": "sap-icon://add-document"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+		{
+            "Nome": "Observação",
+            "Dados": [
+                               {
+                    "Nome": "",
+                    "Detalhe": [
+                        {
+                            "Grupo": "",
+                            "Campos": [
+                                {
+                                    "tipo": "text",
+                                    "texto": "",
+                                    "masc": "Text",
+                                    "bdName": "obs_text",
+                                    "icon": "sap-icon://add-document"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

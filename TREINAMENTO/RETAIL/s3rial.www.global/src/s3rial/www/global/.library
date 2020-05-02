@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<library xmlns="http://www.sap.com/sap.ui.library.xsd">
+  <name>s3rial.www.global</name>
+  <vendor>S3rial</vendor>
+  <version>${version}</version>
+  <documentation>Internal UI5 Library for web pages</documentation>
+  <dependencies>
+    <dependency>
+      <libraryName>sap.ui.core</libraryName>
+      <libraryName>sap.m</libraryName>
+      <libraryName>sap.f</libraryName>
+      <libraryName>sap.ui.layout</libraryName>
+      <libraryName>sap.ui.table</libraryName>
+    </dependency>
+  </dependencies>
+  <appData></appData>
+</library>

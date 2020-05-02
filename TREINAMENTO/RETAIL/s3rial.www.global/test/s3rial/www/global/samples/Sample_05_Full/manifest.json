@@ -1,0 +1,105 @@
+{
+	"_version": "1.0.0",
+	"sap.app": {
+		"id": "s3rial.www.global.samples.Sample_05_Full",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"resources": "resources.json",
+		"ach": "ach"
+	},
+
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "s3rial.www.global.view.MasterPage",
+			"type": "JS",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.60.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.f": {}, 
+				"s3rial.www.global": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"resources": {
+			"css": [
+			{
+				"uri": "css/style.css"
+			},
+			{
+				"uri": "/src/s3rial/www/global/css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "s3rial.www.global.samples.Sample_05_Full.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"async": true,
+				"bypassed": {
+					"target": "notFound"
+				}
+			},
+			"routes": [
+				{
+					"pattern": "product",
+					"name": "productList",
+					"target": ["productList"]
+				}
+			],
+			
+			"targets": {
+				"productList": {
+					"viewName": "ProductList",
+					"viewId": "ProductList",
+					"viewLevel": 1,
+					"title": "Produtos",
+					"viewType": "JS"
+				},
+				"productEdit": {
+					"viewName": "ProductEdit",
+					"viewId": "ProductEdit",
+					"viewLevel": 1,
+					"title": "Edição de Produtos",
+					"viewType": "JS"
+				},
+				"notFound": {
+					"viewName": "NotFound",
+					"viewId": "NotFound",
+					"viewLevel": 1,
+					"viewType": "XML"
+				}
+			}
+		}
+	}
+}

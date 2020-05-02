@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AssemblyName>varsis.data.serviceb1</AssemblyName>
+    <RootNamespace>Varsis.Data.Serviceb1</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>C:\PROJETOS\VARSIS\TREINAMENTO\bin\debug\varsis.data.serviceb1</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>C:\PROJETOS\VARSIS\TREINAMENTO\bin\release\varsis.data.serviceb1</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Integration\CustomTableTesting.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="DataFile\OCNT.data" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="DataFile\OCNT.data" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\infrastructure\infrastructure.csproj" />
+    <ProjectReference Include="..\model\model.csproj" />
+  </ItemGroup>
+
+</Project>

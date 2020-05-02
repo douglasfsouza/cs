@@ -1,0 +1,51 @@
+ormResGridCont>.sapUiFormElementLbl:not(.sapUiRespGridSpanM12)>.sapMLabel, .sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont>.sapUiFormElementLbl:not(.sapUiRespGridSpanL12)>.sapMLabel, .sapUiRespGridMedia-Std-LargeDesktop.sapUiFormResGridCont>.sapUiFormElementLbl:not(.sapUiRespGridSpanXL12)>.sapMLabel {
+    text-align: start !important;
+}
+
+.sapUiRespGridMedia-Std-Phone.sapUiFormResGridCont>.sapUiFormElementLbl:not(.sapUiRespGridSpanS12)>.sapMLabel, .sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont>.sapUiFormElementLbl:not(.sapUiRespGridSpanM12)>.sapMLabel, .sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont>.sapUiFormElementLbl:not(.sapUiRespGridSpanL12)>.sapMLabel, .sapUiRespGridMedia-Std-LargeDesktop.sapUiFormResGridCont>.sapUiFormElementLbl:not(.sapUiRespGridSpanXL12)>.sapMLabel {
+    text-align: start !important;
+}
+
+
+.sapUiTableCell {
+    border-color: #fff;
+}
+
+.sapUiTableCell.sapUiTableHeaderCell,
+.sapUiTableHScr .sapUiTableCell.sapUiTableRowActionHeaderCell 
+.sapUiTableCell.sapUiTableRowActionHeaderCell {
+    border-color: #f7f7f7;
+}
+
+.sapUiTableContentRow.sapUiTableRowHvr .sapUiTableCell, 
+.sapUiTableContentRow.sapUiTableRowHvr .sapUiTableCell.sapUiTableRowActionCell,
+.sapUiTableContentRow.sapUiTableRowSel .sapUiTableCell
+{
+    border-color: #f0f0f0;
+}
+
+.sapUiTableHScr .sapUiTableCell.sapUiTableRowActionCell,
+.sapUiTableCell.sapUiTableRowActionCell {
+    border-left-color: #fff    
+}
+
+.sapFDynamicPageTitleMain>.sapFDynamicPageTitleMainInner .sapFDynamicPageTitleMainHeading .sapFDynamicPageTitleMainHeadingInner .sapMTitle {
+    font-size: 1.125rem
+}
+
+.sapFDynamicPageTitle {
+    min-height: 4rem
+}
+
+.sapFDynamicPageHeader.sapFDynamicPageHeaderWithContent {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.sapUiFormResGridCont>.sapUiFormElementLbl>.sapMLabel {
+    width: unset
+}
+
+.sapMObjectStatusLarge > .sapMObjStatusText {
+    font-size: 1.375rem;
+}

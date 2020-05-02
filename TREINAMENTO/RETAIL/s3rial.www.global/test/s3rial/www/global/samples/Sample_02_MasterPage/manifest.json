@@ -1,0 +1,106 @@
+{
+	"_version": "1.0.0",
+	"sap.app": {
+		"id": "s3rial.www.global.samples.Sample_02_MasterPage",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"resources": "resources.json",
+		"ach": "ach"
+	},
+
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "s3rial.www.global.view.MasterPage",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.60.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.f": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "s3rial.www.global.samples.Sample_02_MasterPage.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "s3rial.www.global.samples.Sample_02_MasterPage.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"async": true,
+				"bypassed": {
+					"target": "notFound"
+				}
+			},
+			"routes": [
+				{
+					"pattern": "mp",
+					"name": "masterpage",
+					"target": ["masterpage"]
+				},
+				{
+					"pattern": "sample",
+					"name": "sample",
+					"target": ["sample"]
+				}
+			],
+			
+			"targets": {
+				"notFound": {
+					"viewName": "NotFound",
+					"viewId": "NotFound",
+					"viewLevel": 1,
+					"viewType": "XML"
+				},
+				"sample": {
+					"viewName": "Customers",
+					"viewId": "Customers",
+					"viewLevel": 1,
+					"title": "Clientes",
+					"viewType": "JS"
+				}
+			}
+		}
+	}
+}

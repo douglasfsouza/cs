@@ -1,0 +1,114 @@
+{
+    "Pagina": {
+        "Titulo": "{record>/descricao}",
+        "Subtitulo": "{record>/cod_item}-{record>/desc_reduz}",
+        "BlocosDeCampos": [
+        ]
+    },
+    "Formulario": [
+        {
+            "Nome": "Geral",
+            "Dados": [
+                {
+                    "Nome": "",
+                    "Colunas": [2,2,2],
+                    "Detalhe": [
+                        {
+                            "Grupo": "Geral",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Código",
+                                    "masc": "Text",
+                                    "bdName": "cod_item"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Nome completo",
+                                    "masc": "Text",
+                                    "bdName": "descricao"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Nome reduzido",
+                                    "masc": "Text",
+                                    "bdName": "desc_reduz"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Data",
+                                    "masc": "Date",
+                                    "bdName": "data"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Data 7",
+                                    "masc": "rms7",
+                                    "bdName": "dataRms7"
+                                },
+                                {
+                                    "tipo": "text",
+                                    "texto": "CEP",
+                                    "masc": "cep",
+                                    "bdName": "zipCode"
+                                }
+                            ]
+                        },
+                        {
+                            "Grupo": "Embalagem Fornecedor",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Tipo",
+                                    "masc": "Text",
+                                    "bdName": "tpo_emb_for"
+                                },
+                                {
+                                    "tipo": "selectlist",
+                                    "masc": "branch",
+                                    "texto": "Filial",
+                                    "bdName": "bplid"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Unidades",
+                                    "masc": "Number",
+                                    "bdName": "emb_for"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Nome": "Tabela",
+            "Grid": {
+                "bdName": "listForn",
+                "tableConfig": {
+                    "ColunaPK": "2",
+                    "Titulo": "",
+                    "Tipo": "Grid",
+                    "Tabs": [],
+                    "Buttons": [],
+                    "colunasTabela": [
+                        {
+                            "tipo": "Label",
+                            "texto": "Código",
+                            "masc": "Text",
+                            "bdName": "codigo",
+                            "path": "record>"
+                        },
+                        {
+                            "tipo": "Label",
+                            "texto": "Fornecedor",
+                            "masc": "Text",
+                            "bdName": "nome",
+                            "path": "record>"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

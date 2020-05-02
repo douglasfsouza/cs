@@ -1,0 +1,295 @@
+{
+    "Pagina": {
+        "Titulo": "{record>/codigo} {record>/razao_social}"
+    },
+    "Formulario": [
+        {
+            "Nome": "Geral",
+            "Dados": [
+                {
+                    "Nome": "",
+                    "Colunas": [2,2,2],
+                    "Detalhe": [
+                        {
+                            "Grupo": "Principal",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Código do PN",
+                                    "masc": "Number",
+                                    "bdName": "codigo"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Nome do PN",
+                                    "masc": "Text",
+                                    "bdName": "razao_social"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Tipo de PN",
+                                    "masc": "Text",
+                                    "bdName": "loj_cli"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Pessoa de contato",
+                                    "masc": "Text",
+                                    "bdName": "cli_contato"
+                                }
+                            ]
+                        },
+                        {
+                            "Grupo": "Principal",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Resumo do PN",
+                                    "masc": "Text",
+                                    "bdName": "forpri"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Nome fantasia",
+                                    "masc": "Text",
+                                    "bdName": "nome_fantasia"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Data inicial da relação",
+                                    "masc": "Text",
+                                    "bdName": "data_cad"
+                                },
+                                
+                                {
+                                    "tipo": "input",
+                                    "texto": "Data final da relação",
+                                    "masc": "Text",
+                                    "bdName": "situacao"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Nome": "Endereço",
+            "Dados": [
+                {
+                    "Nome": "",
+                    "Colunas": [2,2,2],
+                    "Detalhe": [
+                        {
+                            "Grupo": "Endereço",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Rua",
+                                    "masc": "Text",
+                                    "bdName": "localidade"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Bairro",
+                                    "masc": "Text",
+                                    "bdName": "bairro"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Cep",
+                                    "masc": "Text",
+                                    "bdName": "cep"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Cidade",
+                                    "masc": "Text",
+                                    "bdName": "cidade"
+                                }
+                            ]
+                        },
+                        {
+                            "Grupo": "Endereço",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Município",
+                                    "masc": "Text",
+                                    "bdName": "cod_municipio"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "País",
+                                    "masc": "Text",
+                                    "bdName": "cod_x25"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Estado",
+                                    "masc": "Text",
+                                    "bdName": "estado"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Complemento",
+                                    "masc": "Text",
+                                    "bdName": "nr_interior"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Núm. Rua",
+                                    "masc": "Text",
+                                    "bdName": "nr_exterior"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Nome": "Fiscal",
+            "Dados": [
+                {
+                    "Nome": "",
+                    "Colunas": [2,2,2],
+                    "Detalhe": [
+                        {
+                            "Grupo": "Fiscal",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "CNPJ",
+                                    "masc": "Text",
+                                    "bdName": "cgc_cpf"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Inscrição Estadual",
+                                    "masc": "Text",
+                                    "bdName": "insc_est_ident"
+                                }
+                            ]
+                        },
+                        {
+                            "Grupo": "Fiscal",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "inscrição do substituto tributário",
+                                    "masc": "Text",
+                                    "bdName": "insc_est_subst"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Inscrição municipal",
+                                    "masc": "Text",
+                                    "bdName": "insc_mun"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Nome": "Banco",
+            "Dados": [
+                {
+                    "Nome": "",
+                    "Colunas": [2,2,2],
+                    "Detalhe": [
+                        {
+                            "Grupo": "Banco",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Código do banco",
+                                    "masc": "Number",
+                                    "bdName": "banco"
+                                },   
+                                {
+                                    "tipo": "input",
+                                    "texto": "Núm. da conta",
+                                    "masc": "Text",
+                                    "bdName": "conta"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Agência",
+                                    "masc": "Text",
+                                    "bdName": "agencia"
+                                }
+                            ]
+                        },
+                        {
+                            "Grupo": "Banco",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Dígito da conta",
+                                    "masc": "Number",
+                                    "bdName": "dig_conta"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Dígito de controle da filial",
+                                    "masc": "Text",
+                                    "bdName": "dig_agen"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Nome": "Contatos",
+            "Grid": {
+                "bdName" :"contatos",
+                "tableConfig" :{
+                "ColunaPK": "2",
+                "Titulo": "Titulo da Tabela",
+                "Tipo": "Grid",
+                "Tabs": [
+                ],
+                "colunasTabela": [
+                    {
+                        "tipo": "input",
+                        "texto": "Tel.Celular",
+                        "masc": "text",
+                        "bdName": "fone_1",
+                        "icon": "sap-icon://add-document",
+                        "path" : "record>"
+                    },
+                    {
+                        "tipo": "input",
+                        "texto": "Email",
+                        "masc": "text",
+                        "bdName": "email_1",
+                        "icon": "sap-icon://add-document",
+                        "path" : "record>"
+                    },
+                    {
+                        "tipo": "input",
+                        "texto": "Primeiro Nome",
+                        "masc": "text",
+                        "bdName": "nome",
+                        "icon": "sap-icon://add-document",
+                        "path" : "record>"
+                    },
+                    {
+                        "tipo": "input",
+                        "texto": "Posição",
+                        "masc": "text",
+                        "bdName": "cargo",
+                        "icon": "sap-icon://add-document",
+                        "path" : "record>"
+                    }
+                ]
+            }	
+          }
+        }
+    ]
+}

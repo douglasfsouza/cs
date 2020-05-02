@@ -1,0 +1,11 @@
+specVersion: '1.0'
+metadata:
+  name: s3rial-www-global
+type: library
+copyright: |-
+   S3rial Software Library
+    * (c) Copyright 2009-${currentYear} S3rial Software
+    * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+resources:
+  configuration:
+    propertiesFileSourceEncoding: UTF-8

@@ -1,0 +1,238 @@
+{
+	"Pagina": {
+		"Titulo": "Títulos a Receber"
+	},
+	"Tabela": {
+			"ColunaPK": "2",
+			"Titulo": "",
+			"Tipo": "Grid",
+			"Tabs": [	
+				{"key": "open", "text": "Em Aberto"},				
+				{"key": "schedule", "text": "Agendados"},				
+				{"key": "closed", "text": "Liquidados"},				
+				{"key": "all", "text": "Todos"}
+			],
+			"Buttons": [				
+				{"id": "inst_rearrangeI", "text": "Reorganizar"},
+				{"id": "inst_settlementI", "text": "Abater"},
+				{"id": "inst_agroupI", "text": "Agrupar"},
+				{"id": "inst_alterI", "text": "Alterar"},
+				{"id": "inst_scheduleI", "text": "Agendar"},
+				{"id": "inst_paydownI", "text": "Liquidar"}
+			],
+			"colunasTabela": [
+				{
+					"tipo": "label",
+					"texto": "Parceiro de negócios",
+					"masc": "Text",
+					"bdName": "nomeFornecedor",
+					"largura": 20
+				},
+				{
+					"tipo": "label",
+					"texto": "Empresa",
+					"masc": "Text",
+					"bdName": "codigoEmpresa",
+					"largura": 10
+				},
+				{
+					"tipo": "label",
+					"texto": "Filial",
+					"masc": "Text",
+					"bdName": "nomeFilial",
+					"largura": 15
+				},
+				{
+					"tipo": "label",
+					"texto": "Conta",
+					"masc": "Text",
+					"bdName": "nomeContaRazao",
+					"largura": 15
+				},
+				{
+					"tipo": "label",
+					"texto": "Título",
+					"masc": "Text",
+					"bdName": "notaFiscal",
+					"largura": 8
+				},
+				{
+					"tipo": "label",
+					"texto": "Emissão",
+					"masc": "Date",
+					"bdName": "dataEmissao",
+					"largura": 8
+				},
+				{
+					"tipo": "label",
+					"texto": "Vencimento",
+					"masc": "Date",
+					"bdName": "dataVencimento",
+					"largura": 8
+				},
+				{
+					"tipo": "label",
+					"texto": "Prev. Recebimento",
+					"masc": "Date",
+					"bdName": "dataVencimentoOriginal",
+					"largura": 8
+				},
+				{
+					"tipo": "label",
+					"texto": "Liquidação",
+					"masc": "Date",
+					"bdName": "dataPagamento",
+					"largura": 8
+				},
+				{
+					"tipo": "label",
+					"texto": "Dias",
+					"masc": "Integer",
+					"bdName": "diasAtraso",
+					"largura": 8
+				},
+				{
+					"tipo": "label",
+					"texto": "Forma de Pagamento",
+					"masc": "Text",
+					"bdName": "formaPagamento",
+					"largura": 8
+				},	
+				{
+					"tipo": "label",
+					"texto": "Valor bruto",
+					"masc": "Number",
+					"bdName": "valorBruto",
+					"largura": 8
+				},
+				{
+					"tipo": "label",
+					"texto": "Desconto",
+					"masc": "Number",
+					"bdName": "desconto",
+					"largura": 8
+				},
+				{
+					"tipo": "label",
+					"texto": "Abatimento",
+					"masc": "Number",
+					"bdName": "abatimentoPagar",
+					"largura": 8
+				},
+				{
+					"tipo": "label",
+					"texto": "Retencoes",
+					"masc": "Number",
+					"bdName": "retencoes",
+					"largura": 8
+				},				
+				{
+					"tipo": "label",
+					"texto": "Juros",
+					"masc": "Number",
+					"bdName": "juros",
+					"largura": 8
+				},
+				{
+					"tipo": "label",
+					"texto": "Acrescimos",
+					"masc": "Number",
+					"bdName": "acrescimos",
+					"largura": 8
+				},
+				{
+					"tipo": "label",
+					"texto": "Multa",
+					"masc": "Number",
+					"bdName": "multa",
+					"largura": 8
+				},
+				{
+					"tipo": "label",
+					"texto": "Valor líquido",
+					"masc": "Number",
+					"bdName": "valorLiquido",
+					"largura": 8
+				},
+				{
+					"tipo": "label",
+					"texto": "Situacao",
+					"bdName": "situacao",
+					"masc": "Text",				
+					"largura": 10
+				},
+				{
+					"tipo": "label",
+					"texto": "Status",
+					"bdName": "status",
+					"masc": "enum",
+					"enumName": "installmentStatus",
+					"enumSource": "varsis.www.apinvoices.Enumerators",
+					"largura": 10
+				}
+			]
+	},
+	"Filtragem": {
+		"tamanhoDoFlex": "190px",
+		"Campos": [
+            {
+                "tipo": "selectlist",
+                "masc": "vendor",
+                "texto": "Parceiro de negócio",
+				"bdName": "codigoFornecedor",
+				"apiName": "businessPartners",
+				"listMethod": "getVendorsSelectList"
+			},
+
+			{
+				"tipo": "combobox",
+				"texto": "Data",
+				"bdName": "dateType",
+				"masc": "enum",
+				"enumName": "filterDateType",
+				"enumSource": "varsis.www.apinvoices.Enumerators"
+			},
+	
+			{
+                "tipo": "input",
+                "texto": "Início",
+                "masc": "date",
+                "bdName": "startDate"
+            },
+			{
+                "tipo": "input",
+                "texto": "Final",
+                "masc": "date",
+                "bdName": "endDate"
+            },
+			{
+                "tipo": "input",
+                "texto": "Empresa",
+                "masc": "text",
+                "bdName": "codigoEmpresa"
+            },
+            {
+                "tipo": "selectlist",
+                "masc": "branch",
+                "texto": "Filial",
+				"bdName": "codigoFilial",
+				"apiName": "businessPlaces",
+				"listMethod": "getSelectList"
+            },
+			{
+				"tipo": "selectlist",
+				"masc": "account",
+				"texto": "Conta",
+				"bdName": "contaRazao",
+				"apiName": "ChartOfAccounts",
+				"listMethod": "getChartOfAccountsSelectList"
+			},
+			{
+                "tipo": "input",
+                "texto": "Título",
+                "masc": "text",
+                "bdName": "notaFiscal"
+            }
+		]
+	}	
+}

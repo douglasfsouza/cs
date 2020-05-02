@@ -1,0 +1,28 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:tnt="sap.tnt"
+	xmlns:core="sap.ui.core"
+>
+	<tnt:ToolPage id="toolPage">
+		<tnt:header>
+			<tnt:ToolHeader
+				style="Clear"
+				design="Transparent"
+			>
+				<Button id="sideNavigationToggleButton"
+					icon="sap-icon://nav-back"
+					type="Transparent" />
+				<Image id="imageLogo" src="{/logo}" height="{/logoSize}" press="navigateToHome"/>
+				<ToolbarSpacer />
+				<FormattedText htmlText='&lt;h3&gt;{i18n>appTitle}&lt;/h3&gt;' />
+				<ToolbarSpacer />
+				<Button id="userButtonPress" text="{jsonModel>/recipient/name}"
+					type="Transparent"
+					press="onUserNamePress" />
+			</tnt:ToolHeader>
+		</tnt:header>
+		<tnt:mainContents>
+			<App id="app" />
+		</tnt:mainContents>
+	</tnt:ToolPage>    
+</core:FragmentDefinition>

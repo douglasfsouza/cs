@@ -1,0 +1,33 @@
+{
+    "cSpell.enabledLanguageIds": [
+        "asciidoc",
+        "c",
+        "cpp",
+        "csharp",
+        "css",
+        "git-commit",
+        "go",
+        "handlebars",
+        "jade",
+        "java",
+        "javascriptreact",
+        "jsonc",
+        "latex",
+        "less",
+        "markdown",
+        "php",
+        "plaintext",
+        "pug",
+        "python",
+        "restructuredtext",
+        "rust",
+        "scala",
+        "scss",
+        "text",
+        "typescript",
+        "typescriptreact",
+        "yml"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/49fb1bc3-f5c0-4777-a8da-bd637a4154a0/resourceGroups/retail-ai-br-dev/providers/Microsoft.Web/sites/s3rial-b1-www",
+    "appService.deploySubpath": "dist"
+}

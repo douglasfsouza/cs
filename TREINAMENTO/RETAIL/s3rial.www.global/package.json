@@ -1,0 +1,19 @@
+{
+  "name": "s3rial-www-global",
+  "version": "1.0.0",
+  "description": "s3rial-www-global",
+  "main": "dist/resources/s3rial/www/global/library-preload.js",
+  "author": "marcelo.cuin@s3rial",
+  "license": "MIT",
+  "scripts": {
+    "dev": "browser-sync start -s \"./\" -f . --no-notify",
+    "prod": "browser-sync start -s \"dist/\" -f . --no-notify",
+    "build": "ui5 build --clean-dest --all --exclude-task=createDebugFiles",
+    "build-dbg": "ui5 build --clean-dest",
+    "deploy": "powershell Copy-Item -Path ./dist/resources/s3rial -Destination ../s3rial.srm.finance/www_mgmt/resources -recurse -force"
+  },
+  "dependencies": {
+    "@types/openui5": "^1.40.4",
+    "@ui5/cli": "^2.0.2"
+  }
+}

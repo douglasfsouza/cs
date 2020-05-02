@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AccountsPayable</title>
+
+	<base href="../../../../../../">
+    <!--[if lte IE 9]><script type="text/javascript">
+    (function() {
+        var baseTag = document.getElementsByTagName('base')[0];
+        baseTag.href = baseTag.href;
+    })();
+	</script><![endif]-->	
+
+	<script id="sap-ui-bootstrap"
+		src="https://sapui5.hana.ondemand.com/1.71.2/resources/sap-ui-core.js"
+		data-sap-ui-libs="s3rial.www.global"
+		data-sap-ui-theme="sap_belize_plus"
+		data-sap-ui-resourceroots='{
+			"varsis/www/apinvoices": "./AccountsPayable",
+			"varsis/www/ipinvoices": "./AccountsPayable",
+			"s3rial/www/global": "../resources/s3rial/www/global"
+	}'
+		data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+		data-sap-ui-compatVersion="edge"
+		data-sap-ui-async="true"
+		data-sap-ui-frameOptions="trusted"		
+	>
+	</script>
+</head>
+
+<body class="sapUiBody">
+	<div data-sap-ui-component data-name="varsis.www.apinvoices" data-id="container" data-settings='{"id" : "apinvoices"}'></div>
+</body>
+</html>

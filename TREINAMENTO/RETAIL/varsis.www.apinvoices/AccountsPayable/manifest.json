@@ -1,0 +1,124 @@
+{
+	"_version": "1.0.0",
+	"sap.app": {
+		"id": "varsis.www.apinvoices",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"resources": "resources.json",
+		"ach": "ach"
+	},
+
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "s3rial.www.global.view.MasterPage",
+			"type": "JS",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.60.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.f": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"resources": {
+			"css": [
+			{
+				"uri": "css/style.css"
+			},
+			{
+				"uri": "./resources/s3rial/www/global/css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "varsis.www.apinvoices.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"async": true,
+				"bypassed": {
+					"target": "notFound"
+				}
+			},
+			"routes": [
+				{
+					"pattern" : "accountsToPayable",
+					"name": "accountsToPayableList",
+					"target": ["accountsToPayableList"]
+				},
+				{
+					"pattern" : "accountsToIncoming",
+					"name": "accountsToIncomingList",
+					"target": ["accountsToIncomingList"]
+				}
+			],
+			
+			"targets": {
+				"accountsToPayableList":{
+					"viewName": "Installments",
+					"viewId": "Installments",
+					"viewLevel" : 1,
+					"title" : "Contas a Pagar",
+					"viewType" : "JS"
+				},
+				"installmentEdit":{
+					"viewName": "InstallmentsEdit",
+					"viewId": "InstallmentsEdit",
+					"viewLevel" : 1,
+					"title" : "Edição de Contas a Pagar",
+					"viewType" : "JS"
+				},
+				"accountsToIncomingList":{
+					"viewName": "InstallmentsIncoming",
+					"viewId": "InstallmentsIncoming",
+					"viewLevel" : 1,
+					"title" : "Contas a Receber",
+					"viewType" : "JS"
+				},
+				"installmentIncomingEdit":{
+					"viewName": "InstallmentsIncomingEdit",
+					"viewId": "InstallmentsIncomingEdit",
+					"viewLevel" : 1,
+					"title" : "Edição de Contas a Receber",
+					"viewType" : "JS"
+				},
+				"notFound": {
+					"viewName": "NotFound",
+					"viewId": "NotFound",
+					"viewLevel": 1,
+					"viewType": "XML"
+				}
+			}
+			
+		}
+	}
+}

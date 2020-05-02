@@ -1,0 +1,570 @@
+{
+    "Pagina": {
+        "Titulo": "Detalhe do título",
+        "BlocosDeCampos": [
+            {
+                "Campos": [
+                    {
+                        "tipo": "label",
+                        "texto": "",
+                        "masc": "text",
+                        "bdName": "nomeFornecedor"
+                    }
+                ]
+            },
+            {
+                "Campos": [
+                    {
+                        "tipo": "attribute",
+                        "texto": "Valor do título",
+                        "masc": "number",
+                        "bdName": "valorBruto"
+                    }
+                ]
+            },
+            {
+                "Campos": [
+                    {
+                        "tipo": "attribute",
+                        "texto": "Status",
+                        "bdName": "status",
+                        "masc": "enum",
+                        "enumName": "installmentStatus",
+                        "enumSource": "varsis.www.apinvoices.Enumerators"
+                    }
+                ]
+            },
+            {
+                "Campos": [
+                    {
+                        "tipo": "attribute",
+                        "texto": "Valor líquido",
+                        "bdName": "valorLiquido",
+                        "masc": "number"
+                    }
+                ]
+            }
+        ]
+    },
+    "Formulario": [
+        {
+            "Nome": "Geral",
+            "Dados": [
+                {
+                    "Nome": "",
+                    "Colunas": [2,2,2],
+                    "Detalhe": [
+                        {
+                            "Grupo": "Empresa",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Descrição",
+                                    "masc": "text",
+                                    "bdName": "nomeEmpresa"
+                                },                                
+                                {
+                                    "tipo": "input",
+                                    "texto": "Filial",
+                                    "masc": "text",
+                                    "bdName": "nomeFilial"
+                                }
+                            ]
+                        },
+                        {
+                            "Grupo": "Fornecedor",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Descrição",
+                                    "masc": "text",
+                                    "bdName": "nomeFornecedor"
+                                }
+                            ]
+                        }                        
+                    ]
+                },
+                {
+                    "Nome": "",
+                    "Colunas": [2,2,2],
+                    "Detalhe": [
+                        {
+                            "Grupo": "Título",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Data emissão",
+                                    "masc": "date",
+                                    "bdName": "dataEmissao"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Data recepção",
+                                    "masc": "date",
+                                    "bdName": "dataRecepcao"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Data lançamento",
+                                    "masc": "date",
+                                    "bdName": "dataLancamento"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Condição Pagamento",
+                                    "masc": "text",
+                                    "bdName": "nomeCondicaoPagamento"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Número",
+                                    "masc": "text",
+                                    "bdName": "notaFiscal"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Série",
+                                    "masc": "text",
+                                    "bdName": "notaFiscalSerie"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Modelo",
+                                    "masc": "text",
+                                    "bdName": "modeloNF"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Parcela",
+                                    "masc": "text",
+                                    "bdName": "parcela"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Nome": "",
+                    "Colunas": [2,2,2],
+                    "Detalhe": [
+                        {
+                            "Grupo": "Razão",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Tipo de operação",
+                                    "masc": "text",
+                                    "bdName": "nomeContaControle"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Contra partida",
+                                    "masc": "text",
+                                    "bdName": "nomeContaRazao"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Transação",
+                                    "masc": "text",
+                                    "bdName": "idTransacao"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Nome": "Pagamento",
+            "Dados": [
+                {
+                    "Nome": "",
+                    "Colunas": [2,2,2],
+                    "Detalhe": [
+                        {
+                            "Grupo": "Data",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Vencimento Original",
+                                    "masc": "date",
+                                    "bdName": "dataVencimentoOriginal"
+                                },                                
+                                {
+                                    "tipo": "input",
+                                    "texto": "Vencimento",
+                                    "masc": "date",
+                                    "bdName": "dataVencimento"
+                                }
+                            ]
+                        },
+                        {
+                            "Grupo": "Status",
+                            "Campos": [
+                                {
+                                    "tipo": "text",
+                                    "texto": "Status",
+                                    "bdName": "status",
+                                    "masc": "enum",
+                                    "enumName": "installmentStatus",
+                                    "enumSource": "varsis.www.apinvoices.Enumerators"
+                                },
+                                {
+                                    "tipo": "text",
+                                    "texto": "Situacao",
+                                    "bdName": "situacao",
+                                    "masc": "enum",
+                                    "enumName": "installmentSituacao",
+                                    "enumSource": "varsis.www.apinvoices.Enumerators"
+                                }
+                            ]
+                        },
+                        {
+                            "Grupo": "Forma de pagamento",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Meio de pagamento",
+                                    "masc": "text",
+                                    "bdName": "meioPagamentoNome"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Forma de pagamento",
+                                    "masc": "text",
+                                    "bdName": "formaPagamentoNome"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Banco",
+                                    "masc": "text",
+                                    "bdName": "nomeBanco"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Agência / Conta",
+                                    "masc": "text",
+                                    "bdName": "agenciaConta"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Nome": "",
+                    "Colunas": [2,2,2],
+                    "Detalhe": [
+                        {
+                            "Grupo": "Moeda estrangeira",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Valor da transação",
+                                    "masc": "number",
+                                    "bdName": "ValTranMoeda2"
+                                }                                
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Nome": "",
+                    "Colunas": [2,2,2],
+                    "Detalhe": [
+                        {
+                            "Grupo": "Valor",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Valor bruto",
+                                    "masc": "number",
+                                    "bdName": "valorBruto"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Abatimento pagar",
+                                    "masc": "number",
+                                    "bdName": "abatimentoPagar"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Desconto",
+                                    "masc": "number",
+                                    "bdName": "desconto"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Desconto acordo",
+                                    "masc": "number",
+                                    "bdName": "descontoAcordo"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Acréscimos",
+                                    "masc": "number",
+                                    "bdName": "acrescimos"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Retenções",
+                                    "masc": "number",
+                                    "bdName": "retencoes"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Juros",
+                                    "masc": "number",
+                                    "bdName": "juros"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Multa",
+                                    "masc": "number",
+                                    "bdName": "multa"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Valor líquido",
+                                    "masc": "number",
+                                    "bdName": "valorLiquido"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Nome": "Liquidação",
+            "Dados": [
+                {
+                    "Nome": "",
+                    "Colunas": [2,2,2],
+                    "Detalhe": [
+                        {
+                            "Grupo": "Liquidação",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Data de pagamento",
+                                    "masc": "date",
+                                    "bdName": "dataPagamento"
+                                },                                
+                                {
+                                    "tipo": "input",
+                                    "texto": "Data de compensação",
+                                    "masc": "date",
+                                    "bdName": "dataLiquida"
+                                },                                
+                                {
+                                    "tipo": "switch",
+                                    "texto": "Liquidado",
+                                    "masc": "bool",
+                                    "bdName": "liquidado"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Nome": "",
+                    "Colunas": [2,2,2],
+                    "Detalhe": [
+                        {
+                            "Grupo": "Referência",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Id do pagamento",
+                                    "masc": "text",
+                                    "bdName": "idPagamento"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Nosso número",
+                                    "masc": "text",
+                                    "bdName": "nossoNumero"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Nome do arquivo",
+                                    "masc": "text",
+                                    "bdName": "arquivoGerado"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Número do cheque",
+                                    "masc": "text",
+                                    "bdName": "numeroCheque"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Nome": "",
+                    "Colunas": [2,2,2],
+                    "Detalhe": [
+                        {
+                            "Grupo": "Moeda estrangeira",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Valor da transação",
+                                    "masc": "text",
+                                    "bdName": "ValTranMoeda3"
+                                },
+                                {
+                                    "tipo": "input",
+                                    "texto": "Moeda",
+                                    "masc": "text",
+                                    "bdName": "moeda"
+                                }                                
+                            ]
+                        },
+                        {
+                            "Grupo": "Valor pago",
+                            "Campos": [
+                                {
+                                    "tipo": "input",
+                                    "texto": "Valor",
+                                    "masc": "number",
+                                    "bdName": "valorPago"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Nome": "Retenções",
+            "Grid": {
+                "bdName": "withHolding",
+                "tableConfig": {
+                    "ColunaPK": "2",
+                    "Titulo": "",
+                    "Tipo": "Grid",
+                    "Tabs": [
+                    ],
+                    "Buttons": [
+                    ],
+                    "colunasTabela": [
+                        {
+                            "tipo": "label",
+                            "texto": "Entrada/Pagamento",
+                            "bdName": "fato",
+                            "masc": "enum",
+                            "path": "record>",
+                            "enumName": "whTaxDirection",
+                            "enumSource": "varsis.www.apinvoices.Enumerators",
+                            "largura": 10
+                        },
+                        {
+                            "tipo": "label",
+                            "texto": "Data",
+                            "masc": "date",
+                            "path": "record>",
+                            "bdName": "dataTransacao",
+                            "largura": 10
+                        },
+                        {
+                            "tipo": "label",
+                            "texto": "Imposto",
+                            "masc": "text",
+                            "path": "record>",
+                            "bdName": "codigoImposto"
+                        },
+                        {
+                            "tipo": "label",
+                            "texto": "Base",
+                            "masc": "number",
+                            "path": "record>",
+                            "bdName": "valorBase",
+                            "largura": 10
+                        },
+                        {
+                            "tipo": "label",
+                            "texto": "Alíquota",
+                            "masc": "number",
+                            "path": "record>",
+                            "bdName": "aliquota",
+                            "largura": 10
+                        },
+                        {
+                            "tipo": "label",
+                            "texto": "Valor Imposto",
+                            "masc": "number",
+                            "path": "record>",
+                            "bdName": "valorImposto",
+                            "largura": 10
+                        },
+                        {
+                            "tipo": "label",
+                            "texto": "Valor Retenção",
+                            "masc": "number",
+                            "path": "record>",
+                            "bdName": "valorRetencao",
+                            "largura": 10
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Nome": "Abatimento",
+            "Grid": {
+                "bdName": "settlement",
+                "tableConfig": {
+                    "ColunaPK": "2",
+                    "Titulo": "",
+                    "Tipo": "Grid",
+                    "Tabs": [
+                    ],
+                    "Buttons": [
+                    ],
+                    "colunasTabela": [
+                        {
+                            "tipo": "label",
+                            "texto": "Data",
+                            "masc": "date",
+                            "path": "record>",
+                            "bdName": "dataTransacao"
+                        },
+                        {
+                            "tipo": "label",
+                            "texto": "A pagar",
+                            "masc": "Text",
+                            "path": "record>",
+                            "bdName": "tituloPagar",
+                            "largura": 10
+                        },
+                        {
+                            "tipo": "label",
+                            "texto": "A receber",
+                            "masc": "Text",
+                            "path": "record>",
+                            "bdName": "tituloReceber",
+                            "largura": 10
+                        },
+                        {
+                            "tipo": "label",
+                            "texto": "Valor abatimento",
+                            "masc": "number",
+                            "path": "record>",
+                            "bdName": "valorAbatimento",
+                            "largura": 10
+                        },
+                        {
+                            "tipo": "label",
+                            "texto": "Usuário",
+                            "masc": "text",
+                            "path": "record>",
+                            "bdName": "usuarioTransacao"
+                        }
+                    ]
+                }
+            }
+        }        
+    ]
+}
