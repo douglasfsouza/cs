@@ -10,7 +10,20 @@ namespace dgDict
     {
         static void Main(string[] args)
         {
-           Dictionary<int, string > sem = new Dictionary<int, string > ();
+
+            DateTime dt = DateTime.Today;
+
+            dt = Convert.ToDateTime("02-01-2020 00:00");
+
+            Console.WriteLine(dt.AddDays(1));
+
+            int y = 5;
+            string s = y.ToString().PadLeft(7, '0');
+            Console.WriteLine(s);
+
+
+
+            Dictionary<int, string > sem = new Dictionary<int, string > ();
             sem.Add(1, "domingo");
             sem.Add(2, "segunda");
             sem.Add(3, "terça");
@@ -18,6 +31,17 @@ namespace dgDict
             sem.Add(5,"quinta");
             sem.Add(6, "sexta");
             sem.Add(7, "sabado");
+
+            List<string> seml = new List<string>();
+            seml.Add("Dom");
+            seml.Add("Seg");
+            if (seml.Contains("Dom"))
+            {
+                Console.WriteLine("Tem domingo na lista");
+            }
+
+
+          
 
             foreach(var i in sem)
             {

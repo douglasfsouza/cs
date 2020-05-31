@@ -1,0 +1,7 @@
+<connectionStrings>
+    <add name="EscolaContexto" connectionString="Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Escola;Integrated Security=True" providerName="System.Data.SqlClient"></add>
+  </connectionStrings>
+  
+  ou
+  var connection = @"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Escola;Integrated Security=True";
+            
