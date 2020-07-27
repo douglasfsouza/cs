@@ -25,10 +25,10 @@ namespace CriarMap
             string linMdl = null;
             string tipo;
 
-            string a = "c:\\git\\PROJETOS\\DGS\\cs\\CriarMap\\vspagtitulos3Srv.txt";
-            string b = "c:\\git\\PROJETOS\\DGS\\cs\\CriarMap\\map-vsrettitulos3.txt";
-            string c = "c:\\git\\PROJETOS\\DGS\\cs\\CriarMap\\map-tipo-vsrectitulos3.txt";
-            string d = "c:\\git\\PROJETOS\\DGS\\cs\\CriarMap\\mdl-vsrectitulos3.txt";
+            string a = "c:\\git\\PROJETOS\\DGS\\cs\\CriarMap2\\statementlayout.txt";
+            string b = "c:\\git\\PROJETOS\\DGS\\cs\\CriarMap2\\map-statementlayout.txt";
+            string c = "c:\\git\\PROJETOS\\DGS\\cs\\CriarMap2\\map-tipo-statementlayout.txt";
+            string d = "c:\\git\\PROJETOS\\DGS\\cs\\CriarMap2\\mdl-statementlayout.txt";
 
             y = File.OpenText(a);
             x = File.CreateText(b);

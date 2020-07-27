@@ -6,7 +6,7 @@ Passos usar db code first EntityFramework:
 5-Incluir classe Cliente
 6-Incluir as propriedades (campos)
 7-Incluir DBSet na classe contexto
-   DBSet<Cliente> Clientes{Get;Set;}
+   public DBSet<Cliente> Clientes{Get;Set;}
 8-Ativar migrations no console nuGet
    enable-migrations
 9-Criar string de conexao em app.config
@@ -31,4 +31,6 @@ Passos usar db code first EntityFramework:
             Console.WriteLine("Cliente adicionado");
             Console.ReadKey();
         }  
+13-Ver no SQL Server Object Explorer (nao 'Conexao de dados')
+   Menu exibir - SQL Server Object Explorer
   

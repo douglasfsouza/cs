@@ -1,0 +1,3 @@
+public string DESCRICAO { get; set; }
+public string REGISTROS { get; set; }
+public string IMPORTAR { get; set; }

@@ -1,0 +1,26 @@
+lista.Add(new TableColumn()
+                {
+                    name = "DESCRICAO",
+                    dataType = "db_Alpha",
+                    size = 50,
+                    mandatory = true,
+                    description = "Descricao"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "REGISTROS",
+                    dataType = "db_Alpha",
+                    size = 10,
+                    mandatory = true,
+                    description = "Registros"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "IMPORTAR",
+                    dataType = "db_Alpha",
+                    size = 1,
+                    mandatory = false,
+                    description = "Importar"
+                });    
