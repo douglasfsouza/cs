@@ -1,0 +1,8 @@
+entity.Name = record.Name;
+entity.Codelayout = record.U_CODELAYOUT;
+entity.Registro = record.U_REGISTRO;
+entity.Campo = record.U_CAMPO;
+entity.Inicio = record.U_INICIO;
+entity.Fim = record.U_FIM;
+entity.Caract = record.U_CARACT;
+entity.Condicao = record.U_CONDICAO;

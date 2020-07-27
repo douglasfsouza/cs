@@ -1,0 +1,5 @@
+record.Name = entity.RecId.ToString();
+record.Code = entity.RecId.ToString();
+record.U_DESCRICAO = entity.Descricao;
+record.U_REGISTROS = entity.Registros;
+record.U_IMPORTAR = entity.Importar;

@@ -1,0 +1,11 @@
+map.Add("name","T");
+map.Add("banco","N");
+map.Add("catlanc","N");
+map.Add("codhist","T");
+map.Add("deschist","T");
+map.Add("histcompl","T");
+map.Add("acao","T");
+map.Add("forma","T");
+map.Add("debcred","T");
+map.Add("conta","T");
+map.Add("lcm","T");

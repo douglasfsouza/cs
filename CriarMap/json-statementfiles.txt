@@ -1,0 +1,6 @@
+record.Name = entity.RecId.ToString();
+record.Code = entity.RecId.ToString();
+record.U_DATA = entity.Data;
+record.U_USUARIO = entity.Usuario;
+record.U_BANCO = entity.Banco;
+record.U_MOVIMENTO = entity.Movimento;

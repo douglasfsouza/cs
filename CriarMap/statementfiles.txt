@@ -1,0 +1,36 @@
+
+            try
+            {
+                lista.Add(new TableColumn()
+                {
+                    name = "DATA",
+                    dataType = "db_Date",                    
+                    mandatory = true,
+                    description = "Data"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "USUARIO",
+                    dataType = "db_Alpha",
+                    size = 50,
+                    mandatory = false,
+                    description = "Usuario"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "BANCO",
+                    dataType = "db_Numeric",
+                    size = 3,
+                    mandatory = false,
+                    description = "Banco"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "MOVIMENTO",
+                    dataType = "db_Numeric",
+                    mandatory = false,
+                    description = "Movimentos"
+                });

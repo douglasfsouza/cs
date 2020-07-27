@@ -1,0 +1,170 @@
+ try
+            {
+                lista.Add(new TableColumn()
+                {
+                    name = "CODECONTA",
+                    dataType = "db_Alpha",
+                    size = 50,
+                    mandatory = true,
+                    description = "Codigo Conta"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "SEQUENCIA",
+                    dataType = "db_Numeric",
+                    size = 11,
+                    mandatory = false,
+                    description = "Sequencia"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "REGISTRO",
+                    dataType = "db_Numeric",
+                    size = 5,
+                    mandatory = false,
+                    description = "Registro"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "DATA",
+                    dataType = "db_Date",                    
+                    mandatory = true,
+                    description = "Data"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "DOCUMENTO",
+                    dataType = "db_Numeric",
+                    size = 11,
+                    mandatory = true,
+                    description = "Documento"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "CATLANCTO",
+                    dataType = "db_Numeric",
+                    size = 5,
+                    mandatory = false,
+                    description = "Categoria Lancamento"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "CODHIST",
+                    dataType = "db_Alpha",
+                    size = 10,
+                    mandatory = true,
+                    description = "Codigo Historico"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "DESCHIST",
+                    dataType = "db_Alpha",
+                    size = 50,
+                    mandatory = false,
+                    description = "Descricao"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "HISTCOMPL",
+                    dataType = "db_Alpha",
+                    size = 50,
+                    mandatory = false,
+                    description = "Complemento"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "NUNCONCIL",
+                    dataType = "db_Alpha",
+                    size = 10,
+                    mandatory = false,
+                    description = "Nro Conciliacao"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "STATUSCONCIL",
+                    dataType = "db_Alpha",
+                    size = 1,
+                    mandatory = false,
+                    description = "Status Conciliacao"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "STATUSATU",
+                    dataType = "db_Alpha",
+                    size = 1,
+                    mandatory = false,
+                    description = "Status Atualizacao"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "DATACONCIL",
+                    dataType = "db_Date",                    
+                    mandatory = false,
+                    description = "Data Conciliacao"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "VALOR",
+                    dataType = "db_Numeric",
+                    dataTypeSub = "st_Price",
+                    mandatory = false,
+                    description = "Valor"
+                });
+
+               
+                lista.Add(new TableColumn()
+                {
+                    name = "REFERENCIA",
+                    dataType = "db_Alpha",
+                    size = 50,
+                    mandatory = false,
+                    description = "Referencia"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "FILIAL",
+                    dataType = "db_Alpha",
+                    size = 10,
+                    mandatory = false,
+                    description = "Codigo Filial"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "ARQUIVO",
+                    dataType = "db_Alpha",
+                    size = 50,
+                    mandatory = false,
+                    description = "Arquivo"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "ACAO",
+                    dataType = "db_Alpha",
+                    size = 10,
+                    mandatory = false,
+                    description = "Acao"
+                });
+                lista.Add(new TableColumn()
+                {
+                    name = "FORMA",
+                    dataType = "db_Alpha",
+                    size = 50,
+                    mandatory = false,
+                    description = "Forma Pagto"
+                });    

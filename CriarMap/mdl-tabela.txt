@@ -1,0 +1,13 @@
+public override string EntityName => xx;
+public string Name { get; set; }
+public string Code { get; set; }
+public string Code_titulo { get; set; }
+public string Transacao { get; set; }
+public string Tabela { get; set; }
+public string Campo { get; set; }
+public string Descricao { get; set; }
+public string Valor_de { get; set; }
+public string Valor_para { get; set; }
+public string Usuario { get; set; }
+public DateTime Data { get; set; }
+public long Hora { get; set; }

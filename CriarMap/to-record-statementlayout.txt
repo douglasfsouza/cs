@@ -1,0 +1,4 @@
+entity.Name = record.Name;
+entity.Descricao = record.U_DESCRICAO;
+entity.Registros = record.U_REGISTROS;
+entity.Importar = record.U_IMPORTAR;

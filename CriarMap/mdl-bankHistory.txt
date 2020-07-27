@@ -1,0 +1,12 @@
+public override string EntityName => xx;
+public string Name { get; set; }
+public long Banco { get; set; }
+public long Catlanc { get; set; }
+public string Codhist { get; set; }
+public string Deschist { get; set; }
+public string Histcompl { get; set; }
+public string Acao { get; set; }
+public string Forma { get; set; }
+public string Debcred { get; set; }
+public string Conta { get; set; }
+public string Lcm { get; set; }

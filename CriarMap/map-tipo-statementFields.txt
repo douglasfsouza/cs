@@ -1,0 +1,8 @@
+map.Add("name","T");
+map.Add("codelayout","T");
+map.Add("registro","T");
+map.Add("campo","T");
+map.Add("inicio","N");
+map.Add("fim","N");
+map.Add("caract","T");
+map.Add("condicao","T");

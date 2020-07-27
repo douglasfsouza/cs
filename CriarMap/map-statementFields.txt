@@ -1,0 +1,8 @@
+map.Add("name","U_NAME");
+map.Add("codelayout","U_CODELAYOUT");
+map.Add("registro","U_REGISTRO");
+map.Add("campo","U_CAMPO");
+map.Add("inicio","U_INICIO");
+map.Add("fim","U_FIM");
+map.Add("caract","U_CARACT");
+map.Add("condicao","U_CONDICAO");

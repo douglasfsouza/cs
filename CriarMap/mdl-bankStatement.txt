@@ -1,0 +1,21 @@
+public override string EntityName => xx;
+public string Name { get; set; }
+public string Codeconta { get; set; }
+public long Sequencia { get; set; }
+public long Registro { get; set; }
+public DateTime Data { get; set; }
+public long Documento { get; set; }
+public long Catlancto { get; set; }
+public string Codhist { get; set; }
+public string Deschist { get; set; }
+public string Histcompl { get; set; }
+public string Nunconcil { get; set; }
+public string Statusconcil { get; set; }
+public string Statusatu { get; set; }
+public DateTime Dataconcil { get; set; }
+public long Valor { get; set; }
+public string Referencia { get; set; }
+public string Filial { get; set; }
+public string Arquivo { get; set; }
+public string Acao { get; set; }
+public string Forma { get; set; }

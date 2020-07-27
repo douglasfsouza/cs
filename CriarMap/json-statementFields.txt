@@ -1,0 +1,9 @@
+record.Name = entity.RecId.ToString();
+record.Code = entity.RecId.ToString();
+record.U_CODELAYOUT = entity.Codelayout;
+record.U_REGISTRO = entity.Registro;
+record.U_CAMPO = entity.Campo;
+record.U_INICIO = entity.Inicio;
+record.U_FIM = entity.Fim;
+record.U_CARACT = entity.Caract;
+record.U_CONDICAO = entity.Condicao;

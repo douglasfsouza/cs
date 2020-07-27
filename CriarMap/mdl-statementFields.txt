@@ -1,0 +1,9 @@
+public override string EntityName => xx;
+public string Name { get; set; }
+public string Codelayout { get; set; }
+public string Registro { get; set; }
+public string Campo { get; set; }
+public long Inicio { get; set; }
+public long Fim { get; set; }
+public string Caract { get; set; }
+public string Condicao { get; set; }

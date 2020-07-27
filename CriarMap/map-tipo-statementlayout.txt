@@ -1,0 +1,4 @@
+map.Add("name","T");
+map.Add("descricao","T");
+map.Add("registros","T");
+map.Add("importar","T");

@@ -1,0 +1,60 @@
+try
+            {
+                lista.Add(new TableColumn()
+                {
+                    name = "CODELAYOUT",
+                    dataType = "db_Alpha",
+                    size = 50,
+                    mandatory = true,
+                    description = "Layout"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "REGISTRO",
+                    dataType = "db_Alpha",
+                    size = 3,
+                    mandatory = true,
+                    description = "Registro"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "CAMPO",
+                    dataType = "db_Alpha",
+                    size = 50,
+                    mandatory = true,
+                    description = "Campo"
+                });
+                lista.Add(new TableColumn()
+                {
+                    name = "INICIO",
+                    dataType = "db_Numeric",
+                    size = 3,
+                    mandatory = true,
+                    description = "Pos. Inicial"
+                });
+                lista.Add(new TableColumn()
+                {
+                    name = "FIM",
+                    dataType = "db_Numeric",
+                    size = 3,
+                    mandatory = true,
+                    description = "Pos. Final"
+                });
+                lista.Add(new TableColumn()
+                {
+                    name = "CARACT",
+                    dataType = "db_Alpha",
+                    size = 50,
+                    mandatory = true,
+                    description = "Caractere"
+                });
+                lista.Add(new TableColumn()
+                {
+                    name = "CONDICAO",
+                    dataType = "db_Alpha",
+                    size = 100,
+                    mandatory = true,
+                    description = "Condicao"
+                });

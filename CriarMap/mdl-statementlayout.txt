@@ -1,0 +1,5 @@
+public override string EntityName => base.EntityName;
+public string Name { get; set; }
+public string Descricao { get; set; }
+public string Registros { get; set; }
+public string Importar { get; set; }

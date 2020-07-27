@@ -1,0 +1,11 @@
+map.Add("name","Name");
+map.Add("banco","U_BANCO");
+map.Add("catlanc","U_CATLANC");
+map.Add("codhist","U_CODHIST");
+map.Add("deschist","U_DESCHIST");
+map.Add("histcompl","U_HISTCOMPL");
+map.Add("acao","U_ACAO");
+map.Add("forma","U_FORMA");
+map.Add("debcred","U_DEBCRED");
+map.Add("conta","U_CONTA");
+map.Add("lcm","U_LCM");

@@ -1,0 +1,4 @@
+map.Add("name","U_NAME");
+map.Add("descricao","U_DESCRICAO");
+map.Add("registros","U_REGISTROS");
+map.Add("importar","U_IMPORTAR");

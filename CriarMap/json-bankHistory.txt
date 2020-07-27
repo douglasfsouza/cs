@@ -1,0 +1,12 @@
+record.Name = entity.RecId.ToString();
+record.Code = entity.RecId.ToString();
+record.U_BANCO = entity.Banco;
+record.U_CATLANC = entity.Catlanc;
+record.U_CODHIST = entity.Codhist;
+record.U_DESCHIST = entity.Deschist;
+record.U_HISTCOMPL = entity.Histcompl;
+record.U_ACAO = entity.Acao;
+record.U_FORMA = entity.Forma;
+record.U_DEBCRED = entity.Debcred;
+record.U_CONTA = entity.Conta;
+record.U_LCM = entity.Lcm;

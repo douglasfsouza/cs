@@ -1,0 +1,5 @@
+map.Add("name","T");
+map.Add("data","T");
+map.Add("usuario","T");
+map.Add("banco","N");
+map.Add("movimento","N");

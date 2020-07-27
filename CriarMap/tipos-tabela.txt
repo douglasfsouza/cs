@@ -1,0 +1,12 @@
+map.Add("name","T");
+map.Add("code","T");
+map.Add("code_titulo","T");
+map.Add("transacao","T");
+map.Add("tabela","T");
+map.Add("campo","T");
+map.Add("descricao","T");
+map.Add("valor_de","T");
+map.Add("valor_para","T");
+map.Add("usuario","T");
+map.Add("data","T");
+map.Add("hora","N");

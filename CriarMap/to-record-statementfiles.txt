@@ -1,0 +1,5 @@
+entity.Name = record.Name;
+entity.Data = record.U_DATA;
+entity.Usuario = record.U_USUARIO;
+entity.Banco = record.U_BANCO;
+entity.Movimento = record.U_MOVIMENTO;

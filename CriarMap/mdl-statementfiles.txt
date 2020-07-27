@@ -1,0 +1,6 @@
+public override string EntityName => xx;
+public string Name { get; set; }
+public DateTime Data { get; set; }
+public string Usuario { get; set; }
+public long Banco { get; set; }
+public long Movimento { get; set; }

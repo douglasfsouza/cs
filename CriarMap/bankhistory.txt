@@ -1,0 +1,91 @@
+try
+            {
+                lista.Add(new TableColumn()
+                {
+                    name = "BANCO",
+                    dataType = "db_Numeric",
+                    size = 3,
+                    mandatory = true,
+                    description = "Banco"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "CATLANC",
+                    dataType = "db_Numeric",
+                    size = 5,
+                    mandatory = true,
+                    description = "Categ. Lancto"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "CODHIST",
+                    dataType = "db_Alpha",
+                    size = 10,
+                    mandatory = true,
+                    description = "Codigo Histórico"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "DESCHIST",
+                    dataType = "db_Alpha",
+                    size = 50,
+                    mandatory = true,
+                    description = "Descrição"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "HISTCOMPL",
+                    dataType = "db_Alpha",
+                    size = 50,
+                    mandatory = false,
+                    description = "Complemento"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "ACAO",
+                    dataType = "db_Alpha",
+                    size = 1,
+                    mandatory = true,
+                    description = "Acao"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "FORMA",
+                    dataType = "db_Alpha",
+                    size = 50,
+                    mandatory = true,
+                    description = "Forma de Pagamento"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "DEBCRED",
+                    dataType = "db_Alpha",
+                    size = 1,
+                    mandatory = true,
+                    description = "Debito ou Credito"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "CONTA",
+                    dataType = "db_Alpha",
+                    size = 50,
+                    mandatory = true,
+                    description = "Conta"
+                });
+
+                lista.Add(new TableColumn()
+                {
+                    name = "LCM",
+                    dataType = "db_Alpha",
+                    size = 50,
+                    mandatory = true,
+                    description = "Descrição LCM"
+                });
