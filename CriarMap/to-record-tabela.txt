@@ -1,12 +1,6 @@
 entity.Name = record.Name;
 entity.Code = record.Code;
-entity.Code_titulo = record.U_CODE_TITULO;
-entity.Transacao = record.U_TRANSACAO;
-entity.Tabela = record.U_TABELA;
-entity.Campo = record.U_CAMPO;
-entity.Descricao = record.U_DESCRICAO;
-entity.Valor_de = record.U_VALOR_DE;
-entity.Valor_para = record.U_VALOR_PARA;
-entity.Usuario = record.U_USUARIO;
-entity.Data = record.U_DATA;
-entity.Hora = record.U_HORA;
+entity.Code_agreement = record.U_CODE_AGREEMENT;
+entity.Duedate = record.U_DUEDATE;
+entity.Percentage = record.U_PERCENTAGE;
+entity.Value = record.U_VALUE;

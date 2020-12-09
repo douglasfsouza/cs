@@ -1,12 +1,6 @@
 record.Name = entity.RecId.ToString();
 record.Code = entity.RecId.ToString();
-record.U_CODE_TITULO = entity.Code_titulo;
-record.U_TRANSACAO = entity.Transacao;
-record.U_TABELA = entity.Tabela;
-record.U_CAMPO = entity.Campo;
-record.U_DESCRICAO = entity.Descricao;
-record.U_VALOR_DE = entity.Valor_de;
-record.U_VALOR_PARA = entity.Valor_para;
-record.U_USUARIO = entity.Usuario;
-record.U_DATA = entity.Data;
-record.U_HORA = entity.Hora;
+record.U_CODE_AGREEMENT = entity.Code_agreement;
+record.U_DUEDATE = entity.Duedate;
+record.U_PERCENTAGE = entity.Percentage;
+record.U_VALUE = entity.Value;

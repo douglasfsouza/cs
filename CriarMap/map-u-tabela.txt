@@ -1,12 +1,6 @@
 map.Add("name","Name");
 map.Add("code","Code");
-map.Add("code_titulo","U_CODE_TITULO");
-map.Add("transacao","U_TRANSACAO");
-map.Add("tabela","U_TABELA");
-map.Add("campo","U_CAMPO");
-map.Add("descricao","U_DESCRICAO");
-map.Add("valor_de","U_VALOR_DE");
-map.Add("valor_para","U_VALOR_PARA");
-map.Add("usuario","U_USUARIO");
-map.Add("data","U_DATA");
-map.Add("hora","U_HORA");
+map.Add("code_agreement","U_CODE_AGREEMENT");
+map.Add("duedate","U_DUEDATE");
+map.Add("percentage","U_PERCENTAGE");
+map.Add("value","U_VALUE");

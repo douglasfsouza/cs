@@ -1,0 +1,19 @@
+- lambda
+- linq
+- create table in db
+- open table of a db
+- wcf
+- files
+- delegate
+- partial classes
+- Task
+- StringBuilder
+- Regex
+- Passando parametros com dois pontos
+- DataContract
+- DataContractJson
+- Serialization XML
+- Serialization Json
+- Array single
+- Array multdimensional
+- Array jagged

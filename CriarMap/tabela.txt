@@ -1,90 +1,36 @@
-try
-            {              
-                lista.Add(new TableColumn()
-                {
-                    name = "Code_titulo",
-                    dataType = "db_Alpha",
-                    mandatory = true,
-                    size = 50,
-                    description = "Associacao com o titulo"
-                });
+lista.Add(new TableColumn()
+            {
+                name = "CODE_AGREEMENT",
+                dataType = "db_Alpha",
+                size = 50,
+                mandatory = true,
+                description = "Acordo Associado"
+            });
 
-                lista.Add(new TableColumn()
-                {
-                    name = "Transacao",
-                    dataType = "db_Alpha",
-                    mandatory = true,
-                    size = 20,
-                    description = "A transacao que originou o alteracao"
-                });
+            lista.Add(new TableColumn()
+            {
+                name = "DUEDATE",
+                dataType = "db_Date",               
+                mandatory = true,
+                description = "Vencimento"
+            });
 
-                lista.Add(new TableColumn()
-                {
-                    name = "Tabela",
-                    dataType = "db_Alpha",
-                    mandatory = false,
-                    size = 20,
-                    description = "Tabela"
-                });
+            lista.Add(new TableColumn()
+            {
+                name = "PERCENTAGE",
+                dataType = "db_Float",
+                dataTypeSub = "st_Price",
+                size = 5,
+                mandatory = true,
+                description = "Percentual"
+            });
 
-                lista.Add(new TableColumn()
-                {
-                    name = "Campo",
-                    dataType = "db_Alpha",
-                    mandatory = true,
-                    size = 20,
-                    description = "O nome do campo alterado"
-                });
-
-                lista.Add(new TableColumn()
-                {
-                    name = "Descricao",
-                    dataType = "db_Alpha",
-                    mandatory = false,
-                    size = 50,
-                    description = "Descricao"
-                });
-
-                lista.Add(new TableColumn()
-                {
-                    name = "Valor_de",
-                    dataType = "db_Alpha",
-                    mandatory = true,
-                    size = 50,
-                    description = "Valor anterior"
-                });
-
-                lista.Add(new TableColumn()
-                {
-                    name = "Valor_para",
-                    dataType = "db_Alpha",
-                    mandatory = true,
-                    size = 50,
-                    description = "Valor apos a alteracao"
-                });
-
-                lista.Add(new TableColumn()
-                {
-                    name = "Usuario",
-                    dataType = "db_Alpha",
-                    mandatory = true,
-                    size = 25,
-                    description = "Usuario que alterou"
-                });
-
-                lista.Add(new TableColumn()
-                {
-                    name = "Data",
-                    dataType = "db_Date",
-                    mandatory = true,
-                    description = "Data da alteracao"
-                });
-
-                lista.Add(new TableColumn()
-                {
-                    name = "Hora",
-                    dataType = "db_Numeric",                    
-                    mandatory = true,
-                    size = 6,
-                    description = "Horário da alteração"
-                });
+            lista.Add(new TableColumn()
+            {
+                name = "VALUE",
+                dataType = "db_Float",
+                dataTypeSub = "st_Price",
+                size = 17,
+                mandatory = true,
+                description = "Valor"
+            });
