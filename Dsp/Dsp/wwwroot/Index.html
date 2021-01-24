@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despesas</title>
+</head>
+<script type="text/javascript" src="dsp.js" asp-append-version="true"></script>
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+
+<style>
+    #cab1 {
+        background-color: aqua;
+    }
+
+    #det {
+        background-color: darkblue;
+        color: red;
+    }
+
+    #txtAno {
+        width: 100px;
+    }
+    #divTot{
+        margin-top : -20px;
+        margin-left: 600px;
+    }
+    #txtTotDeb {
+        width: 80px;   
+        background-color: black;
+        color: blue;         
+        text-align:center;
+    }
+    #txtTotCre {
+        background-color: black;
+        color: blue;
+        width: 80px;
+        text-align: center;
+    }
+    #txtTotTot {
+        background-color: black;
+        color: blue;
+        width: 80px;
+        text-align: center;
+    }
+    #txtPesquisa{
+        width: 200px;
+    }
+    #search{
+        width: 15px;
+        height: 15px;
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+</style>
+<body>
+    <div id="cab1">
+        Ano
+        <input type="number" id="txtAno">
+        Mes
+        <select id="selMes">
+            <option value="1">Janeiro </option>
+            <option value="2">Fevereiro </option>
+            <option value="3">Março </option>
+            <option value="4">Abril </option>
+            <option value="5">Maio </option>
+            <option value="6">Junho </option>
+            <option value="7">Julho </option>
+            <option value="8">Agosto </option>
+            <option value="9">Setembro </option>
+            <option value="10">Outubro </option>
+            <option value="11">Novembro </option>
+            <option value="12">Dezembro </option>
+        </select>
+        Tipo
+        <select id="selTipo">
+            Tipo
+            <option value="*">Todos</option>
+            <option value="d">Debito</option>
+            <option value="c">Credito</option>
+        </select>
+        <input type="button" value="Listar" id="btnListar">
+        <input type="button" value="Incluir" id="btnIncluir">
+        <input type="button" value="Excluir" id="btnExcluir">
+        <input type="button" value="Alterar" id="btnAlterar">
+        Débito: <input id="txtTotDeb" type="text" value="0,00" />
+        + Crédito: <input id="txtTotCre" type="text" value="0,00" />
+        = <input id="txtTotTot" type="text" value="0,00" />
+        <input id="txtPesquisa" type="text" />
+        <img id="search" src="search.jpg" />
+
+    </div>
+    <div id="det">
+        <table>
+            <tr>
+                <td style="width: 50px;"> Sel</td>
+                <td style="width: 100px;"> Codigo</td>
+                <td style="width: 200px;"> Data </td>
+                <td style="width: 300px;"> Descricao</td>
+                <td style="width: 200px;"> Tipo</td>
+                <td style="width: 200px;"> Valor</td>
+            </tr>
+            <!--Mock
+    <tr>
+        <td><input type="checkbox" id="1"></td>
+        <td>1</td>
+        <td> 07-12-2020 </td>
+        <td> Internet</td>
+        <td> Debito</td>
+        <td> 89.90</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="2"></td>
+        <td>2</td>
+        <td> 04-12-2020 </td>
+        <td> Ituran</td>
+        <td> Debito</td>
+        <td> 81.40</td>
+    </tr>
+    -->
+            <tbody id="todos"></tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+<script>
+   
+    eExcluir = document.getElementById("btnExcluir")
+    eAlt = document.getElementById("btnAlterar")
+    eListar = document.getElementById("btnListar")
+    var el = document.querySelectorAll("input[type='checkbox']")
+    eIncluir = document.getElementById("btnIncluir")
+    ePesquisa = document.getElementById("txtPesquisa")
+    eSearch = document.getElementById("search")
+
+    eSearch.addEventListener("click", function () {
+        let texto = ePesquisa.value
+        Listar(0,texto)
+    })
+
+    eSearch.addEventListener("touchstart", function () {
+        let texto = ePesquisa.value
+        Listar(0, texto)
+    })
+    
+    eListar.addEventListener("click", function () {
+        console.log("listando")
+        
+        let texto = ePesquisa.value
+
+        if (texto.length > 0)
+            Listar(0, texto)
+        else
+            Listar(0)
+
+    })
+    eIncluir.addEventListener("click", function () {             
+        window.location = `incluir.html`        
+    })
+    eAlt.addEventListener("click", function () {
+        el = document.querySelectorAll("input[type='checkbox']")
+
+        let codigo = 0
+        for (i = 0; i < el.length; i++) {
+            if (el[i].checked)
+                codigo = el[i].id
+
+        }
+        if (codigo == 0)
+            alert("Seleção invalida!!")
+        else {
+            window.location = `alterar.html?codigo=${codigo}`
+        }
+
+    })
+    eExcluir.addEventListener("click", function () {
+        el = document.querySelectorAll("input[type='checkbox']")
+        let codigo = 0
+        for (i = 0; i < el.length; i++) {
+            if (el[i].checked)
+                codigo = el[i].id
+        }
+        if (codigo == 0)
+            alert("Seleção invalida!!")
+        else {
+            var resp = confirm(`Confirma exclusao da despesa: ${codigo} ?`)
+            if (resp)               
+                Excluir(codigo)            
+        }
+    })
+    let eAno = document.getElementById("txtAno")
+    let data = new Date()
+    eAno.value = data.getFullYear()
+
+    let eMes = document.getElementById("selMes")
+
+    eMes.value = data.getMonth() + 1
+
+    function Excluir(codigo) {
+        const uri = `api/Despesas/${codigo}`
+         
+        fetch(uri, {
+            headers: {
+                'Content-Type': 'application/json', 'Content-Encoding':'utf-8', 'Accept-Encoding':'*' },
+            method: 'DELETE',        
+            Access: { 'Control-Allow-Origin': '*' }           
+        })
+            .then(response => response.json())
+            .then(() => {
+                alert("Despesa Excluida")
+                window.location.reload()
+            })
+            .catch(error => {console.error('nao foi possivel incluir',error)})
+    }
+    
+        
+    Listar(0)
+
+</script>

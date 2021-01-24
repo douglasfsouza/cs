@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inclusão</title>
+</head>
+<script type="text/javascript" src="Dsp.js" asp-append-version="true"></script>
+<style>
+    #txtValor {
+        width: 100px;
+        background-color: lime;
+    }
+
+    #txtDescricao {
+        width: 300px;
+        background-color: lime;
+    }
+
+    #dtmData {
+        background-color: lime;
+    }
+
+    div {
+        border: maroon solid;
+    }
+</style>
+<body>
+    <div>
+        Data: <input type="date" name="dtmData" id="dtmData">
+        Descrição: <input type="text" name="txtDescricao" id="txtDescricao">
+        Tipo: <select id="cboTipo">
+            <option value="d">Debito </option>
+            <option value="c">Credito</option>
+        </select>
+        Valor: <input type="number" id="txtValor">
+        <input type="button" value="Gravar" id="btnGravar">
+        <input type="button" value="Voltar" id="btnCancelar">
+    </div>
+
+</body>
+</html>
+<script>
+    eData = document.getElementById("dtmData")
+    eDescricao = document.getElementById("txtDescricao")
+    eTipo = document.getElementById("cboTipo")
+    eValor = document.getElementById("txtValor")
+    eGravar = document.getElementById("btnGravar")
+    eCancelar = document.getElementById("btnCancelar")
+    var d = new Date()
+    
+    eData.value = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`
+    eGravar.addEventListener("click",function(){
+        if (eData.valueAsDate == null)
+            alert("Data não informada")
+        else{            
+            if (eDescricao.value == "")
+                alert("Descrição não informada")
+            else{                
+                if (eValor.value == "")
+                    alert("Valor inválido")
+                else {
+                    Incluir()
+                }
+            }
+        }
+    })
+    eCancelar.addEventListener("click",function(){
+        window.location = "index.html"
+    })
+
+    
+</script>

@@ -33,4 +33,44 @@ Passos usar db code first EntityFramework:
         }  
 13-Ver no SQL Server Object Explorer (nao 'Conexao de dados')
    Menu exibir - SQL Server Object Explorer
-  
+   
+Obs:
+   - O localdb não foi projetado para o IIS, por isso precisa usar o SqlServer Express
+   - Para usar em memoria em StartUp:
+        services.AddDbContext < DspContext>(options =>
+                  options.UseInMemoryDatabase("DspList")
+   - Para usar conexao com banco sqlServer, e StartUp:
+        services.AddDbContext<DspContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("con2"))
+				Onde "con2" = 
+				     Em AppSetting:
+					      "ConnectionStrings": {
+							"con2": "Server=(localdb)\\mssqllocaldb;Database=Dsp.Models.DspContext;Trusted_Connection=True;"   }
+   - Em StartUp:
+            app.UseHttpsRedirection();
+            app.UseRouting();
+            app.UseAuthorization();
+            app.UseDefaultFiles();
+            app.UseStaticFiles();   
+   - Pacotes de Instalações para apiCore 3.1:
+        - Microsoft.EntityFrameworkCore
+		- Microsoft.EntityFrameworkCore.Design
+		- Microsoft.EntityFrameworkCore.SqlServer
+		- Microsoft.EntityFrameworkCore.Tools
+Para publicar foi necessario dar permissao no sqlServer:
+		GRANT CONNECT TO [IIS APPPOOL\dgs];
+		GO
+		GRANT SELECT,INSERT,DELETE,UPDATE ON DESPESAS TO [IIS APPPOOL\dgs];
+		GO
+		GRANT VIEW ANY COLUMN MASTER KEY DEFINITION TO PUBLIC;
+		GO
+		GRANT VIEW ANY COLUMN ENCRYPTION KEY DEFINITION TO PUBLIC;
+No web.config:
+<connectionStrings>
+    <add name="Dougl" connectionString="server=localhost\SQLEXPRESS;database=aspnet-dgs;uid=dgs;" />
+	<add name="dgs" connectionString="Data Source=LAPTOP-1RAT4MEU\SQLEXPRESS;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;"/>
+  </connectionStrings>
+
+
+		
+						  

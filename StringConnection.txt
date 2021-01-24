@@ -4,4 +4,8 @@
   
   ou
   var connection = @"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Escola;Integrated Security=True";
+  
+  Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;
+  Server=localhost\MSSQLLocalDB;Database=Despesas;Trusted_Connection=True;
+  Data Source=LAPTOP-1RAT4MEU\SQLEXPRESS;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
             

@@ -1,0 +1,29 @@
+Acesso o banco Oracle:
+
+Criar um projeto aspNet Core vazio
+
+Instalar Nuget Oracle.ManagedDataAccess.Core
+
+Alterar Startup.cs:
+  Incluir referencia:
+      using Oracle.ManagedDataAccess.Client;
+	  
+	  Trocar linha HelloWorld por:
+***************************************
+ await context.Response.WriteAsync("Acessando AA2CPARA!\n");
+                   
+                    string connectionString = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.0.117)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=RMS)));User Id=varsis;Password=pwdv4r51s123";
+                    OracleConnection con = new OracleConnection(connectionString);
+                    con.Open();
+                    OracleCommand cmd = con.CreateCommand();
+                    cmd.CommandText = "Select * from carone.AA2CPARA";
+
+                    OracleDataReader reader = cmd.ExecuteReader();
+                    await context.Response.WriteAsync("Codigo\tAcesso\tConteudo\n");
+
+                    while (reader.Read())
+                    {
+                        await context.Response.WriteAsync($"{reader.GetString(0)}\t{reader.GetString(1)}\t{reader.GetString(2)}\n");
+
+                    }  
+***********************************

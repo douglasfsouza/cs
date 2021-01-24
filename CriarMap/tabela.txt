@@ -1,36 +1,144 @@
 lista.Add(new TableColumn()
             {
+                name = "SEQUENCE",
+                dataType = "db_Numeric",
+                size = 11,
+                mandatory = true,
+                description = "Sequencia"
+            });
+
+            lista.Add(new TableColumn()
+            {
                 name = "CODE_AGREEMENT",
                 dataType = "db_Alpha",
                 size = 50,
                 mandatory = true,
-                description = "Acordo Associado"
+                description = "Associacao Acordo"
             });
 
             lista.Add(new TableColumn()
             {
-                name = "DUEDATE",
-                dataType = "db_Date",               
+                name = "DESCRIPTION",
+                dataType = "db_Alpha",
+                size = 50,
                 mandatory = true,
-                description = "Vencimento"
+                description = "Descrição"
             });
 
             lista.Add(new TableColumn()
             {
-                name = "PERCENTAGE",
+                name = "BRANCHCODE",
+                dataType = "db_Numeric",
+                size = 11,
+                mandatory = true,
+                description = "Filial"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "CREATEDATE",
+                dataType = "db_Date",
+                mandatory = true,
+                description = "Data Lançamento"
+            });
+            lista.Add(new TableColumn()
+            {
+                name = "REFERENCEDATE",
+                dataType = "db_Date",
+                mandatory = true,
+                description = "Data Referencia"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "ENTRYAMOUNT",
                 dataType = "db_Float",
                 dataTypeSub = "st_Price",
-                size = 5,
+                size = 15,
                 mandatory = true,
-                description = "Percentual"
+                description = "Valor Lancto"
             });
 
             lista.Add(new TableColumn()
             {
-                name = "VALUE",
+                name = "QUANTITY",
                 dataType = "db_Float",
                 dataTypeSub = "st_Price",
-                size = 17,
-                mandatory = true,
-                description = "Valor"
+                size = 15,
+                mandatory = false,
+                description = "Quantidade"
             });
+
+            lista.Add(new TableColumn()
+            {
+                name = "DOCVALUE",
+                dataType = "db_Float",
+                dataTypeSub = "st_Price",
+                size = 15,
+                mandatory = true,
+                description = "Valor Documento"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "AGRBASEVALUE",
+                dataType = "db_Float",
+                dataTypeSub = "st_Price",
+                size = 15,
+                mandatory = true,
+                description = "Valor Acordo Base"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "ENTRYTYPE",
+                dataType = "db_Alpha",                
+                size = 1,
+                mandatory = true,
+                description = "Tipo Lancto"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "TRANSID",
+                dataType = "db_Numeric",
+                size = 11,
+                mandatory = false,
+                description = "TransId"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "MANUAL",
+                dataType = "db_Alpha",
+                size = 1,
+                mandatory = true,
+                description = "Lançamento Manual"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "DISCOUNTTYPE",
+                dataType = "db_Alpha",
+                size = 1,
+                mandatory = true,
+                description = "Acordo Desconto"
+            });
+            lista.Add(new TableColumn()
+            {
+                name = "STATUS",
+                dataType = "db_Alpha",
+                size = 1,
+                mandatory = true,
+                description = "Status"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "OBSERVATIONS",
+                dataType = "db_Alpha",
+                size = 100,
+                mandatory = false,
+                description = "Observações"
+            });
+            

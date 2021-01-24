@@ -1,7 +1,19 @@
 public override string EntityName => xx;
 public string Name { get; set; }
 public string Code { get; set; }
+public long Sequence { get; set; }
 public string Code_agreement { get; set; }
-public DateTime Duedate { get; set; }
-public double Percentage { get; set; }
-public double Value { get; set; }
+public string Description { get; set; }
+public long Branchcode { get; set; }
+public DateTime Createdate { get; set; }
+public DateTime Referencedate { get; set; }
+public double Entryamount { get; set; }
+public double Quantity { get; set; }
+public double Docvalue { get; set; }
+public double Agrbasevalue { get; set; }
+public string Entrytype { get; set; }
+public long Transid { get; set; }
+public string Manual { get; set; }
+public string Discounttype { get; set; }
+public string Status { get; set; }
+public string Observations { get; set; }
