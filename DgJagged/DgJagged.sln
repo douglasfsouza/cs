@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DgJagged", "DgJagged\DgJagged.csproj", "{CDFD6725-7117-4BA5-AD52-4090B2DFDF54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDFD6725-7117-4BA5-AD52-4090B2DFDF54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDFD6725-7117-4BA5-AD52-4090B2DFDF54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDFD6725-7117-4BA5-AD52-4090B2DFDF54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDFD6725-7117-4BA5-AD52-4090B2DFDF54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D49A46DC-27C9-481A-AC2A-9F5E974A47CA}
+	EndGlobalSection
+EndGlobal

@@ -17,12 +17,15 @@ namespace DgTry
             try
             {
                 if (b == 0)
-                    throw new tstEx();
+                    throw new DivideByZeroException();
+                    //throw new tstEx();
+                    //throw exDZ;
+                
                 i = 1 / b;
 
             }
 
-
+            // Primeiro as exceptions mais específicas
             catch (tstEx e)
             {
                 Console.WriteLine("Tentou dividir por zero e caiu em tstEx");
@@ -36,8 +39,7 @@ namespace DgTry
             catch (DivideByZeroException e)
             {
                 Console.WriteLine("Tentou dividir por zero e caiu em DivideByZeroException");
-                 throw exDZ;
-                
+                //throw; //retorna o erro novamente ao chamador                
             }
             catch (Exception e)
             {
@@ -47,12 +49,15 @@ namespace DgTry
             }
             finally
             {
-                Console.WriteLine("Apos o erro em finally");
+                Console.WriteLine("Finally, esse bloco será executado sempre, dando erro ou não");
 
             }
 
-
             Console.ReadKey();
+
+            Carro carro = new Carro();
+            carro.Dirigir();
+            carro.Estacionar();
         }
     }
 
@@ -61,6 +66,7 @@ namespace DgTry
     {
         public tstEx()
         {
+            Console.WriteLine("Dentro da classe tstEx");
         }
 
         public tstEx(string message) : base(message)
@@ -75,5 +81,21 @@ namespace DgTry
         protected tstEx(SerializationInfo info, StreamingContext context) : base(info, context)
         {
         }
+    }
+    public class Carro
+    {
+        public void Dirigir()
+        {
+            Console.WriteLine("Dirigindo");
+        }
+        public void Estacionar()
+        {
+            //Se alguem chamar, dá erro porque ainda não está implementado
+            //Sem isso, o chamador não veria o erro e daria como certo sem fazer nada
+
+             throw new NotImplementedException();
+        }
+
+
     }
 }

@@ -19,12 +19,11 @@ function Listar(pcodigo, texto) {
     }
     else {
         let criterios = []
+        let eAno = document.getElementById("txtAno")
+        let eMes = document.getElementById("selMes")
+        let eTipo = document.getElementById("selTipo")
         if (texto == undefined) {
             uri = "api/Despesas/GetList"
-            let eAno = document.getElementById("txtAno")
-            let eMes = document.getElementById("selMes")
-            let eTipo = document.getElementById("selTipo")
-
             criterios.push({
                 "Field": "Ano",
                 "Operator": "eq",

@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "Laboo": {
-      "commandName": "Project",
-      "commandLineArgs": "maquina"
-    }
-  }
-}

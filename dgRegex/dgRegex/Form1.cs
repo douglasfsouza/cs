@@ -49,7 +49,7 @@ namespace dgRegex
             if(ValidateEmail(em))
                 MessageBox.Show("Email valido!");
             else
-                MessageBox.Show("Invalido!");
+                MessageBox.Show($"Email Invalido!: {em}");
 
         }
         public bool ValidateEmail(string emailAddress)
@@ -59,6 +59,20 @@ namespace dgRegex
             return matches.Success;
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string hw = "Hell0 World";
+            string d = "\\d";
+            if (Regex.IsMatch(hw, d, RegexOptions.None))
+            {
+                MessageBox.Show($"Number found in {hw}");
+            }
+            else
+            {
+                MessageBox.Show($"Number Not found in {hw}");
+
+            }
+        }
     }
 }
 
