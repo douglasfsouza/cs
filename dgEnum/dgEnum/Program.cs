@@ -8,6 +8,9 @@ namespace dgEnum
         {
             Console.WriteLine($"Hello World!. Today is {s.sabado} ");
             Console.ReadKey();
+
+            Month m = Month.february;
+            Console.WriteLine($"We are in {m}");
         }
         enum s
         {
@@ -19,6 +22,10 @@ namespace dgEnum
             sexta = 5,
             sabado = 6
 
-        }
+        };
+        enum Month {january,
+                    february,
+                    march
+       }
     }
 }
