@@ -8,6 +8,11 @@ namespace DgLinq
     {
         static void Main(string[] args)
         {
+            string s = "1.90";            
+            double dd = Convert.ToDouble(s)/100;
+            decimal d = Convert.ToDecimal(s)/100;                      
+
+            Console.WriteLine($"s={s}, decimal={d}, double={dd}");
             string b = "bol_+";
             b = Uri.EscapeUriString(b);
 
@@ -161,8 +166,46 @@ namespace DgLinq
             var proIdo = pros.FirstOrDefault(m => m.Id == 4);
             Console.WriteLine($"Produto encontrado: {proIdo.Description} Id: {proIdo.Id}");
             
+            Console.WriteLine();
+            Console.WriteLine("Group by com n campos:");
+
+            List<Children> children = new List<Children>() { 
+                new Children { Age = 15, Friend = "Matheus", FavoriteColor = "Black", ID = 1, School = "Monteiro" },
+                new Children {Age = 16, Friend = "Nicolas", FavoriteColor = "Red", ID = 2, School = "Lobato"},
+                new Children {Age = 12, Friend = "Matheus",FavoriteColor = "Black",ID = 3, School = "Monteiro"}
+            };           
+
+            var consolidatedChildren = from c in children
+                                       group c by new
+                                       {
+                                           c.School,
+                                           c.Friend,
+                                           c.FavoriteColor,
+                                       } into gcs
+                                       select new
+                                       {
+                                           School = gcs.Key.School,
+                                           Friend = gcs.Key.Friend,
+                                           FavoriteColor = gcs.Key.FavoriteColor,
+                                           Age = gcs.Min(m => m.Age),
+                                           _Children = gcs.ToList(),
+                                           Qtd = gcs.Count()
+                                        };
+            foreach (var a in consolidatedChildren)
+            {
+                Console.WriteLine($"School: {a.School} - Menor idade:{a.Age} - Qtd:{a.Qtd}");
+            }
+
             Console.Read();
                                                                         
         }
+    }
+    class Children
+    {
+        public int ID { get; set; }
+        public string Friend { get; set; }
+        public string School { get; set; }
+        public string FavoriteColor { get; set; }
+        public int Age { get; set; }
     }
 }

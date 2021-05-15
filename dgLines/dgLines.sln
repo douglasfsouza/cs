@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dgLines", "dgLines\dgLines.csproj", "{A85659A4-1DBB-4524-A4CE-6AD0CA5ACE99}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A85659A4-1DBB-4524-A4CE-6AD0CA5ACE99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A85659A4-1DBB-4524-A4CE-6AD0CA5ACE99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A85659A4-1DBB-4524-A4CE-6AD0CA5ACE99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A85659A4-1DBB-4524-A4CE-6AD0CA5ACE99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C3BD6F91-3B42-43E9-8A21-D4A3DDBC2DE4}
+	EndGlobalSection
+EndGlobal

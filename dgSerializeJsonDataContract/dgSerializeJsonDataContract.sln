@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dgSerializeJsonDataContract", "dgSerializeJsonDataContract\dgSerializeJsonDataContract.csproj", "{EAC0F69B-24E4-4B97-BFA6-13359469BAFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAC0F69B-24E4-4B97-BFA6-13359469BAFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC0F69B-24E4-4B97-BFA6-13359469BAFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC0F69B-24E4-4B97-BFA6-13359469BAFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC0F69B-24E4-4B97-BFA6-13359469BAFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7726FA6D-AAE6-436A-A365-E43C625B38A3}
+	EndGlobalSection
+EndGlobal

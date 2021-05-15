@@ -1,0 +1,6 @@
+var invalidPNse =
+                        (from s in distinctPnsArgs
+                         select s)
+                        .Except
+                            (from s in distinctPnInvoice
+                             select s);

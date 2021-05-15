@@ -18,6 +18,7 @@ namespace dgOData
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -28,6 +29,16 @@ namespace dgOData
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  builder =>
+                                  {
+                                      builder.WithOrigins("https://localhost:44354/weatherforecast",
+                                                          "http://www.contoso.com");
+                                  });
+            });
+
             //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             //services.AddMvc(options => options.EnableEndpointRouting = false);
             //adicionando o data
@@ -55,6 +66,8 @@ namespace dgOData
             });
 
             app.UseRouting();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseAuthorization();
 

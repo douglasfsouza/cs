@@ -73,6 +73,19 @@ namespace dgRegex
 
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Match nota = Regex.Match(txtNota.Text, @"[A-E][+-]?$");
+            if (nota.Success)
+            {
+                MessageBox.Show("Nota válida");
+            }
+            else
+            {
+                MessageBox.Show("Informe nota de E- à A+");
+            }
+        }
     }
 }
 
