@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dgExpandoObject", "dgExpandoObject\dgExpandoObject.csproj", "{0EE3CC06-497C-41C2-BEDF-69E7FC2EE83F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EE3CC06-497C-41C2-BEDF-69E7FC2EE83F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EE3CC06-497C-41C2-BEDF-69E7FC2EE83F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EE3CC06-497C-41C2-BEDF-69E7FC2EE83F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EE3CC06-497C-41C2-BEDF-69E7FC2EE83F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A9FE6CC-32DB-4F99-B80E-20751C087A3A}
+	EndGlobalSection
+EndGlobal

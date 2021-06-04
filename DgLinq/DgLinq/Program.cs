@@ -196,6 +196,60 @@ namespace DgLinq
                 Console.WriteLine($"School: {a.School} - Menor idade:{a.Age} - Qtd:{a.Qtd}");
             }
 
+            Console.WriteLine();
+            Console.WriteLine("Drilldown:");
+            List<Fruits> fruits = new List<Fruits>()
+            {
+                new Fruits()
+                {
+                    id = 1,
+                    name = "banana",
+                    color = "yellow",
+                    qtd = 5
+                },
+                new Fruits()
+                {
+                    id = 2,
+                    name = "lemon",
+                    color = "green",
+                    qtd = 12
+                },
+                new Fruits()
+                {
+                    id = 3,
+                    name = "star fruit",
+                    color = "yellow",
+                    qtd = 3
+                }
+            };
+
+            foreach (var item in fruits)
+            {
+                Console.WriteLine("{0} is {1} as has {2}", item.name, item.color, item.qtd);
+
+            }
+            Console.WriteLine("group by color:");
+            var grpColor = from c in fruits
+                           group c by new
+                           {
+                               color = c.color
+                           } into grp
+                           select new
+                           {
+                               color = grp.Key.color,
+                               qtd = grp.Count(),
+                               fruitsOfTheGroup = grp
+                           };
+            foreach (var item in grpColor)
+            {
+                Console.WriteLine("{0} - records: {1} ", item.color, item.qtd);
+                foreach (var f in item.fruitsOfTheGroup)
+                {
+                    Console.WriteLine("\tid:{0} fruit: {1}", f.id, f.name);
+
+                }
+            }
+
             Console.Read();
                                                                         
         }
@@ -207,5 +261,12 @@ namespace DgLinq
         public string School { get; set; }
         public string FavoriteColor { get; set; }
         public int Age { get; set; }
+    }
+    public class Fruits
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public string color { get; set; }
+        public int qtd { get; set; }
     }
 }
