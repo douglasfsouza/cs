@@ -1,0 +1,62 @@
+Origin = Scheme + domain + port
+
+Scheme = http, https, ftp..
+Domain = localhost, blog.myhost, etc
+
+cross-origin resource sharing
+  origin do servidor difere do cliente
+  
+The same-origin policy
+  dont talk to strangers
+  ex. origin=http://localhost:3000
+  - if client: origin=http://localhost:3000/about
+      Its the same origin, /about isnt considered part of origin
+  	
+  - if client: origin=http://localhost:3000/about/about.html
+      Its the same origin, /about/about.html isnt considered part of origin
+	  
+  - if client: origin=http://localhost:5000
+      Its cross-origin, different Port
+	  
+  - if client: origin=https://localhost:3000
+      Its cross-origin, different Scheme
+
+  - if client: origin=https:/blog.myhost.com
+      Its cross-origin, different Scheme, Domain and Port	  
+  
+Use cors in:
+  - fetch
+  - XMLHTTPRequest
+  
+Erros na resposta do Request:
+- Accesss-Control-Allow-Origin
+     deu cross-origin
+     pode-se configurar com * no server para aceitar qquer client
+	 
+ - Accesss-Control-Allow-Methods
+     Alguns metodos estao bloqueados como GET, PUT, DELETE, POST..
+	 
+ - Accesss-Control-Allow-Headers
+     Alguns headers estão bloqueados com content-type, authorization, etc
+	 
+- Accesss-Control-Max-Age
+     Configuração de tempo de conexão
+	 
+Requests simples que não usam CORS:
+   - Methods
+        GET,  POST or HEAD
+   - Headers:
+       Accept, Accept-Language, Content-Language, Content-Type
+   - Content-Type
+       application/x-www-form-urlencoded, multipart/form-data or text/plain
+   - nao pode ter evento de listener na request XMLHTTPRequest
+   - nao pode ter objeto ReadableStream na request
+   
+Liberando o acesso:
+    1 - se tiver acesso ao backend:
+        configurar com * no server
+    2 - se só tiver acesso ao front:
+        precisa usar um proxy que ira colocar * no  header ex:
+		   fetch("https://cors-anywhere.herokuapp.com/https://o_endereco_da_api_public_e_porta
+		   
+        	

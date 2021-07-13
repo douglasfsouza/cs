@@ -1,0 +1,16 @@
+﻿<Window x:Class="dgFromAsync.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dgFromAsync"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="label" Content="URL:" HorizontalAlignment="Left" Margin="90,112,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtURL" HorizontalAlignment="Left" Margin="124,116,0,0" Text="https://www.itau.com.br/" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" Height="18"/>
+        <Button x:Name="blnGetStatus" Content="Access" HorizontalAlignment="Left" Margin="124,143,0,0" VerticalAlignment="Top" Click="blnGetStatus_Click"/>
+        <Label x:Name="lblResult" Content="Result" HorizontalAlignment="Left" Margin="124,191,0,0" VerticalAlignment="Top" Width="408"/>
+
+    </Grid>
+</Window>

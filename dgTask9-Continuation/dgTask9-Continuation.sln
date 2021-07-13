@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dgTask9-Continuation", "dgTask9-Continuation\dgTask9-Continuation.csproj", "{0F7A8C97-C5B9-4AE4-9BE8-7485272BAABA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F7A8C97-C5B9-4AE4-9BE8-7485272BAABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F7A8C97-C5B9-4AE4-9BE8-7485272BAABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F7A8C97-C5B9-4AE4-9BE8-7485272BAABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F7A8C97-C5B9-4AE4-9BE8-7485272BAABA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6C12FFA-839C-445E-993D-F02ADD7005AD}
+	EndGlobalSection
+EndGlobal

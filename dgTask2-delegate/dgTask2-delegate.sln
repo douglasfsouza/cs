@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dgTask2-delegate", "dgTask2-delegate\dgTask2-delegate.csproj", "{2FF0F55F-AC4C-4958-9C54-E61205B27C63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FF0F55F-AC4C-4958-9C54-E61205B27C63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FF0F55F-AC4C-4958-9C54-E61205B27C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FF0F55F-AC4C-4958-9C54-E61205B27C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FF0F55F-AC4C-4958-9C54-E61205B27C63}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CCAE209E-2839-4E1A-8CFE-041C78B54946}
+	EndGlobalSection
+EndGlobal

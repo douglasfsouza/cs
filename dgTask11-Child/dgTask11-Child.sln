@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dgTask11-Child", "dgTask11-Child\dgTask11-Child.csproj", "{1999C293-F4CC-40E6-B554-F8F071236D73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1999C293-F4CC-40E6-B554-F8F071236D73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1999C293-F4CC-40E6-B554-F8F071236D73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1999C293-F4CC-40E6-B554-F8F071236D73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1999C293-F4CC-40E6-B554-F8F071236D73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {627BAD52-7DB8-47E0-85EC-3AE7E585BA78}
+	EndGlobalSection
+EndGlobal
