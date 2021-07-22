@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace dgFromAsync
+namespace dgThrowAsync
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -26,13 +26,22 @@ namespace dgFromAsync
             InitializeComponent();
         }
 
-        private async void blnGetStatus_Click(object sender, RoutedEventArgs e)
+        private async void btnThrow_Click(object sender, RoutedEventArgs e)
         {
-            string url = txtURL.Text.Trim();
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-            HttpWebResponse response = await Task<WebResponse>.Factory.FromAsync(request.BeginGetResponse, request.EndGetResponse, request) as HttpWebResponse;
-            lblResult.Content = string.Format("The URL returned the Status {0} - {1}", response.StatusCode,response.StatusDescription );
-
+            using (WebClient client = new WebClient())
+            {
+                try
+                {
+                    lblResult.Content = "Loading...";
+                    Uri uri = new Uri("http://fourthcoffee/bogus");
+                    string data = await client.DownloadStringTaskAsync(uri);
+                    lblResult.Content = data;
+                }
+                catch (Exception ex)
+                {
+                    lblResult.Content = ex.Message;
+                }
+            }
         }
     }
 }
