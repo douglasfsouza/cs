@@ -86,6 +86,49 @@ namespace dgRegex
                 MessageBox.Show("Informe nota de E- à A+");
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+           // string data = "2021-02-28";
+            string data = "28-02-2021";
+            //Match mdata = Regex.Match(data, @"dddd");
+            if (Regex.IsMatch(data,@"^[0-9]{4}",RegexOptions.None))
+            {
+                MessageBox.Show("A data inicia com ano");
+            }
+            else
+            {
+                MessageBox.Show("A data não inicia com ano");
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+            string data = "28/02/2021";
+            //string data = "2021/02/28";
+            //data = "02/28/2021";
+
+            string data2 = DateTime.Parse(data).ToString("yyyy-MM-dd");
+            Console.WriteLine(data2);
+
+            /*
+            string data = "02/28/2021";
+            data = Regex.Replace(data,
+             @"\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b",
+            "${day}-${month}-${year}", RegexOptions.None,
+            TimeSpan.FromMilliseconds(150));
+            */
+
+             data = "28-02-2021 17:00";
+            //string data = "2021-02-28";
+            data = Regex.Replace(data,
+             @"\b(?<day>\d{1,2})[/-](?<month>\d{1,2})[/-](?<year>\d{2,4})\b",
+            "${year}-${month}-${day}", RegexOptions.None,
+            TimeSpan.FromMilliseconds(150));
+
+            MessageBox.Show(data);
+        }
     }
 }
 

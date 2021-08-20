@@ -1,26 +1,82 @@
-lista.Add(new TableColumn()
-                {
-                    name = "DESCRICAO",
-                    dataType = "db_Alpha",
-                    size = 50,
-                    mandatory = true,
-                    description = "Descricao"
-                });
 
-                lista.Add(new TableColumn()
-                {
-                    name = "REGISTROS",
-                    dataType = "db_Alpha",
-                    size = 10,
-                    mandatory = true,
-                    description = "Registros"
-                });
+            lista.Add(new TableColumn()
+            {
+                name = "FOR",
+                dataType = "db_Numeric",
+                size = 8,
+                mandatory = true,
+                description = "Fornecedor"
+            });
 
-                lista.Add(new TableColumn()
-                {
-                    name = "IMPORTAR",
-                    dataType = "db_Alpha",
-                    size = 1,
-                    mandatory = false,
-                    description = "Importar"
-                });    
+            lista.Add(new TableColumn()
+            {
+                name = "CTT",
+                dataType = "db_Numeric",
+                size = 8,
+                mandatory = true,
+                description = "Contrato"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "EVE",
+                dataType = "db_Numeric",
+                size = 9,
+                mandatory = true,
+                description = "Evento"
+            });
+
+
+            lista.Add(new TableColumn()
+            {
+                name = "ORI",
+                dataType = "db_Numeric",
+                size = 7,
+                mandatory = true,
+                description = "Origem"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "NV1",
+                dataType = "db_Numeric",
+                size = 7,
+                mandatory = true,
+                description = "Nivel 1"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "NV2",
+                dataType = "db_Numeric",
+                size = 7,
+                mandatory = true,
+                description = "Nivel 2"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "NV3",
+                dataType = "db_Numeric",
+                size = 7,
+                mandatory = true,
+                description = "Nivel 3"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "FIL",
+                dataType = "db_Numeric",
+                size = 7,
+                mandatory = true,
+                description = "Filial"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "SEL",
+                dataType = "db_Alpha",
+                size = 1,
+                mandatory = true,
+                description = "Seleção"
+            });
