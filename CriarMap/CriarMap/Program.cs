@@ -28,12 +28,12 @@ namespace CriarMap
             string linr = null;
             string tipo;
 
-            string a = "c:\\git\\PROJETOS\\DGS\\cs\\CriarMap\\tabela.txt";
-            string b = "c:\\git\\PROJETOS\\DGS\\cs\\CriarMap\\map-u-tabela.txt";
-            string c = "c:\\git\\PROJETOS\\DGS\\cs\\CriarMap\\tipos-tabela.txt";
-            string d = "c:\\git\\PROJETOS\\DGS\\cs\\CriarMap\\mdl-tabela.txt";
-            string j = "c:\\git\\PROJETOS\\DGS\\cs\\CriarMap\\json-tabela.txt";
-            string r = "c:\\git\\PROJETOS\\DGS\\cs\\CriarMap\\to-record-tabela.txt";
+            string a = "e:\\git\\cs\\CriarMap\\tabela.txt";
+            string b = "e:\\git\\cs\\CriarMap\\map-u-tabela.txt";
+            string c = "e:\\git\\cs\\CriarMap\\tipos-tabela.txt";
+            string d = "e:\\git\\cs\\CriarMap\\mdl-tabela.txt";
+            string j = "e:\\git\\cs\\CriarMap\\json-tabela.txt";
+            string r = "e:\\git\\cs\\CriarMap\\to-record-tabela.txt";
 
             y = File.OpenText(a);
             x = File.CreateText(b);

@@ -1,7 +1,22 @@
 public override string EntityName => xx;
 public string Name { get; set; }
 public string Code { get; set; }
-public long Fornecedor { get; set; }
-public long Nro_contrato { get; set; }
-public long Cod_desconto { get; set; }
-public long Codigo { get; set; }
+public string Agreementcode { get; set; }
+public long Bplid { get; set; }
+public DateTime Createdate { get; set; }
+public long Createtime { get; set; }
+public double Entryamount { get; set; }
+public double Quantity { get; set; }
+public double Docvalue { get; set; }
+public double Agrbasevalue { get; set; }
+public long Docentry { get; set; }
+public string Objecttype { get; set; }
+public string Canceled { get; set; }
+public string Itemcode { get; set; }
+public long Linenum { get; set; }
+public string Manual { get; set; }
+public string Discounttype { get; set; }
+public string Status { get; set; }
+public string Observations { get; set; }
+public string Cycleid { get; set; }
+public long Stornototr { get; set; }
