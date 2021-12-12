@@ -1,173 +1,93 @@
-
-            lista.Add(new TableColumn()
+lista.Add(new TableColumn()
             {
-                name = "AGREEMENTCODE",
+                name = "VSEVENTCODE",
                 dataType = "db_Alpha",
                 size = 50,
-                mandatory = true,
-                description = "Associacao Acordo"
-            });           
-
-            lista.Add(new TableColumn()
-            {
-                name = "BPLID",
-                dataType = "db_Numeric",
-                size = 11,
-                mandatory = true,
-                description = "Filial"
-            });
-
-            lista.Add(new TableColumn()
-            {
-                name = "CREATEDATE",
-                dataType = "db_Date",
-                mandatory = true,
-                description = "Data Lançamento"
-            });
-
-            lista.Add(new TableColumn()
-            {
-                name = "CREATETIME",
-                dataType = "db_Numeric",
-                size = 6,
-                mandatory = true,
-                description = "Hora de Lançamento"
-            });          
-
-            lista.Add(new TableColumn()
-            {
-                name = "ENTRYAMOUNT",
-                dataType = "db_Float",
-                dataTypeSub = "st_Price",
-                size = 15,
-                mandatory = true,
-                description = "Valor Lancto"
-            });
-
-            lista.Add(new TableColumn()
-            {
-                name = "QUANTITY",
-                dataType = "db_Float",
-                dataTypeSub = "st_Price",
-                size = 15,
                 mandatory = false,
-                description = "Quantidade"
+                description = "ID Evento"
             });
 
             lista.Add(new TableColumn()
             {
-                name = "DOCVALUE",
-                dataType = "db_Float",
-                dataTypeSub = "st_Price",
-                size = 15,
-                mandatory = true,
-                description = "Valor Documento"
+                name = "VSBILLINGTYPE",
+                dataType = "db_Alpha",
+                size = 3,
+                mandatory = false,
+                description = "Tipo Faturamento",
+                options = new List<TableColumnOption>()
+                {
+                    { new TableColumnOption() {Value = "DEV", Description = "Devolução"} },
+                    { new TableColumnOption() {Value = "ACO", Description = "Acordo - Descarte"} },
+                    { new TableColumnOption() {Value = "DES", Description = "Descarte"} }
+                }
             });
 
             lista.Add(new TableColumn()
             {
-                name = "AGRBASEVALUE",
-                dataType = "db_Float",
-                dataTypeSub = "st_Price",
-                size = 15,
-                mandatory = true,
-                description = "Valor Acordo Base"
-            });          
+                name = "VSNOTIFDATE",
+                dataType = "db_Date",
+                mandatory = false,
+                description = "Data Notificação"
+            });
 
             lista.Add(new TableColumn()
             {
-                name = "DOCENTRY",
+                name = "VSNOTICEDATE",
+                dataType = "db_Date",
+                mandatory = false,
+                description = "Data Aviso"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "VSBILLINGDATE",
+                dataType = "db_Date",
+                mandatory = false,
+                description = "Data Faturamento"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "VSDUEDATE",
+                dataType = "db_Date",
+                mandatory = false,
+                description = "Data Vencimento"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "VSUNITYCOST",
+                dataType = "db_Float",
+                dataTypeSub = "st_Price",
+                size = 11,
+                mandatory = false,
+                description = "Custo Unitário"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "VSCARDCODE",
+                dataType = "db_Alpha",
+                size = 50,
+                mandatory = false,
+                description = "Parceiro de Negócio"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "VSDOCENTRY",
                 dataType = "db_Numeric",
                 size = 11,
                 mandatory = false,
                 description = "DocEntry"
             });
 
-            lista.Add(new TableColumn()
-            {
-                name = "OBJECTTYPE",
-                dataType = "db_Alpha",
-                size = 20,
-                mandatory = true,
-                description = "Tipo Nota"
-            });
 
             lista.Add(new TableColumn()
             {
-                name = "CANCELED",
-                dataType = "db_Alpha",
-                size = 1,
-                mandatory = true,
-                description = "Cancelado"
-            });
-
-            lista.Add(new TableColumn()
-            {
-                name = "ITEMCODE",
-                dataType = "db_Alpha",
-                size = 50,
-                mandatory = true,
-                description = "Codigo Item"
-            });
-
-            lista.Add(new TableColumn()
-            {
-                name = "LINENUM",
-                dataType = "db_Numeric",
-                size = 1,
-                mandatory = true,
-                description = "LineNum"
-            });
-
-            lista.Add(new TableColumn()
-            {
-                name = "MANUAL",
-                dataType = "db_Alpha",
-                size = 1,
-                mandatory = true,
-                description = "Lançamento Manual"
-            });
-
-            lista.Add(new TableColumn()
-            {
-                name = "DISCOUNTTYPE",
-                dataType = "db_Alpha",
-                size = 1,
-                mandatory = true,
-                description = "Acordo Desconto"
-            });
-            lista.Add(new TableColumn()
-            {
-                name = "STATUS",
-                dataType = "db_Alpha",
-                size = 1,
-                mandatory = true,
-                description = "Status"
-            });
-
-            lista.Add(new TableColumn()
-            {
-                name = "OBSERVATIONS",
-                dataType = "db_Alpha",
-                size = 100,
-                mandatory = false,
-                description = "Observações"
-            });
-
-            lista.Add(new TableColumn()
-            {
-                name = "CYCLEID",
-                dataType = "db_Alpha",
-                size = 50,
-                mandatory = false,
-                description = "Id Ciclo"
-            });
-
-            lista.Add(new TableColumn()
-            {
-                name = "STORNOTOTR",
+                name = "VSLINENUM",
                 dataType = "db_Numeric",
                 size = 11,
                 mandatory = false,
-                description = "StornoToTr"
+                description = "LineNum"
             });

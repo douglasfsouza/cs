@@ -1,0 +1,35 @@
+﻿
+<h1>Clientes</h1>
+
+<div>
+    <a href="/clients/Add" class="btn btn-primary" role="button">Add</a>
+    <a href="/home" class="btn btn-primary" role="button"> Return</a>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>DateOfBirth</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var cli in Model)
+        {
+            <tr class="table-active">
+                <td> @cli.Id</td>
+                <td> @cli.Name</td>
+                <td> @cli.Dob.ToString("dd-MM-yyyy")</td>
+                <td> <a href="/Clients/Update/@cli.Id" class="btn btn-primary" role="button">Update</a></td>
+                <td> <a href="/Clients/Delete/@cli.Id" class="btn btn-primary" role="button">Delete</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+

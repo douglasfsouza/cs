@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 
 namespace dgDateFormat
 {
@@ -6,6 +7,28 @@ namespace dgDateFormat
     {
         static void Main(string[] args)
         {
+            DateTime datax = new DateTime(2021, 12, 9);
+            Console.WriteLine(datax.ToString("dd-MMM-yy"));
+            Console.ReadLine();
+
+            DateTime addDays = DateTime.Now;
+            DateTime newDate = addDays.AddDays(1);
+            Console.WriteLine(newDate);
+
+            TimeSpan diff = newDate.Subtract(addDays);
+            Console.WriteLine(diff.TotalDays);
+
+            if (newDate >= addDays)
+            {
+                Console.WriteLine("new date maior");
+            }
+
+
+
+
+
+
+
             string strdt1 = DateTime.Now.ToString("dd-MM-yyyy");
             DateTime dt2 = DateTime.Now;
             string strdt2 = $"{dt2:dd-MM-yyyy}";
