@@ -22,6 +22,7 @@ namespace ReplaceCV
         private void button1_Click(object sender, EventArgs e)
         {
             folderBrowserDialog1.ShowDialog();
+            
             txtPasta.Text = folderBrowserDialog1.SelectedPath;
 
             if (!Directory.Exists(txtPasta.Text))
@@ -47,9 +48,14 @@ namespace ReplaceCV
 
                 //listView1.Items.Add(file);
 
-                DataGridViewColumn c = new DataGridViewColumn();
+                if (!file.EndsWith(".exe"))
+                {
+                    DataGridViewColumn c = new DataGridViewColumn();
 
-                lstFiles.Add(new Files() { File = file });
+                    lstFiles.Add(new Files() { File = file });
+                }
+
+                
 
                 
                 
@@ -60,39 +66,60 @@ namespace ReplaceCV
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            folderBrowserDialog1.SelectedPath = AppContext.BaseDirectory;
+            txtPasta.Text = folderBrowserDialog1.SelectedPath;
             loadFiles();
         }
 
         private bool Replace()
         {
             StreamReader r;
-            StreamWriter w;          
-
+            StreamWriter w;     
 
             string[] files = Directory.GetFiles(txtPasta.Text);
+            int errors = 0;
             foreach (var file in files)
             {
-                string newFileName = $"{file}.new";
-
-                r = File.OpenText(file);
-                w = File.CreateText(newFileName);
-
-                while (!r.EndOfStream)
+                if (!file.EndsWith(".exe"))
                 {
-                    string line = r.ReadLine();
+                    string newFileName = $"{file}.new";
 
-                    line=line.Replace("development.views.", "%placeholder%.");
-                    line=line.Replace("sap.sbocarone.", "%placeholder%.");
-                    line=line.Replace("SBO_CARONE", "%PLACEHOLDER%");
+                    r = File.OpenText(file);
+                    w = File.CreateText(newFileName);
+                    
 
-                    w.WriteLine(line);
+                    while (!r.EndOfStream)
+                    {
+                        string line = r.ReadLine();
 
-                }
-                r.Close();
-                w.Close();
-                File.Delete(file);
-                File.Move(newFileName, file);
+                        line = line.Replace("development.views.", "%placeholder%.");
+                        line = line.Replace("sap.sbocarone.", "%placeholder%.");
+                        line = line.Replace("SBO_CARONE", "%PLACEHOLDER%");
+                        line = line.Replace("SBOVARSISDEMO", "%PLACEHOLDER%");
 
+                        if (line.Contains("schemaName="))
+                        {
+                            if (!line.Contains("%"))
+                            {
+                                errors++;
+                            }
+                        }
+                        w.WriteLine(line);
+
+                    }
+                    r.Close();
+                    w.Close();
+                    File.Delete(file);
+                    File.Move(newFileName, file);                    
+
+                }        
+
+
+            }
+
+            if (errors != 0)
+            {
+                MessageBox.Show("Há novos schemas!!");
             }
             return true;
         }
