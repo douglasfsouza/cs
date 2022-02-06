@@ -1,0 +1,10 @@
+﻿@model dgs.Store2.UI.ViewModels.ProdutoIndexVM
+@{
+    ViewBag.Title = "Página Inicial";
+    ViewBag.SubTitle = $"Confirma a exclusão do produto {Model.Nome} ?";
+}
+<div>
+    <a class="btn btn-outline-warning" href="@Url.Action("Index","Produtos")">Voltar</a>
+    <a class="btn btn-outline-warning" href="/Produtos/Excluir/@Model.Id">Confirmar</a>
+
+ </div>

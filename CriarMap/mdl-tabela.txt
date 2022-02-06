@@ -1,13 +1,11 @@
 public override string EntityName => xx;
 public string Name { get; set; }
 public string Code { get; set; }
-public string Vseventcode { get; set; }
-public string Vsbillingtype { get; set; }
-public DateTime Vsnotifdate { get; set; }
-public DateTime Vsnoticedate { get; set; }
-public DateTime Vsbillingdate { get; set; }
-public DateTime Vsduedate { get; set; }
-public double Vsunitycost { get; set; }
-public string Vscardcode { get; set; }
-public long Vsdocentry { get; set; }
-public long Vslinenum { get; set; }
+public string Purchordercode { get; set; }
+public long Itm_det { get; set; }
+public double Qtdped_det { get; set; }
+public long Emb_det { get; set; }
+public double For_cst_det { get; set; }
+public double Dsc_det { get; set; }
+public double Desp_aces_det { get; set; }
+public double Pedd_frete_val { get; set; }

@@ -1,93 +1,69 @@
 lista.Add(new TableColumn()
             {
-                name = "VSEVENTCODE",
+                name = "PURCHORDERCODE",
                 dataType = "db_Alpha",
+                mandatory = true,
                 size = 50,
-                mandatory = false,
-                description = "ID Evento"
+                description = "Id Pedido"
             });
-
             lista.Add(new TableColumn()
             {
-                name = "VSBILLINGTYPE",
-                dataType = "db_Alpha",
-                size = 3,
-                mandatory = false,
-                description = "Tipo Faturamento",
-                options = new List<TableColumnOption>()
-                {
-                    { new TableColumnOption() {Value = "DEV", Description = "Devolução"} },
-                    { new TableColumnOption() {Value = "ACO", Description = "Acordo - Descarte"} },
-                    { new TableColumnOption() {Value = "DES", Description = "Descarte"} }
-                }
+                name = "ITM_DET",
+                dataType = "db_Numeric",
+                mandatory = true,
+                size = 7,
+                description = "Código Item"
             });
-
             lista.Add(new TableColumn()
             {
-                name = "VSNOTIFDATE",
-                dataType = "db_Date",
-                mandatory = false,
-                description = "Data Notificação"
+                name = "QTDPED_DET",
+                dataType = "db_Float",
+                dataTypeSub = "st_Quantity",
+                mandatory = true,
+                size = 11,
+                description = "Quantidade"
             });
-
             lista.Add(new TableColumn()
             {
-                name = "VSNOTICEDATE",
-                dataType = "db_Date",
-                mandatory = false,
-                description = "Data Aviso"
+                name = "EMB_DET",
+                dataType = "db_Numeric",
+                mandatory = true,
+                size = 5,
+                description = "Embalagem"
             });
-
             lista.Add(new TableColumn()
             {
-                name = "VSBILLINGDATE",
-                dataType = "db_Date",
+                name = "FOR_CST_DET",
+                dataType = "db_Float",
+                dataTypeSub = "st_Quantity",
                 mandatory = false,
-                description = "Data Faturamento"
+                size = 11,
+                description = "Custo Fornecedor"
             });
-
             lista.Add(new TableColumn()
             {
-                name = "VSDUEDATE",
-                dataType = "db_Date",
-                mandatory = false,
-                description = "Data Vencimento"
-            });
-
-            lista.Add(new TableColumn()
-            {
-                name = "VSUNITYCOST",
+                name = "DSC_DET",
                 dataType = "db_Float",
                 dataTypeSub = "st_Price",
-                size = 11,
                 mandatory = false,
-                description = "Custo Unitário"
+                size = 11,
+                description = "Desconto"
             });
-
             lista.Add(new TableColumn()
             {
-                name = "VSCARDCODE",
-                dataType = "db_Alpha",
-                size = 50,
+                name = "DESP_ACES_DET",
+                dataType = "db_Float",
+                dataTypeSub = "st_Price",
                 mandatory = false,
-                description = "Parceiro de Negócio"
+                size = 11,
+                description = "Despesas Acessórias"
             });
-
             lista.Add(new TableColumn()
             {
-                name = "VSDOCENTRY",
-                dataType = "db_Numeric",
-                size = 11,
+                name = "PEDD_FRETE_VAL",
+                dataType = "db_Float",
+                dataTypeSub = "st_Price",
                 mandatory = false,
-                description = "DocEntry"
-            });
-
-
-            lista.Add(new TableColumn()
-            {
-                name = "VSLINENUM",
-                dataType = "db_Numeric",
                 size = 11,
-                mandatory = false,
-                description = "LineNum"
+                description = "Valor Frete"
             });

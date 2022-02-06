@@ -1,0 +1,44 @@
+﻿@model dgs.Store2.UI.ViewModels.ProdutoEditVM
+@{
+    ViewBag.Title = "Página Inicial";
+    ViewBag.SubTitle = "Adicionar novo produto";
+}
+
+
+<form method="post">
+    <div class="mb-3">
+        @Html.LabelFor(x => x.Nome, new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Nome, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Nome, null, new { @class = "inv" })
+    </div>
+
+    <div class="mb-3">
+        @Html.LabelFor(x => x.Preco, new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Preco, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Preco, null, new { @class = "inv" })
+    </div>
+
+    <div class="mb-3">
+        @Html.LabelFor(x => x.CategoriaId, "Categoria", new { @class = "form-label" })
+        @Html.ValidationMessageFor(x => x.CategoriaId, null, new { @class = "inv" })
+        @*<select class="form-select" name="CategoriaId">
+                @foreach (var item in Model.Categorias)
+                {
+                    <option value=@item.Value selected="(@Model?.CategoriaId==item.Id ? " selected":null)"> @item.Text </option>
+                }
+            </select*@
+
+        @Html.DropDownListFor(x => x.CategoriaId, Model.Categorias, "Selecione...", new { @class = "form-select" })
+
+    </div>
+    <div>
+        <a class="btn btn-outline-warning" href="@Url.Action("Index","Produtos")">Voltar</a>
+        <button class="btn btn-outline-secondary" type="submit">Salvar</button>
+    </div>
+</form>
+
+@section scripts{
+    <partial name="_ScriptsValidate">
+
+}
+

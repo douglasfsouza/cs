@@ -1,0 +1,19 @@
+﻿@model CadCli.Models.Cliente
+<h1>Adicionar</h1>
+<form action="/clientes/gravar" method="post">     
+
+    <div>
+        <label>Nome</label>
+        <input type="text" name="Nome" value="" required autofocus />
+    </div>
+
+    <div>
+        <label>Idade</label>
+        <input type="number" name="Idade" value="" />
+    </div>
+
+    <div>
+        <a href="/clientes">Cancelar</a>
+        <button type="submit">Gravar</button>
+    </div>
+</form>

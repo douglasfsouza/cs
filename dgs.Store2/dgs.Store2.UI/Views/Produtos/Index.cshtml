@@ -1,0 +1,49 @@
+﻿@model IEnumerable<dgs.Store2.UI.ViewModels.ProdutoIndexVM>
+@{
+    ViewBag.Title = "Produtos";
+    ViewBag.SubTitle = "Aplicação criada em sala";
+}
+
+
+
+<div>
+    <a href="/Produtos/Adicionar" class="btn btn-outline-secondary">Adicionar</a>
+    <a href="@Url.Action("Adicionar","Produtos")" class="btn btn-outline-secondary">Adicionar</a>
+    <a asp-action="Adicionar" asp-controller="Produtos" class="btn btn-outline-secondary">Adicionar</a>
+    @Html.ActionLink("Adicionar Produto","Adicionar","Produtos", null, new { @class = "btn btn-outline-secondary" }) 
+</div>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Categoria</th>
+            <th>Data Cadastro</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <th>@item.Id</th>
+            <td>@item.Nome</td>
+            <td>@item.Preco.ToString("c2")</td>
+            <td>@item.Categoria</td>
+            <td>@item.DataCadastro.ToShortDateString()</td>
+            <td><a href="/Produtos/Editar/@item.Id" class="btn btn-outline-success btn-sm">Editar</a></td>
+            <td><a href="/Produtos/ConfirmarDel/@item.Id" class="btn btn-outline-danger btn-sm">Excluir</a></td>
+
+            @*<td><button class="btn btn-outline-danger btn-sm">Excluir</button></td>*@
+        </tr>
+
+        }
+
+
+    </tbody>
+</table>
+
+
+

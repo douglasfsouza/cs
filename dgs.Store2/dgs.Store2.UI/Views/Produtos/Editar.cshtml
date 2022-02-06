@@ -1,0 +1,38 @@
+﻿@model dgs.Store2.UI.ViewModels.ProdutoEditVM
+@{
+    ViewBag.Title = "Página Inicial";
+    ViewBag.SubTitle = $"Editar o produto {Model.Nome}";
+}
+
+<form method="Post" action="@Url.Action("Salvar","Produtos")">
+    <div class="mb-3">
+        <label for="txtId" class="form-label">Id</label>
+        <input type="text" class="form-control" id="txtId" name="Id" readonly value=@Model.Id>
+    </div>
+
+    <div class="mb-3">
+        <label for="txtNome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="txtNome" name="Nome" value="@Model.Nome">
+    </div>
+
+    <div class="mb-3">
+        <label for="txtPreco" class="form-label">Preco</label>
+        <input type="text" class="form-control" id="txtPreco" name="Preco" value=@Model.Preco>
+    </div>
+
+    <div class="mb-3">
+        <label for="txtCategoria" class="form-label">Categoria</label>
+        <select class="form-select" name="CategoriaId">
+            @foreach (var item in Model.Categorias)
+            {
+                <option value=@item.Value selected="(@Model.CategoriaId == item.Id ? "selected":null)"> @item.Text </option>
+            }
+
+
+        </select>
+    </div>
+    <div>
+        <a class="btn btn-outline-warning" href="@Url.Action("Index","Produtos")">Voltar</a>
+        <button class="btn btn-outline-secondary" type="submit">Salvar</button>
+    </div>
+</form>

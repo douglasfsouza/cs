@@ -1,0 +1,55 @@
+﻿ul {
+    text-decoration: none;
+    quotes: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+    li a {
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+        padding: 16px;
+    }
+
+        li a:hover:not(.active) {
+            background-color: #000;
+        }
+
+
+main {
+    min-height: 500px;
+}
+
+form div {
+    margin: 20px;
+}
+
+input:valid {
+    border-left: 2px solid green;
+}
+
+input:invalid {
+    border-left: 2px solid red;
+}
+
+form label {
+    width: 50px;
+    display: inline-block;
+    text-align: right;
+}
+
+form input {
+    font-size: 20px;
+}
+
+.active {
+    background-color: aqua;
+}

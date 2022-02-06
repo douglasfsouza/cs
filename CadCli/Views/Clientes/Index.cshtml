@@ -1,0 +1,33 @@
+﻿@model List<CadCli.Models.Cliente>
+<h1>Lista de Clientes</h1>
+<nav>
+    <a href="/clientes/adicionar">Adicionar</a>
+    <a href="/">Voltar</a>
+</nav>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th colspan="2">Idade</thcolspan="2">
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var cli in Model)
+        {
+            <tr>
+                <td>@cli.Id</td>
+                <td>@cli.Nome</td>
+                <td>@cli.Idade</td>
+                <td>
+                    <a href="/clientes/confExcluir/@cli.Id">Excluir</a>
+                    <a href="/clientes/editar/@cli.Id">Editar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
