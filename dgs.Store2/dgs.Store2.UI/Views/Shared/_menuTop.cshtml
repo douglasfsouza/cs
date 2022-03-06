@@ -15,6 +15,40 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/produtos">Produtos</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/categorias">Categorias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/usuarios">Usuários</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/perfis">Perfis</a>
+                </li>
+                
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                @if (!User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" href="/auth/login">Login</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Olá @User.Identity.Name
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            @*<li><a class="dropdown-item right" asp-action="MeuPerfil" asp-controller="Usuarios">Trocar Senha</a></li>*@
+                            <li><a class="dropdown-item" asp-action="MeuPerfil" asp-controller="Usuarios">Trocar Senha</a></li>
+
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" asp-action="LogOff" asp-controller="auth">LogOff</a></li>
+                        </ul>
+                    </li>
+                }                
+
             </ul>
              
         </div>

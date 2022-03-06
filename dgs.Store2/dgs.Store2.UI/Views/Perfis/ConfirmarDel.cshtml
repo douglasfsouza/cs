@@ -1,0 +1,10 @@
+﻿@model dgs.Store2.UI.ViewModels.PerfilIndexVM
+@{
+    ViewBag.Title = "Página Inicial";
+    ViewBag.SubTitle = $"Confirma a exclusão do perfil {Model.Nome} ?";
+}
+<div>
+    <a class="btn btn-outline-warning" href="@Url.Action("Index","Perfis")">Voltar</a>
+    <a class="btn btn-outline-warning" href="/Perfis/Excluir/@Model.Id">Confirmar</a>
+
+ </div>

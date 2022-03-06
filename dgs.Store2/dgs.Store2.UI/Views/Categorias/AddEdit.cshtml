@@ -1,0 +1,24 @@
+﻿@model dgs.Store2.UI.ViewModels.CategoriaAddEditVM
+@{
+    ViewBag.Title = Model.Id == 0 ? "Adicionar" : "Editar";
+    ViewBag.SubTitle = Model.Id == 0 ?  "Adicionar nova categoria" : $"Categoria:  {Model.Nome}" ;
+}
+
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="Nome" class="form-label"></label>
+        <input asp-for="Nome" class="form-control" autofocus>
+        <span asp-validation-for="Nome" class="inv"></span>
+    </div>
+    
+    <div>
+        <a class="btn btn-outline-warning" asp-action="Index" asp-controller="Categorias">Voltar</a>
+        <button class="btn btn-outline-secondary" type="submit">Salvar</button>
+    </div>
+</form>
+
+@section scripts{
+    <partial name="_ScriptsValidate">
+
+}
+

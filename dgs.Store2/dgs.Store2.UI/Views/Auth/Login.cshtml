@@ -1,0 +1,32 @@
+﻿@model dgs.Store2.UI.ViewModels.AuthVM
+@{
+    ViewBag.Title = "Login";
+    ViewBag.SubTitle = "Informe o email e senha";
+}
+<div class="inv" asp-validation-summary="All"></div>
+
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control" autofocus>
+        <span asp-validation-for="Email" class="inv"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Senha" class="form-label"></label>
+        <input asp-for="Senha" class="form-control" autofocus>
+        <span asp-validation-for="Senha" class="inv"></span>
+    </div>
+
+    <div>
+        <a class="btn btn-outline-warning" asp-action="Index" asp-controller="Home">Voltar</a>
+        <button class="btn btn-outline-secondary" type="submit">Acessar</button>
+    </div>
+</form>
+
+@section scripts{
+    <partial name="_ScriptsValidate">
+
+}
+
+

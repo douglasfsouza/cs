@@ -1,0 +1,58 @@
+﻿@model dgs.Store2.UI.ViewModels.MeuPerfilVM
+@{
+    ViewBag.Title = "Meu Perfil";
+    ViewBag.SubTitle = "Se necessario troque sua senha";
+}
+
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="Id" class="form-label"></label>
+        <input asp-for="Id" class="form-control" readonly>
+        <span asp-validation-for="Id" class="inv"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Nome" class="form-label"></label>
+        <input asp-for="Nome" class="form-control" readonly>
+        <span asp-validation-for="Nome" class="inv"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control" readonly>
+        <span asp-validation-for="Email" class="inv"></span>
+    </div>
+
+    <div class="row">
+
+        <div class="col mb-3">
+            <label asp-for="SenhaAtual" class="form-label"></label>
+            <input type="password" asp-for="SenhaAtual" class="form-control" autofocus>
+            <span asp-validation-for="SenhaAtual" class="inv"></span>
+        </div>
+
+
+        <div class="col mb-3">
+            <label asp-for="NovaSenha" class="form-label"></label>
+            <input type="password" asp-for="NovaSenha" class="form-control" autofocus>
+            <span asp-validation-for="NovaSenha" class="inv"></span>
+        </div>
+
+        <div class="col mb-3">
+            <label asp-for="ConfSenha" class="form-label">Confirmar Senha</label>
+            <input asp-for="ConfSenha" class="form-control" autofocus>
+            <span asp-validation-for="ConfSenha" class="inv"></span>
+        </div>
+    </div>
+
+    <div>
+        <a class="btn btn-outline-warning" asp-action="Index" asp-controller="Usuarios">Voltar</a>
+        <button class="btn btn-outline-secondary" type="submit">Salvar</button>
+    </div>
+</form>
+
+@section scripts{
+    <partial name="_ScriptsValidate">
+
+}
+

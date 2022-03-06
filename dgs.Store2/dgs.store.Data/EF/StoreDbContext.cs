@@ -1,4 +1,5 @@
-﻿using dgs.Store.Domain.Entities;
+﻿using dgs.store.Data.EF.Maps;
+using dgs.Store.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -24,41 +25,22 @@ namespace dgs.store.Data.EF
 
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(_conn);
+            optionsBuilder.UseSqlServer(_conn).EnableSensitiveDataLogging(true);
+
             optionsBuilder.LogTo(Console.WriteLine);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Categoria>().HasData(
-                new Categoria() { Id = 1, Nome = "Bebidas" },
-                new Categoria() { Id = 2, Nome = "Eletrônicos" }
-                );
-
-            modelBuilder.Entity<Produto>().HasData(
-                new Produto()
-                {
-                    Id = 1,
-                    Nome = "Coca-cola",
-                    Preco = 4.5M,
-                    CategoriaId = 1
-                },
-                new Produto()
-                {
-                    Id = 2,
-                    Nome = "Laptop",
-                    Preco = 5000M,
-                    CategoriaId = 2
-                },
-                new Produto()
-                {
-                    Id = 3,
-                    Nome = "Celular Samsung A30",
-                    Preco = 1600M,
-                    CategoriaId = 2
-                });
+            modelBuilder.ApplyConfiguration(new ProdutoMap());
+            modelBuilder.ApplyConfiguration(new CategoriaMap());
+            modelBuilder.ApplyConfiguration(new UsuarioMap());
+            modelBuilder.ApplyConfiguration(new PerfilMap());
+            modelBuilder.Seed();
+           
         }
 
     }

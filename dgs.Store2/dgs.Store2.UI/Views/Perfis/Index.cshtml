@@ -1,26 +1,22 @@
-﻿@model IEnumerable<dgs.Store2.UI.ViewModels.ProdutoIndexVM>
+﻿@model IEnumerable<dgs.Store2.UI.ViewModels.PerfilIndexVM>
 @{
-    ViewBag.Title = "Produtos";
+    ViewBag.Title = "Perfis";
     ViewBag.SubTitle = "Aplicação criada em sala";
 }
 
 
 
 <div>
-    <a href="/Produtos/AddEdit" class="btn btn-outline-secondary">Adicionar</a>
-    <a href="@Url.Action("AddEdit","Produtos")" class="btn btn-outline-secondary">Adicionar</a>
-    <a asp-action="AddEdit" asp-controller="Produtos" class="btn btn-outline-secondary">Adicionar</a>
-    @Html.ActionLink("Adicionar Produto", "Adicionar", "Produtos", null, new { @class = "btn btn-outline-secondary" })
-</div>
+    <a href="/Perfis/AddEdit" class="btn btn-outline-secondary">Adicionar</a>
+    <a href="@Url.Action("AddEdit","Perfis")" class="btn btn-outline-secondary">Adicionar</a>
+    <a asp-action="AddEdit" asp-controller="Perfis" class="btn btn-outline-secondary">Adicionar</a>
+ </div>
 
 <table class="table table-striped table-hover">
     <thead>
         <tr>
             <th>Id</th>
-            <th>Nome</th>
-            <th>Preço</th>
-            <th>Categoria</th>
-            <th>Data Cadastro</th>
+            <th>Nome</th>            
             <th></th>
         </tr>
     </thead>
@@ -29,14 +25,10 @@
         {
             <tr id="item-@item.Id">
                 <th>@item.Id</th>
-                <td>@item.Nome</td>
-                <td>@item.Preco.ToString("c2")</td>
-                <td>@item.Categoria</td>
-                <td>@item.DataCadastro.ToShortDateString()</td>
-                <td><a asp-action="AddEdit" asp-controller="Produtos" asp-route-id="@item.Id" class="btn btn-outline-success btn-sm">Editar</a></td>
-                @*<td><a href="/Produtos/ConfirmarDel/@item.Id" class="btn btn-outline-danger btn-sm">Excluir</a></td>*@
-
-                <td><button class="btn btn-outline-danger btn-sm" onclick="excluir(@item.Id, '@item.Nome', 'do Produto', '@Url.Action("Excluir","Produtos")')">Excluir</button></td>
+                <td>@item.Nome</td>                 
+                <td><a asp-action="AddEdit" asp-controller="Perfis" asp-route-id="@item.Id" class="btn btn-outline-success btn-sm">Editar</a></td>
+ 
+                <td><button class="btn btn-outline-danger btn-sm" onclick="excluir(@item.Id, '@item.Nome', 'do Perfil', '@Url.Action("Excluir","Perfis")')">Excluir</button></td>
             </tr>
 
         }
@@ -65,7 +57,7 @@
 <div class="toast align-items-right text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="d-flex">
         <div class="toast-body">
-            Produto excluido com sucesso
+            Categoria excluida com sucesso
         </div>
         <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>

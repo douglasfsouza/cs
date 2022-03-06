@@ -5,8 +5,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\js\Del-Modal.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\Del-Modal.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\Del-Modal.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\dgs.store.Data\dgs.store.Data.csproj" />
     <ProjectReference Include="..\dgs.Store.Domain\dgs.Store.Domain.csproj" />
+    <ProjectReference Include="..\dgs.Store.IocDI\dgs.Store.IocDI.csproj" />
   </ItemGroup>
 
 </Project>

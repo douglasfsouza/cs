@@ -20,6 +20,14 @@ main > .container {
 label.is-invalid, .inv {
     color: #dc3545;    
 }
+
+div.inv > ul{
+    list-style-type: none;
+}
+
+li>a.right{
+    text-align: right;
+}
  
 
 

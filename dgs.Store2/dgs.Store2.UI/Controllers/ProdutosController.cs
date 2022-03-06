@@ -1,6 +1,9 @@
 ﻿using dgs.store.Data.EF;
+using dgs.store.Data.EF.Repositories;
+using dgs.Store.Domain.Contracts.Data;
 using dgs.Store.Domain.Entities;
 using dgs.Store2.UI.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -13,108 +16,72 @@ using System.Threading.Tasks;
 
 namespace dgs.Store2.UI.Controllers
 {
+    [Authorize]
     public class ProdutosController : Controller
     {
-        private readonly StoreDbContext _ctx;
-        public ProdutosController(IConfiguration config)
-        {
-            _ctx = new StoreDbContext(config);
-        }
-        public IActionResult Index()
-        {
-            var prods = _ctx.Produtos.Include(x => x.Categoria)
-            .ToList().Select(x => new ProdutoIndexVM() { 
-                Id = x.Id, 
-                Nome = x.Nome, 
-                Preco = x.Preco, 
-                Categoria = x.Categoria?.Nome, 
-                DataCadastro = x.DataCadastro });
+        private readonly IProdutoRepository _produtoRepository;
+        private readonly ICategoriaRepository _categoriaRepository;
+        private readonly IUnityOfWork _uow;
 
-           
+        public ProdutosController(IProdutoRepository produtoRepository, ICategoriaRepository categoriaRepository, IUnityOfWork uow )
+        {
+            _produtoRepository = produtoRepository;
+            _categoriaRepository = categoriaRepository;
+            _uow = uow;
+        }
+        [AllowAnonymous]
+        public async Task<IActionResult> Index()
+        {  
+            var prods = (await _produtoRepository.GetAllWithCategoriasAsync()).Select(x => x.ToProdutoIndexVM());
+
             return View(prods);
         }
 
         [HttpGet]
-        public IActionResult Adicionar()
+        public async Task<IActionResult> AddEdit(int Id)
         {
-            var categorias = _ctx.Categorias.ToList();
-            // ViewBag.Categorias = categorias;
-            var model = new ProdutoEditVM()
+             // ViewBag.Categorias = categorias;
+            var model = new ProdutoAddEditVM();
+            
+            if(Id != 0)
             {
-                Categorias = categorias.Select(x => new SelectListItem(){ Value = x.Id.ToString(), Text = x.Nome})
-            };
+                var data = await _produtoRepository.GetAsync(Id);
+                model = data.ToProdutoAddEditVM();       
+            }
+
+            await addCategoriasToModel(model);
+
             return View(model);
         }
 
         [HttpPost]
-        public IActionResult Adicionar(ProdutoEditVM model)
+        public async Task<IActionResult> AddEdit(int Id, ProdutoAddEditVM model)
         {
             if (!ModelState.IsValid)
             {
-                addCategoriasToModel(model);
-                return View("Adicionar",model);
+                await addCategoriasToModel(model);
+                return View(model);
             }
-            var prod = new Produto()
-            {
-                Id = model.Id,
-                Nome = model.Nome,
-                Preco = (decimal)model.Preco,
-                CategoriaId = (int)model.CategoriaId
-            };
-            if (model.Id == 0)
-                _ctx.Produtos.Add(prod);
+            var prod = model.ToData();
+
+            if (Id == 0)
+                _produtoRepository.Add(prod);                
             else
             {
-                var ed = _ctx.Produtos.Find(model.Id);
-                _ctx.Produtos.Update(ed);
+                prod.Id = Id;
+                prod.DataAlteracao = DateTime.Now;
+                _produtoRepository.Update(prod);                
             }
-            _ctx.SaveChanges();
+
+            await _uow.CommitAsync(); ;
+
+
             return RedirectToAction("Index");
-        }
+        }       
 
-        public IActionResult Salvar(ProdutoEditVM model)
+        public async Task<IActionResult> ConfirmarDel(int Id)
         {
-            if (!ModelState.IsValid)
-            {
-                addCategoriasToModel(model);
-                return View("Adicionar", model);
-            }
-            var prod = new Produto()
-            {
-                Id = model.Id,
-                Nome = model.Nome,
-                Preco = (decimal)model.Preco,
-                CategoriaId = (int)model.CategoriaId
-            };
-            if (model.Id == 0)
-                _ctx.Produtos.Add(prod);
-            else
-            {
-                _ctx.Produtos.Update(prod);
-            }
-            _ctx.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        public IActionResult Editar(int Id)
-        {
-            //var categorias = _ctx.Categorias.ToList();
-            var prod = _ctx.Produtos.Find(Id);
-            var vm = new ProdutoEditVM()
-            {
-                Id = Id,
-                CategoriaId = prod.CategoriaId,
-                // Categorias = categorias.Select(x => new ProdutoAddCategorias() { Nome = x.Nome, Id = x.Id }),
-                Nome = prod.Nome,
-                Preco = prod.Preco
-            };
-            addCategoriasToModel(vm);
-            return View(vm);
-        }
-
-        public IActionResult ConfirmarDel(int Id)
-        {
-            var prod = _ctx.Produtos.Find(Id);
+            var prod = await _produtoRepository.GetAsync(Id);
             var pro = new ProdutoIndexVM()
             {
                 Id = Id,
@@ -124,17 +91,24 @@ namespace dgs.Store2.UI.Controllers
             return View(pro);
         }
 
-        public IActionResult Excluir(int Id)
+        public async Task<IActionResult> Excluir(int Id)
         {
-            var pro = _ctx.Produtos.Find(Id);
-            _ctx.Produtos.Remove(pro);
-            _ctx.SaveChanges();
-            return RedirectToAction("Index");
+            var pro = await _produtoRepository.GetAsync(Id);
+
+            if (pro == null)
+            {
+                return BadRequest();
+            }
+
+            _produtoRepository.Delete(pro);
+            await _uow.CommitAsync();
+
+            return NoContent();
         }
 
-        private void addCategoriasToModel(ProdutoEditVM model)
+        private async Task addCategoriasToModel(ProdutoAddEditVM model)
         {
-            var categorias = _ctx.Categorias.ToList();
+            var categorias = await _categoriaRepository.GetAsync();
             model.Categorias = categorias.Select(x => new SelectListItem() { Value = x.Id.ToString(), Text = x.Nome });
 
         }
