@@ -47,17 +47,16 @@ namespace dgs.Store2.UI.Controllers
                 };
 
                 var identity = new ClaimsIdentity(claims,
-                        CookieAuthenticationDefaults.AuthenticationScheme,
-                        "nomeUsuario",
-                        string.Join(", ", usr.Perfis.Select(x => x.Nome)));
+                                                  CookieAuthenticationDefaults.AuthenticationScheme,
+                                                  "nomeUsuario",
+                                                  string.Join(", ", usr.Perfis.Select(x => x.Nome)));
                 await HttpContext.SignInAsync(
                     new ClaimsPrincipal(identity),
                     new AuthenticationProperties()
                     {
-                        ExpiresUtc = DateTime.UtcNow.AddMinutes(30)
+                        ExpiresUtc = DateTime.UtcNow.AddMinutes(30) // pra nao pegar o utc do brasil
                     }
                     );
-
             }
 
             if (string.IsNullOrEmpty(returnURL))
@@ -73,10 +72,8 @@ namespace dgs.Store2.UI.Controllers
                 else
                 {
                     return RedirectToAction("index", "home");
-                }
-                
-            }
-            
+                }                
+            }            
         }
         public async Task<IActionResult> LogOff()
         {

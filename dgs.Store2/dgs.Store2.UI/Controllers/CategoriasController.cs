@@ -29,18 +29,15 @@ namespace dgs.Store2.UI.Controllers
             _uow = uow;
         }
         public async Task<IActionResult> Index()
-        {            
-
+        {
             var cats = (await _categoriaRepository.GetAsync()).Select(x => x.ToCategoriaIndexVM());
-
 
             return View(cats);
         }
 
         [HttpGet]
         public async Task<IActionResult> AddEdit(int Id)
-        {
-              
+        {              
             var model = new CategoriaAddEditVM();
             
             if(Id != 0)
