@@ -55,8 +55,17 @@ Requests simples que não usam CORS:
 Liberando o acesso:
     1 - se tiver acesso ao backend:
         configurar com * no server
+		    Startup.cs:
+			     app.UseCors(x =>
+            {
+                x.AllowAnyMethod();
+                x.AllowAnyOrigin();
+                x.AllowAnyHeader();
+            });
     2 - se só tiver acesso ao front:
         precisa usar um proxy que ira colocar * no  header ex:
 		   fetch("https://cors-anywhere.herokuapp.com/https://o_endereco_da_api_public_e_porta
+   Obs:
+      PATCH tem que passar em maiusculo, com minusculo não reconheceu e deu erro de CORS
 		   
         	
