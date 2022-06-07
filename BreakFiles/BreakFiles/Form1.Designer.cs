@@ -97,7 +97,7 @@ namespace ReplaceCV
             this.txtLinhasPorArquivo.Name = "txtLinhasPorArquivo";
             this.txtLinhasPorArquivo.Size = new System.Drawing.Size(75, 20);
             this.txtLinhasPorArquivo.TabIndex = 5;
-            this.txtLinhasPorArquivo.Text = "500";
+            this.txtLinhasPorArquivo.Text = "600";
             this.txtLinhasPorArquivo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
