@@ -63,6 +63,13 @@ namespace Dsp
             app.UseDefaultFiles();
             app.UseStaticFiles();
 
+            app.UseCors(x =>
+            {
+                x.AllowAnyMethod();
+                x.AllowAnyOrigin();
+                x.AllowAnyHeader();
+            });
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
