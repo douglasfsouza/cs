@@ -1,0 +1,30 @@
+﻿@model GTIAspMVC.Models.GTICliente
+<style>
+    .btn {
+        background-color: #00ff90;
+        border: solid;
+        border-radius: 5px;
+        border-color: seagreen;
+        color: blue;
+        padding: 4px;
+        font-family: Verdana, Geneva;
+        font-size: 20px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+        .btn:hover {
+            background-color: #b6ff00;
+        }
+</style>
+<form method="post" action="/clientes/excluir">
+    <div>
+        <input name="Id" type="number" value=@Model.Id hidden />
+        <h1>Exclusão</h1>
+        <h3>Cliente : @Model.Nome</h3>
+        <br/>
+        <a href="/clientes" class="btn">Cancelar</a>
+        <button type="submit" class="btn">Excluir</button>
+    </div>
+</form>
+

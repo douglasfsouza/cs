@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+    
+    <style>
+        ul {
+            list-style-type: none;
+            background-color: #05aa6e;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                text-decoration: none;
+                font-family: Verdana, Geneva;
+                padding: 3px;
+            }
+
+                li a:hover {
+                    background-color: #b6ff00;
+                }
+
+        active {
+            background-color: #00ff90;
+            font-size: x-large;
+        }
+
+        inactive {
+            background-color: #000000;
+        }
+
+        footer {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>    
+</head>
+<body>
+    <nav>
+        <ul>
+            <li> <a href="/">Home</a></li>
+            <li><a href="/clientes">Clientes</a></li>
+        </ul>
+    </nav>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>Test by Douglas</footer>
+</body>
+</html>

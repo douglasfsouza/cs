@@ -1,0 +1,276 @@
+﻿@model GTIAspMVC.Models.GTIClienteVM
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .linha {
+        background-color: aqua;
+        padding: 2px;
+        display: flex;
+        flex-direction: row;
+        width: 1020px;
+    }
+
+    .campo {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .campoCEP {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0 5px 5px;
+    }
+
+    #txtNome {
+        width: 805px;
+    }
+
+    #txtEnderecoCEP {
+        width: 100px;
+    }
+
+    #txtNumero {
+        width: 75px;
+    }
+
+    #txtEnderecoCidade {
+        width: 140px;
+    }
+
+    #selEnderecoUF {
+        width: 50px;
+        height: 20px;
+    }
+
+    #txtDataNascimento {
+        width: 150px;
+    }
+
+    #txtOrgaoExpedicao {
+        width: 130px;
+    }
+
+    #selUFExpedicao {
+        width: 100px;
+        height: 20px;
+    }
+
+    #selSexo {
+        width: 100px;
+        height: 20px;
+    }
+
+    #selEstadoCivil {
+        width: 150px;
+        height: 20px;
+    }
+
+    .campoHlp {
+        padding: 23px 5px 5px 0;
+        height: 30px;
+    }
+
+    .btnHlp {
+        background-color: DodgerBlue;
+        border: none;
+        color: white;
+        padding: 0;
+        font-size: 15px;
+        padding: 2px;
+        cursor: pointer;
+    }
+
+        .btnHlp:hover {
+            background-color: RoyalBlue;
+        }
+
+    .btn {
+        background-color: #00ff90;
+        border: solid;
+        border-radius: 5px;
+        border-color: seagreen;
+        color: blue;
+        padding: 4px;
+        font-family: Verdana, Geneva;
+        font-size: 20px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+        .btn:hover {
+            background-color: #b6ff00;
+        }
+
+    .actions {
+        width: 1025px;
+        height: 35px;
+        align-items: center;
+        background-color: mediumaquamarine;
+        justify-content: space-between;
+        display: flex;
+</style>
+<form method="post" action="/clientes/salvar">
+    <h1>Cliente</h1>
+    <input type="number" name="Id" value="@Model.Id" hidden/>
+    <div class="linha">
+        <div class="campo">
+            <label>CPF*</label>
+            <input type="text" name="CPF" value="@Model.CPF" autofocus required />
+        </div>
+        @*<div>
+            <label asp-for="CPF" class="form-label"></label>
+            <input asp-for="CPF" class="form-control" autofocus required>
+            <span asp-validation-for="CPF" class="invalid"></span>
+        </div>*@
+
+        <div class="campo">
+            <label>Nome*</label>
+            <input id="txtNome" type="text" name="Nome" value="@Model.Nome" required />
+        </div>
+    </div>
+
+    <div class="linha">
+        <div class="campo">
+            <label>RG</label>
+            <input type="text" name="RG" value="@Model.RG" />
+        </div>
+
+        <div class="campo">
+            <label>Data Expedição</label>
+            <input type="date" name="DataExpedicao" value="@Model.DataExpedicao?.ToString("yyyy-MM-dd")" />
+        </div>
+
+        <div class="campo">
+            <label>Orgão Expedição</label>
+            <input id="txtOrgaoExpedicao" type="text" name="OrgaoExpedicao" value="@Model.OrgaoExpedicao" />
+        </div>
+
+        <div class="campo">
+            <label>UF Expedição</label>
+            <select id="selUFExpedicao" asp-for="UF" asp-items="Model.UFs">
+            </select>
+        </div>
+
+        <div class="campo">
+            <label>Data de Nascimento*</label>
+            <input id="txtDataNascimento" type="date" name="DataNascimento" value="@Model.DataNascimento.ToString("yyyy-MM-dd")" required />
+        </div>
+
+        <div class="campo">
+            <label>Sexo*</label>
+            <select id="selSexo" asp-for="Sexo" asp-items="Model.SexoList" required>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label>Estado Civil*</label>
+            <select id="selEstadoCivil" asp-for="EstadoCivil" asp-items="Model.EstadoCivilList">
+            </select>
+        </div>
+    </div>
+
+    <h1>Endereço</h1>
+
+    <div class="linha">
+        <div class="campoCEP" name="CEP">
+            <label>CEP*</label>
+            <input id="txtEnderecoCEP" type="text" name="EnderecoCEP" value="@Model.EnderecoCEP" required />
+        </div>
+
+        <div class="campoHlp">
+            <button type="button" class="btnHlp" onclick="handleClickCep()"><i class="fa fa-search"></i></button>
+        </div>
+
+        <div class="campo">
+            <label>Rua*</label>
+            <input type="text" id="txtEnderecoRua" name="EnderecoLogradouro" value="@Model.EnderecoLogradouro" required />
+        </div>
+
+        <div class="campo">
+            <label>Número*</label>
+            <input id="txtNumero" type="text" name="EnderecoNumero" value="@Model.EnderecoNumero" required />
+        </div>
+
+        <div class="campo">
+            <label>Complemento</label>
+            <input type="text" id="txtEnderecoComplemento" name="EnderecoComplemento" value="@Model.EnderecoComplemento" />
+        </div>
+
+        <div class="campo">
+            <label>Bairro*</label>
+            <input type="text" id="txtEnderecoBairro" name="EnderecoBairro" value="@Model.EnderecoBairro" required />
+        </div>
+
+        <div class="campo">
+            <label>Cidade*</label>
+            <input id="txtEnderecoCidade" type="text" name="EnderecoCidade" value="@Model.EnderecoCidade" required />
+        </div>
+
+        <div class="campo">
+            <label>UF*</label>
+            <select id="selEnderecoUF" asp-for="EnderecoUF" asp-items="Model.UFs" required>
+            </select>
+        </div>
+    </div>
+    <div class="actions">
+        <a class="btn" href="/Clientes">Cancelar</a>
+        <button class="btn" type="submit">Atualizar</button>
+    </div>
+</form>
+
+<script>
+    async function handleClickCep() {
+        
+        let cep = document.getElementById("txtEnderecoCEP").value;
+        if (!cep) {
+            alert("Cep não informado");
+            return;
+        }
+
+        if (cep.replace("-", "").replace(".", "").length < 8) {
+            alert("Cep inválido");
+            return;
+        }
+
+
+        await buscarCep(cep);            
+    }
+
+    async function buscarCep(cep) {
+        const url = `http://viacep.com.br/ws/${cep}/json`;
+        console.log(url);
+        await fetch(url)
+            .then(response => {
+                return _parseJSON(response)
+            }).
+            then((obj) => {
+                mostrarCep(obj);
+            })
+            .catch((ex) => {
+                alert("Erro ao consultar o Cep: Erro: " + ex);
+            });           
+    }
+
+    function _parseJSON(response) {
+        return response.text().then(function (text) {
+            return text ? JSON.parse(text) : {}
+        })
+    }
+
+    function mostrarCep(cep) {
+        let dCep = document.getElementById("txtEnderecoCEP");
+        let dRua = document.getElementById("txtEnderecoRua");
+        let dCidade = document.getElementById("txtEnderecoCidade");
+        let dBairro = document.getElementById("txtEnderecoBairro");
+        let dUF = document.getElementById("selEnderecoUF");
+        let dCompl = document.getElementById("txtEnderecoComplemento");
+
+        if (cep.cep) dCep.value = cep.cep;
+        if (cep.logradouro) dRua.value = cep.logradouro;
+        if (cep.complemento) dCompl.value = cep.complemento;
+        if (cep.localidade) dCidade.value = cep.localidade;
+        if (cep.bairro) dBairro.value = cep.bairro;
+        if (cep.uf) dUF.value = cep.uf;
+    }   
+</script>

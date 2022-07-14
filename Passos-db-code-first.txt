@@ -65,6 +65,13 @@ Para publicar foi necessario dar permissao no sqlServer:
 		GRANT VIEW ANY COLUMN MASTER KEY DEFINITION TO PUBLIC;
 		GO
 		GRANT VIEW ANY COLUMN ENCRYPTION KEY DEFINITION TO PUBLIC;
+		Obs:
+		   - publicar para pasta e nao web deploy é mais facil e funciona
+		   - precisa incluir o usuario do windows no grupo de usuarios do iis no painel de controle
+		   - passar usuario e senha na connection string
+		   - logar com o usuario do windows no iis
+		   - para o react precisa habilitar o https no iis porque a netlify exige https
+		   
 No web.config:
 <connectionStrings>
     <add name="Dougl" connectionString="server=localhost\SQLEXPRESS;database=aspnet-dgs;uid=dgs;" />

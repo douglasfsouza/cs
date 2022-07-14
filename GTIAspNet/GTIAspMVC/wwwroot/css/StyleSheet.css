@@ -1,0 +1,109 @@
+﻿.linha {
+    background-color: aqua;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    width: 1020px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.campoCEP {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0 5px 5px;
+}
+
+#txtNome {
+    width: 805px;
+}
+
+#txtEnderecoCEP {
+    width: 100px;
+}
+
+#txtNumero {
+    width: 75px;
+}
+
+#txtEnderecoCidade {
+    width: 140px;
+}
+
+#selEnderecoUF {
+    width: 50px;
+    height: 20px;
+}
+
+#txtDataNascimento {
+    width: 150px;
+}
+
+#txtOrgaoExpedicao {
+    width: 130px;
+}
+
+#selUFExpedicao {
+    width: 100px;
+    height: 20px;
+}
+
+#selSexo {
+    width: 100px;
+    height: 20px;
+}
+
+#selEstadoCivil {
+    width: 150px;
+    height: 20px;
+}
+
+.campoHlp {
+    padding: 23px 5px 5px 0;
+    height: 30px;
+}
+
+.btnHlp {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 0;
+    font-size: 15px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+    .btnHlp:hover {
+        background-color: RoyalBlue;
+    }
+
+.btn {
+    background-color: #00ff90;
+    border: solid;
+    border-radius: 5px;
+    border-color: seagreen;
+    color: blue;
+    padding: 4px;
+    font-family: Verdana, Geneva;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+    .btn:hover {
+        background-color: #b6ff00;
+    }
+
+.actions {
+    width: 1025px;
+    height: 35px;
+    align-items: center;
+    background-color: mediumaquamarine;
+    justify-content: space-between;
+    display: flex;
+}
+ 
