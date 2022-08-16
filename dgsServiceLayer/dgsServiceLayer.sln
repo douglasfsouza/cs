@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dgsServiceLayer", "dgsServiceLayer\dgsServiceLayer.csproj", "{B0406339-944F-497F-88F3-41196A2CB010}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0406339-944F-497F-88F3-41196A2CB010}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0406339-944F-497F-88F3-41196A2CB010}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0406339-944F-497F-88F3-41196A2CB010}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0406339-944F-497F-88F3-41196A2CB010}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {249AD87A-F344-4DEE-8708-390BBBC4E4FA}
+	EndGlobalSection
+EndGlobal

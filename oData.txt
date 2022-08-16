@@ -1,0 +1,8 @@
+Integrar api asp.net core com odata:
+ - Instalar o pacote Microsoft.AspNetCore.oData
+ - No ConfigureServices
+      services.addOData() ou AddODataQueryFilter() para versoes superiores a 7.4;
+	  
+ - No Controller
+     [EnableQuery]
+	 trocar INumerable por IQuerable

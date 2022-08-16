@@ -1,0 +1,33 @@
+Cookies
+
+Serve para armazenar dados na sessão do usuario,
+ex: lembrar o nome do usuario e senha na tela de login
+    ou guardar um token
+ 
+HttpCookie cookie = new HttpCookie("myCookie", "123");
+cookie.expires = DateTime.Now.AddMinutes(120);
+Response.Cookies.Add(cookie);
+funcionou com webforms e mvc framework
+        Aplicativo Web Asp.net Core -> Este não usa controlador, core não usa HttpCookie
+		Aplicativo Web Asp.net framework - tem HttpCookie
+		Asp.NET Core Web App MVC -> Core não usa HttpCookie
+		Usando Aplicativo console dá para gravar e ler, mas não faz sentido porque não tem o browser;
+
+Para ler:
+   HttpCookie cookie = Request.Cookies.Get("myCookie");
+   if (cookie != null)
+   {
+		Label.text = cookie.Value;
+   }
+
+Para adicionar com Core:
+   Response.Cookies.Append("core","API");
+   
+pode ser só do servidor ou servidor e cliente
+httpOnly = true (so servidor)
+
+Namespace System.Web
+	
+referencias:
+  site tornese um programador explica bem
+      https://www.torneseumprogramador.com.br/

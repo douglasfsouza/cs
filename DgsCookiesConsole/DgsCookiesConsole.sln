@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DgsCookiesConsole", "ConsoleApp6\DgsCookiesConsole.csproj", "{A011BE06-A3FB-4AF2-BFDE-A0136C1E8E35}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A011BE06-A3FB-4AF2-BFDE-A0136C1E8E35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A011BE06-A3FB-4AF2-BFDE-A0136C1E8E35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A011BE06-A3FB-4AF2-BFDE-A0136C1E8E35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A011BE06-A3FB-4AF2-BFDE-A0136C1E8E35}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3789BBC2-2ED9-45CE-AAFE-9D52AF94B0A4}
+	EndGlobalSection
+EndGlobal

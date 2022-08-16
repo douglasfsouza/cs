@@ -22,6 +22,9 @@ namespace WebForms
         ClientServiceReference.Cliente cliente = new ClientServiceReference.Cliente();
         protected void Page_Load(object sender, EventArgs e)
         {
+            HttpCookie cookie = new HttpCookie("myCookie", "1234");
+            cookie.Expires = DateTime.Now.AddMinutes(120);
+            Response.Cookies.Add(cookie);
             DataSet ds = new DataSet();
             ds = clientService.GetClienteRecords();
             grdClients.DataSource = ds;

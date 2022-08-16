@@ -1,69 +1,236 @@
-lista.Add(new TableColumn()
+ 
+            lista.Add(new TableColumn()
             {
-                name = "PURCHORDERCODE",
+                name = "RPTACP_P",
                 dataType = "db_Alpha",
-                mandatory = true,
-                size = 50,
-                description = "Id Pedido"
-            });
-            lista.Add(new TableColumn()
-            {
-                name = "ITM_DET",
-                dataType = "db_Numeric",
-                mandatory = true,
-                size = 7,
-                description = "Código Item"
-            });
-            lista.Add(new TableColumn()
-            {
-                name = "QTDPED_DET",
-                dataType = "db_Float",
-                dataTypeSub = "st_Quantity",
-                mandatory = true,
-                size = 11,
-                description = "Quantidade"
-            });
-            lista.Add(new TableColumn()
-            {
-                name = "EMB_DET",
-                dataType = "db_Numeric",
-                mandatory = true,
-                size = 5,
-                description = "Embalagem"
-            });
-            lista.Add(new TableColumn()
-            {
-                name = "FOR_CST_DET",
-                dataType = "db_Float",
-                dataTypeSub = "st_Quantity",
+                size = 20,
                 mandatory = false,
-                size = 11,
-                description = "Custo Fornecedor"
+                description = "Código Relatório Aceite Percentual"
             });
+
             lista.Add(new TableColumn()
             {
-                name = "DSC_DET",
-                dataType = "db_Float",
-                dataTypeSub = "st_Price",
+                name = "RPTACP_VU",
+                dataType = "db_Alpha",
+                size = 20,
                 mandatory = false,
-                size = 11,
-                description = "Desconto"
+                description = "Código Relatório Aceite Valor Unitário"
             });
+
             lista.Add(new TableColumn()
             {
-                name = "DESP_ACES_DET",
-                dataType = "db_Float",
-                dataTypeSub = "st_Price",
+                name = "RPTACP_CV",
+                dataType = "db_Alpha",
+                size = 20,
                 mandatory = false,
-                size = 11,
-                description = "Despesas Acessórias"
+                description = "Código Relatório Aceite Crescimento Valor"
             });
+
             lista.Add(new TableColumn()
             {
-                name = "PEDD_FRETE_VAL",
-                dataType = "db_Float",
-                dataTypeSub = "st_Price",
+                name = "RPTACP_CQ",
+                dataType = "db_Alpha",
+                size = 20,
                 mandatory = false,
-                size = 11,
-                description = "Valor Frete"
+                description = "Código Relatório Aceite Crescimento Qtde"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTACP_VF",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Aceite Valor Fixo"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTACP_VFP",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Aceite Valor Fixo Prg"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTACP_D",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Aceite Desconto"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTACP_FV",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Aceite Faixa Valor"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTACP_FQ",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Aceite Faixa Qtde"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTACP_S",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Aceite Share"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTACP_MG",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Aceite Margem Garantida"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTACP_PG",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Aceite Ponta Gôndola"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTACP_VE",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Aceite Valor Estoque"
+            });
+
+
+            
+            lista.Add(new TableColumn()
+            {
+                name = "RPTAPU_P",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Apuração Percentual"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTAPU_VU",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Apuração Valor Unitário"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTAPU_CV",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Apuração Crescimento Valor"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTAPU_CQ",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Apuração Crescimento Qtde"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTAPU_VF",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Apuração Valor Fixo"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTAPU_VFP",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Apuração Valor Fixo Prg"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTAPU_D",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Apuração Desconto"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTAPU_FV",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Apuração Faixa Valor"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTAPU_FQ",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Apuração Faixa Qtde"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTAPU_S",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Apuração Share"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTAPU_MG",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Apuração Margem Garantida"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTAPU_PG",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Apuração Ponta Gôndola"
+            });
+
+            lista.Add(new TableColumn()
+            {
+                name = "RPTAPU_VE",
+                dataType = "db_Alpha",
+                size = 20,
+                mandatory = false,
+                description = "Código Relatório Apuração Valor Estoque"
             });

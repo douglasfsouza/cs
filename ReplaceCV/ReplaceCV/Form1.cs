@@ -96,6 +96,7 @@ namespace ReplaceCV
                         line = line.Replace("sap.sbocarone.", "%placeholder%.");
                         line = line.Replace("SBO_CARONE", "%PLACEHOLDER%");
                         line = line.Replace("SBOVARSISDEMO", "%PLACEHOLDER%");
+                        line = line.Replace("HOMOLOGACAO", "%PLACEHOLDER%");
 
                         if (line.Contains("schemaName="))
                         {
