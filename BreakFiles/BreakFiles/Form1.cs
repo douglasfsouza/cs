@@ -82,6 +82,9 @@ namespace ReplaceCV
             long linesPerFile = Convert.ToInt64(txtLinhasPorArquivo.Text);
             if (linesPerFile == 0) linesPerFile = 500;
 
+            long linesCabec = Convert.ToInt64(txtQtdCab.Text);
+            if (linesCabec == 0) linesCabec = 1;
+
             foreach (var file in files)
             {
                 if (!file.EndsWith(".ret"))
@@ -125,9 +128,14 @@ namespace ReplaceCV
                         {
                             newFileName = $"{file.Substring(0, file.Length - 4)}-{++countFiles}.ret";
                             w = File.CreateText(newFileName);
-                            w.WriteLine(cab1);
-                            w.WriteLine(cab2);
-                            w.WriteLine(cab3);
+                            if (linesCabec >=1)
+                                w.WriteLine(cab1);
+
+                            if (linesCabec >=2)
+                                w.WriteLine(cab2);
+
+                            if (linesCabec >=3)
+                                w.WriteLine(cab3);
                         }
                     }
                     r.Close();

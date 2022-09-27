@@ -38,6 +38,8 @@ namespace ReplaceCV
             this.grdFiles = new System.Windows.Forms.DataGridView();
             this.txtLinhasPorArquivo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtQtdCab = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdFiles)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,11 +111,31 @@ namespace ReplaceCV
             this.label2.TabIndex = 6;
             this.label2.Text = "Qtde Linhas";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(875, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Qtde Cabeçalho";
+            // 
+            // txtQtdCab
+            // 
+            this.txtQtdCab.Location = new System.Drawing.Point(875, 102);
+            this.txtQtdCab.Name = "txtQtdCab";
+            this.txtQtdCab.Size = new System.Drawing.Size(79, 20);
+            this.txtQtdCab.TabIndex = 8;
+            this.txtQtdCab.Text = "2";
+            this.txtQtdCab.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(959, 237);
+            this.Controls.Add(this.txtQtdCab);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtLinhasPorArquivo);
             this.Controls.Add(this.grdFiles);
@@ -142,6 +164,8 @@ namespace ReplaceCV
         private System.Windows.Forms.DataGridView grdFiles;
         private System.Windows.Forms.TextBox txtLinhasPorArquivo;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtQtdCab;
     }
 }
 
