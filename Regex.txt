@@ -1,0 +1,53 @@
+*****************************
+*Regex - Regular expressions*
+*****************************
+^ - Indica o inicio do input
+\A - igual ^, mas nao efetado pela opacao de multiplas linhas
+$ - Indica o final do input
+\Z - igual $, mas nao efetado pela opacao de multiplas linhas
+\z - final do input sem excecao
+{n} - Quantidade de vezes que caracter repete
+{n,m} - Quantidade de vezes que caracter repete de n ate m
+[pcaracteres] - Encontra o caracter especificado em 'pcaracteres' 
+[^pcaracteres] - Encontra o caracter NAO especificado em 'pcaracteres' 
+[pIni-pFim] - Encontra qualquer caracter de pIni a pFim
+. - Encontra qualquer caracter exceto \n
+? - Indica quer o caracter é opcional
++ - o caracter tem que aparecer uma ou mais vezes
+* - o caracter pode nao aparecer ou aparecer n vezes
+| - Or
+\w - Encontra qualquer letra, digito decimal ou underline
+\W - Encontra qualquer caracter exceto letra, digito decimal ou underline
+\s - Encontra espaco
+\S - Encontra qualquer caracter exceto espaco
+\d - Encontra qualquer digito decimal
+\D - Encontra qualquer caracter exceto digito decimal
+
+Grupos:
+(pSub) - Captura pSub em um grupo nao nomeado
+
+Substituicoes:
+$n - substitui o valor de um grupo especificado por n
+
+scapes:
+\r - encontra carriage return
+\n - Encontra quebra de linha
+\t - Encontra tab
+[\b] - encontra backspace
+  
+
+validar o cpf:
+  ^[0-9]{3}[.]?[0-9]{3}[.]?[0-9]{3}[-]?[0-9]{2}$
+
+extrair o model de response.data:  
+({[\w\W]+})
+**************
+Pegar so um campo de response.data:
+Regex regex = new Regex("[\"]?JdtNum[\"] : [0-9]+");
+                    Match match = regex.Match(response.data);
+                    result = new Dictionary<string, object>();
+                    result["JdtNum"] = Convert.ToInt64(match.Value.Split(':')[1]);
+**************
+
+links:
+  regexstorm.net/tester

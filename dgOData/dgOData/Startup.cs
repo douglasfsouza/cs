@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OData.Edm;
 using Newtonsoft.Json;
 
 namespace dgOData
@@ -35,7 +36,8 @@ namespace dgOData
                                   builder =>
                                   {
                                       builder.WithOrigins("https://localhost:44354/weatherforecast",
-                                                          "http://www.contoso.com");
+                                                          "http://www.contoso.com",
+                                                          "http://127.0.0.1:5500");
                                   });
             });
 
@@ -67,14 +69,27 @@ namespace dgOData
 
             app.UseRouting();
 
-            app.UseCors(MyAllowSpecificOrigins);
+            //app.UseCors(MyAllowSpecificOrigins);
+
+            app.UseCors(x =>
+            {
+                x.AllowAnyMethod();
+                x.AllowAnyHeader();
+                x.AllowAnyOrigin();
+            });
 
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapODataRoute("odata", "odata", GetEdmModel());
             });
+        }
+
+        private IEdmModel GetEdmModel()
+        {
+            throw new NotImplementedException();
         }
     }
 }

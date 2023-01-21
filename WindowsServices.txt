@@ -1,0 +1,19 @@
+Windows Services 
+  21-01-2023
+  
+Para criar um serviço no windows pelo c#
+   - Criar um projeto tipo windows service no windows 2022 por exemplo
+   - colocar a logica em service1.cs, onStart,onStop..
+   - Incluir um instalador
+        botao direito na tela de design, adicionar instalador
+	    definir algumas propriedades do instalador como nome, descricao, que serao mostrados na tela de servicos do windows
+   - compilar a solucao
+   - instalar no windows   
+         no prompt de comando, ir ate a pasta de debug do projeto:
+		    instalar com o comando 
+                c:\Windows\Microsoft.NET\Framework64\v2.0.50727\InstallUtil.exe myService.exe
+			se for atualizar deve antes desinstalar:
+			    c:\Windows\Microsoft.NET\Framework64\v2.0.50727\InstallUtil.exe myService.exe /u
+   - pronto, verificar o servico em services.msc
+   - se for instalar em outra maquina pode copiar a pasta debug como instalador
+			

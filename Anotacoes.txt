@@ -58,3 +58,14 @@ Sealed -> Para que o metodo não seja implementado, fica fechado para herança, en
 Extract Method -> No menu popup do botao direito apos selecionar parte do codigo para gerar um metodo
 
 EventViewer do windows para mostrar dados do log
+
+Erros:
+   Não pára no breakpoint para depurar
+      pode ser 'Otimizar o código' em propriedades do projeto, seção 'compilar',  tem que deixar desmarcado
+      pode ser:
+         Nas propriedades do projeto
+             a url do projeto não condiz com servico instalado no iis porque foi alterada
+             ex. estava com http://localhost:8020/odata
+                 foi alterado para http://localhost:38758/
+                    continuou funcionando, mas parou de parar nos breakpoints
+	  
