@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyName>Dsp</AssemblyName>
     <UserSecretsId>b231d2ad-1611-492d-89bc-ddb7c919dfdb</UserSecretsId>
+    <Configurations>Debug;Release;tst</Configurations>
   </PropertyGroup>
 
   <ItemGroup>

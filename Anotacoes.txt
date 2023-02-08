@@ -59,6 +59,11 @@ Extract Method -> No menu popup do botao direito apos selecionar parte do codigo
 
 EventViewer do windows para mostrar dados do log
 
+Para ver o erro no get:
+this.ModelState["entity"].Errors[0].Exception.Message
+entity é o parametro recebido
+
+
 Erros:
    Não pára no breakpoint para depurar
       pode ser 'Otimizar o código' em propriedades do projeto, seção 'compilar',  tem que deixar desmarcado

@@ -70,8 +70,9 @@ Para publicar foi necessario dar permissao no sqlServer:
 		   - precisa incluir o usuario do windows no grupo de usuarios do iis no painel de controle
 		   - passar usuario e senha na connection string
 		   - logar com o usuario do windows no iis
+		   - se for criar novo servico no iis cuidado com o nome do pool, pois foi feito grant no sql para o DefaultAppPool
 		   - para o react precisa habilitar o https no iis porque a netlify exige https
-		   
+		   - liberar a porta no firewall
 No web.config:
 <connectionStrings>
     <add name="Dougl" connectionString="server=localhost\SQLEXPRESS;database=aspnet-dgs;uid=dgs;" />
