@@ -21,7 +21,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.SqlServer.Management.SqlParser" Version="160.20216.14" />
     <PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="161.44091.28" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Shared.Management.Objects.for.SQL.Server.2012.SP1" Version="11.0.3000" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
     <PackageReference Include="System.Data.OleDb" Version="5.0.0" />
