@@ -6,3 +6,6 @@ Integrar api asp.net core com odata:
  - No Controller
      [EnableQuery]
 	 trocar INumerable por IQuerable
+	 
+Pegar o erro do model no backend:
+  this.ModelState["entity"].Errors[0].Exception.Message

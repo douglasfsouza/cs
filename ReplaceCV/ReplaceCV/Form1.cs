@@ -92,8 +92,12 @@ namespace ReplaceCV
                     {
                         string line = r.ReadLine();
 
+                        //maiusculas = nome do banco
+                        //minusculas = nome do pacote
+
                         line = line.Replace("development.views.", "%placeholder%.");
                         line = line.Replace("sap.sbocarone.", "%placeholder%.");
+                        line = line.Replace("sap.homologacao.", "%placeholder%.");
                         line = line.Replace("SBO_CARONE", "%PLACEHOLDER%");
                         line = line.Replace("SBOVARSISDEMO", "%PLACEHOLDER%");
                         line = line.Replace("HOMOLOGACAO", "%PLACEHOLDER%");
@@ -105,6 +109,16 @@ namespace ReplaceCV
                                 errors++;
                             }
                         }
+
+                        if (line.Contains("<resourceUri>"))
+                        {
+                            if (!line.Contains("%"))
+                            {
+                                errors++;
+                            }
+                        }
+
+                        
                         w.WriteLine(line);
 
                     }
