@@ -83,7 +83,7 @@ namespace dgOData
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapODataRoute("odata", "odata", GetEdmModel());
+                //endpoints.MapODataRoute("odata", "odata", GetEdmModel());
             });
         }
 

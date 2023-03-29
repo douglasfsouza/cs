@@ -1,19 +1,30 @@
-﻿using System;
+﻿using DspODataFramework.infra.attributes;
+using DspODataFramework.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.OData;
 
 namespace DspODataFramework.Controllers
 {
-    public class ValuesController : ApiController
+     
+    public class ValuesController : ODataController
     {
         // GET api/values
+        [EnableQuery]
+
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            List<string> values = new List<string>();
+            values.Add("Douglas");
+            return values.AsEnumerable();
+            //return new string[] { "value1", "value2" };
         }
+
+
 
         // GET api/values/5
         public string Get(int id)
