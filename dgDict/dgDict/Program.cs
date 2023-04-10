@@ -21,6 +21,12 @@ namespace dgDict
             string s = y.ToString().PadLeft(7, '0');
             Console.WriteLine(s);
 
+            Dictionary<int, int> xxx = new Dictionary<int, int>()
+            {
+                {1, 1},
+                {2, 2},
+            };
+
 
             Dictionary<int, string > sem = new Dictionary<int, string > ();
             sem.Add(1, "domingo");

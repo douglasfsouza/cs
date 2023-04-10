@@ -39,7 +39,7 @@ namespace DgMongoDb
             }
 
             //alterar
-            Console.WriteLine("Alerar o registro:");
+            Console.WriteLine("Alterar o registro:");
             var filter = Builders<BsonDocument>.Filter.Eq("name", "brazil");
             var update = Builders<BsonDocument>.Update.Set("name", "brasil");
 
