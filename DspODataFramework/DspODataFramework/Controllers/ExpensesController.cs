@@ -13,6 +13,8 @@ using System.Web.Http.OData.Query;
 using System.Xml.Linq;
 using System.CodeDom;
 using DspODataFramework.Service;
+using System.Web.Http.OData.Extensions;
+using Amazon.Runtime.Internal.Util;
 
 namespace DspODataFramework.Controllers
 {
@@ -25,17 +27,86 @@ namespace DspODataFramework.Controllers
         //    _service = service;
         //}
 
-        [EnableQuery]
+        //[EnableQuery]
                
-        public async Task<PageResult<Expense>> Get(ODataQueryOptions<Expense> queryOptions, [FromODataUri] string key = null)
+        //public async Task<PageResult<Expense>> Get(ODataQueryOptions<Expense> queryOptions, [FromODataUri] string key = null)
+        //{
+        //    ExpenseService _service = new ExpenseService();
+        //    var lista = await _service.GetList(queryOptions.ToString());
+
+        //    foreach (var item in lista)
+        //    {
+        //        item.Code = item.Code ?? Guid.NewGuid().ToString();
+        //    }
+
+        //    List<Expense> l = new List<Expense>();
+
+        //    if (key != null)
+        //    {
+        //        foreach (var item in lista)
+        //        {
+        //            if (item.Code == key)
+        //            {
+        //                l.Add(item);
+        //            }
+        //        }
+        //        lista = l;
+        //    }
+
+        //    var enumerable = lista as IEnumerable<Expense>;
+        //    long count = lista.Count();
+
+        //    var result = new PageResult<Expense>(enumerable, null, count > 0 ? (long?)count : null);
+
+        //    return result;
+        //}
+
+        public async Task<IQueryable<Expense>> Get(ODataQueryOptions<Expense> queryOptions, [FromODataUri] string key = null)
         {
+            //List<Expense> lista = new List<Expense>();
+
+            //lista.Add ( new Expense
+            //{
+            //    Code = Guid.NewGuid().ToString(),
+            //    Value = 1000,
+            //    Year = 2023,
+            //    Month = 5,
+            //    Description = "Testao",
+            //    Type = "C"
+            //});
             ExpenseService _service = new ExpenseService();
             var lista = await _service.GetList(queryOptions.ToString());
 
-            var enumerable = lista as IEnumerable<Expense>;
-            long count = lista.Count();
+            foreach (var item in lista)
+            {
+                item.Code = item.Code ?? Guid.NewGuid().ToString();
+            }
 
-            var result = new PageResult<Expense>(enumerable, null, count > 0 ? (long?)count : null);
+            List<Expense> l = new List<Expense>();
+
+            if (key != null)
+            {
+                foreach (var item in lista)
+                {
+                    if (item.Code == key)
+                    {
+                        l.Add(item);
+                    }
+                }
+                lista = l;
+            }
+
+            var result = lista.AsQueryable<Expense>();
+            var count = lista.Count();
+            if (count > 0)
+            {
+                Request.ODataProperties().TotalCount = count;
+            }
+
+            if (queryOptions.SelectExpand?.SelectExpandClause != null)
+            {
+                Request.ODataProperties().SelectExpandClause = queryOptions.SelectExpand.SelectExpandClause;
+            }
 
             return result;
         }
@@ -47,7 +118,7 @@ namespace DspODataFramework.Controllers
             HttpResponseMessage response = new HttpResponseMessage();
 
             response.StatusCode = HttpStatusCode.OK;
-            response.Content = new StringContent("1", System.Text.Encoding.UTF8, "text/plain");
+            response.Content = new StringContent("699", System.Text.Encoding.UTF8, "text/plain");
             return ResponseMessage(response);
         }
 

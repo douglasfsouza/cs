@@ -14,7 +14,7 @@ namespace DspODataFramework.infra.attributes
         private List<string> _ignoreList;
         private List<PropertyInfo> _propertyInfos;
         private Type _modelType;
-        private ODataTableAttribute _tableAttribute;
+        private DgDataTableAttribute _tableAttribute;
         readonly List<string> _defaultFields;
 
         public List<string> IgnoreList
@@ -31,7 +31,7 @@ namespace DspODataFramework.infra.attributes
                 _modelType = value;
                 if (_modelType != null)
                 {
-                    _tableAttribute = _modelType.GetCustomAttribute<ODataTableAttribute>();
+                    _tableAttribute = _modelType.GetCustomAttribute<DgDataTableAttribute>();
                     _propertyInfos = _modelType.GetProperties(BindingFlags.Public | BindingFlags.Instance).ToList();
                 }
             }

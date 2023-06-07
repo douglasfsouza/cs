@@ -38,6 +38,8 @@ namespace DspODataFramework.infra.attributes
 
         public string Header { get; set; }
 
+        public string AggregationRole { get; set; } //dgs
+
         public string Tooltip { get; set; }
         public bool Creatable { get; set; } = true;
         public bool Updatable { get; set; } = true;

@@ -46,5 +46,7 @@ namespace DspODataFramework.infra.attributes
         public bool OnlyDisplay { get; set; }
 
         public bool IgnoreOnBackend { get; set; }
+
+       
     }
 }

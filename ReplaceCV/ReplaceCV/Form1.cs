@@ -101,6 +101,8 @@ namespace ReplaceCV
                         line = line.Replace("SBO_CARONE", "%PLACEHOLDER%");
                         line = line.Replace("SBOVARSISDEMO", "%PLACEHOLDER%");
                         line = line.Replace("HOMOLOGACAO", "%PLACEHOLDER%");
+                        line = line.Replace("SBODEMOBR", "%PLACEHOLDER%");
+                        line = line.Replace("S3RIAL", "%PLACEHOLDER%");
 
                         if (line.Contains("schemaName="))
                         {

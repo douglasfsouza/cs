@@ -18,6 +18,7 @@ using Microsoft.Data.Edm.Csdl;
 using Microsoft.Data.Edm.Library.Values;
 using System.Web.Http.OData.Routing.Conventions;
 using DspODataFramework.infra;
+using System.Reflection.Emit;
 
 namespace DspODataFramework
 {
@@ -161,7 +162,7 @@ namespace DspODataFramework
                         if (property != null)
                         {
                             SetODataAnnotations(edmModel, property, p, namespaces["sap"]);
-                            //SetSAPODataAnnotations(edmModel, property, p, namespaces["sap"]);
+                            SetSAPODataAnnotations(edmModel, property, p, namespaces["sap"]);
                         }
                     }
                 }
@@ -312,13 +313,15 @@ namespace DspODataFramework
         private static void SetSAPODataAnnotations(IEdmModel edmModel, EdmEntityType entityType, Type type, string ns)
         {
             var attrSAP = type.GetCustomAttribute<SAPODataEntityTypeAttribute>();
-            var attrOData = type.GetCustomAttribute<ODataTableAttribute>();
+            var attrOData = type.GetCustomAttribute<DgDataTableAttribute>();
             var attrHierarchy = type.GetCustomAttribute<SAPODataHierarchyAttribute>();
 
             var stringType = EdmCoreModel.Instance.GetString(true);
 
+          
+
             string label = attrOData?.LogicalName ?? attrSAP?.Label;
-            int semanticsId = (int)ODataTableAttribute.SemanticsEnum.None;
+            int semanticsId = (int)DgDataTableAttribute.SemanticsEnum.None;
 
             if (attrOData != null)
             {
@@ -458,6 +461,136 @@ namespace DspODataFramework
                 {
                     string name = "quickinfo";
                     var value = new EdmStringConstant(stringType, dateAttr.Tooltip);
+                    edmModel.SetAnnotationValue(property, ns, name, value);
+                }
+            }
+        }
+
+        private static void SetSAPODataAnnotations(IEdmModel edmModel, EdmStructuralProperty property, PropertyInfo propertyInfo, string ns)
+        {
+            var attr = propertyInfo.GetCustomAttribute<SAPODataPropertyAttribute>();
+            var stringType = EdmCoreModel.Instance.GetString(true);
+
+            if (attr != null)
+            {
+                string name = string.Empty;
+                EdmStringConstant value = null;
+
+                if (attr.DisplayFormat != null && attr.DisplayFormat != string.Empty)
+                {
+                    name = "display-format";
+                    value = new EdmStringConstant(stringType, attr.DisplayFormat);
+                    edmModel.SetAnnotationValue(property, ns, name, value);
+                }
+
+                if (attr.AgregationRole != SAPODataPropertyAttribute.AgregationRoleEnum.None)
+                {
+                    name = "aggregation-role";
+                    switch (attr.AgregationRole)
+                    {
+                        case SAPODataPropertyAttribute.AgregationRoleEnum.Dimension:
+                            value = new EdmStringConstant(stringType, "dimension");
+                            break;
+                        case SAPODataPropertyAttribute.AgregationRoleEnum.Measure:
+                            value = new EdmStringConstant(stringType, "measure");
+                            break;
+                    }
+                    edmModel.SetAnnotationValue(property, ns, name, value);
+                }
+
+                if (!attr.Creatable)
+                {
+                    name = "creatable";
+                    value = new EdmStringConstant(stringType, "false");
+                    edmModel.SetAnnotationValue(property, ns, name, value);
+                }
+
+                if (!attr.Updatable)
+                {
+                    name = "updatable";
+                    value = new EdmStringConstant(stringType, "false");
+                    edmModel.SetAnnotationValue(property, ns, name, value);
+                }
+
+                if (!attr.Filterable)
+                {
+                    name = "filterable";
+                    value = new EdmStringConstant(stringType, "false");
+                    edmModel.SetAnnotationValue(property, ns, name, value);
+                }
+
+                if (!attr.Sortable)
+                {
+                    name = "sortable";
+                    value = new EdmStringConstant(stringType, "false");
+                    edmModel.SetAnnotationValue(property, ns, name, value);
+                }
+
+                if (attr.Semantics != null && attr.Semantics.Trim() != string.Empty)
+                {
+                    name = "semantics";
+                    value = new EdmStringConstant(stringType, attr.Semantics);
+                    edmModel.SetAnnotationValue(property, ns, name, value);
+                }
+
+                if (attr.Tooltip != null && attr.Tooltip.Trim() != string.Empty)
+                {
+                    name = "quickinfo";
+                    value = new EdmStringConstant(stringType, attr.Tooltip);
+                    edmModel.SetAnnotationValue(property, ns, name, value);
+                }
+
+                if (attr.Label != null && attr.Label.Trim() != string.Empty)
+                {
+                    name = "label";
+                    value = new EdmStringConstant(stringType, attr.Label);
+                    edmModel.SetAnnotationValue(property, ns, name, value);
+                }
+
+                if (attr.Header != null && attr.Header.Trim() != string.Empty)
+                {
+                    name = "heading";
+                    value = new EdmStringConstant(stringType, attr.Header);
+                    edmModel.SetAnnotationValue(property, ns, name, value);
+                }
+
+                if (attr.FilterRestriction != null && attr.FilterRestriction.Trim() != string.Empty)
+                {
+                    name = "filter-restriction";
+                    value = new EdmStringConstant(stringType, attr.FilterRestriction);
+                    edmModel.SetAnnotationValue(property, ns, name, value);
+                }
+            }
+
+            var hierAttr = propertyInfo.GetCustomAttribute<SAPODataHierarchyAttribute>();
+            // Tratamento de hierarquia
+            if (hierAttr != null)
+            {
+                string name = string.Empty;
+                EdmStringConstant value = null;
+
+                if (hierAttr.IsKey)
+                {
+                    name = "hierarchy-node-for";
+                    value = new EdmStringConstant(stringType, propertyInfo.Name);
+                    edmModel.SetAnnotationValue(property, ns, name, value);
+                }
+                else if (!string.IsNullOrWhiteSpace(hierAttr.IsDrillDownFor))
+                {
+                    name = "hierarchy-drill-state-for";
+                    value = new EdmStringConstant(stringType, hierAttr.IsDrillDownFor);
+                    edmModel.SetAnnotationValue(property, ns, name, value);
+                }
+                else if (!string.IsNullOrWhiteSpace(hierAttr.IsLevelIndicatorFor))
+                {
+                    name = "hierarchy-level-for";
+                    value = new EdmStringConstant(stringType, hierAttr.IsLevelIndicatorFor);
+                    edmModel.SetAnnotationValue(property, ns, name, value);
+                }
+                else if (!string.IsNullOrWhiteSpace(hierAttr.IsParentFor))
+                {
+                    name = "hierarchy-parent-node-for";
+                    value = new EdmStringConstant(stringType, hierAttr.IsParentFor);
                     edmModel.SetAnnotationValue(property, ns, name, value);
                 }
             }

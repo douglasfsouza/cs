@@ -6,3 +6,8 @@ Erros:
 				      - selecione a referencia e veja as propriedades
 					  - remova a dependencia se necessário, isso força o vs a pegar a versão adicionada manualmente
 					    e não a instalada pelo nuget
+						
+  2 - Não pára no ponto de interrupção p/ debug:
+      Entrar no visualStudio com Administrador
+	  
+  

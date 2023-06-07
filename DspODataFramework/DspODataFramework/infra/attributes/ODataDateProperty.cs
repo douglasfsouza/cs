@@ -14,5 +14,7 @@ namespace DspODataFramework.infra.attributes
         }
 
         public bool OnlyTime { get; set; }
+
+        public string AggregationRole { get; set; }
     }
 }

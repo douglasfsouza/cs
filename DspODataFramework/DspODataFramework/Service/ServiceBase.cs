@@ -54,7 +54,7 @@ namespace DspODataFramework.Service
             {
                 Type type = typeof(T);
 
-                var attr = type.GetCustomAttribute<ODataTableAttribute>();
+                var attr = type.GetCustomAttribute<XODataTableAttribute>();
 
                 if (!string.IsNullOrWhiteSpace(attr?.PhysicalName))
                 {
@@ -1188,7 +1188,7 @@ namespace DspODataFramework.Service
 
             PropertyInfo[] properties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance);
 
-            ODataTableAttribute attrTable = type.GetCustomAttribute<ODataTableAttribute>();
+            DgDataTableAttribute attrTable = type.GetCustomAttribute<DgDataTableAttribute>();
 
             foreach (var p in properties)
             {

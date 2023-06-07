@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace DspODataFramework.infra.attributes
 {
     [System.AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
-    public sealed class ODataTableAttribute : Attribute
+    public sealed class XODataTableAttribute : Attribute
     {
         readonly string _physicalName;
 
@@ -23,7 +23,7 @@ namespace DspODataFramework.infra.attributes
         }
 
         // This is a positional argument
-        public ODataTableAttribute(string physicalName)
+        public XODataTableAttribute(string physicalName)
         {
             _physicalName = physicalName;
         }
