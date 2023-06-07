@@ -98,12 +98,12 @@ namespace ReplaceCV
                         line = line.Replace("development.views.", "%placeholder%.");
                         line = line.Replace("sap.sbocarone.", "%placeholder%.");
                         line = line.Replace("sap.homologacao.", "%placeholder%.");
+                        line = line.Replace("S3RIAL.", "%placeholder%.");
                         line = line.Replace("SBO_CARONE", "%PLACEHOLDER%");
                         line = line.Replace("SBOVARSISDEMO", "%PLACEHOLDER%");
                         line = line.Replace("HOMOLOGACAO", "%PLACEHOLDER%");
                         line = line.Replace("SBODEMOBR", "%PLACEHOLDER%");
-                        line = line.Replace("S3RIAL", "%PLACEHOLDER%");
-
+                        
                         if (line.Contains("schemaName="))
                         {
                             if (!line.Contains("%"))
