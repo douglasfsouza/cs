@@ -6,6 +6,7 @@ namespace ObjectFactory
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Implementando o padrão FactoryMethod do Gof - Gang of Four");
             Console.WriteLine("Escolha o lanche:");
             Console.WriteLine("hot-Hotdog, bau-Bauru ou xsa-X-Salada");
             var resposta = Console.ReadLine();
