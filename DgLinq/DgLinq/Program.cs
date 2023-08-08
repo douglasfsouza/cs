@@ -100,6 +100,7 @@ namespace DgLinq
             }
             Console.WriteLine();
             Console.WriteLine("Produtos com categoria ou sem:");
+            //left/right outer join
             var proQuery =
                     from p in pros
                     join c in cats on p.Category equals c.Id into categ

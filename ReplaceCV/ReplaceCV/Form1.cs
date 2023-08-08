@@ -97,6 +97,7 @@ namespace ReplaceCV
 
                         line = line.Replace("development.views.", "%placeholder%.");
                         line = line.Replace("sap.sbocarone.", "%placeholder%.");
+                        line = line.Replace("sap.sbodemobr.", "%placeholder%.");
                         line = line.Replace("sap.homologacao.", "%placeholder%.");
                         line = line.Replace("S3RIAL.", "%placeholder%.");
                         line = line.Replace("SBO_CARONE", "%PLACEHOLDER%");
