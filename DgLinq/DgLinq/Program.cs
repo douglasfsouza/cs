@@ -8,6 +8,9 @@ namespace DgLinq
     {
         static void Main(string[] args)
         {
+            decimal paydamount = Convert.ToDecimal("00000000") / 100;
+            Console.WriteLine(paydamount);
+
             string s = "1.90";            
             double dd = Convert.ToDouble(s)/100;
             decimal d = Convert.ToDecimal(s)/100;                      
@@ -31,6 +34,7 @@ namespace DgLinq
             pro.Description = "Book";
             pro.Category = 10;
             pro.Price = 100;
+            pro.Id = 0;
             pros.Add(pro);
 
             pro = new Products();
@@ -38,6 +42,7 @@ namespace DgLinq
             pro.Description = "Table";
             pro.Category = 20;
             pro.Price = 1000;
+            pro.Id = 0;
             pros.Add(pro);
 
             pro = new Products();
@@ -45,6 +50,7 @@ namespace DgLinq
             pro.Description = "Ball";
             pro.Category = 30;
             pro.Price = 90;
+            pro.Id = 0;
             pros.Add(pro);
 
             pro = new Products();
@@ -52,6 +58,8 @@ namespace DgLinq
             pro.Description = "Racket";
             pro.Category = 30;
             pro.Price = 90;
+            pro.PartnerId = 1;
+            pro.Id = 0;
             pros.Add(pro);
 
             pro = new Products();
@@ -59,6 +67,7 @@ namespace DgLinq
             pro.Description = "Without Category";
             pro.Category = 40;
             pro.Price = 50;
+            pro.Id = 0;
             pros.Add(pro);
 
             Category cat = new Category();
@@ -76,6 +85,25 @@ namespace DgLinq
             cat.Id = 30;
             cat.Description = "Sport";
             cats.Add(cat);
+
+            Partner partner = new Partner()
+            {
+                Id = 1,
+                Name = "MicrosoftPress"
+            };
+            List<Partner> partners = new List<Partner>();
+            partners.Add(partner);
+
+            Console.WriteLine();
+            Console.WriteLine("Join com 3 tabelas:");
+            var tres = from p in pros
+                       join pn in partners on p.PartnerId equals pn.Id
+                       join c in cats on p.Category equals c.Id
+                       select pn;
+            foreach (var t in tres)
+            {
+                Console.WriteLine(t.Name);
+            }
 
             Console.WriteLine("Produtos abaixo de 100 ou igual:");
             var proHigh =

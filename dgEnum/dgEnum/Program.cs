@@ -6,8 +6,24 @@ namespace dgEnum
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"Hello World!. Today is {s.sabado} ");
-            Console.ReadKey();
+            string version1 = "2";
+            string version2 = "2.0";
+
+            var v1 = version1.Split('.');
+            var v2 = version2.Split(".");
+
+            var ma1 = v1[0];
+            var ma2 = v2[0];
+
+            if (ma1.Equals(ma2))
+            {
+                Console.Write("hit");
+            }
+
+          
+
+
+      
 
             Month m = Month.february;
             Console.WriteLine($"We are in {m}");
@@ -28,4 +44,6 @@ namespace dgEnum
                     march
        }
     }
+
+
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using System.Drawing;
 using System.Globalization;
@@ -9,6 +10,102 @@ namespace dgTesting
     {
         static void Main(string[] args)
         {
+            string line = "1234567";
+
+            string lineMenor = line.PadLeft(3, '0'); //resulta 1234567
+
+            string lineR = string.Empty;
+            if (line.Length > 9)
+            {
+                lineR =  line.Substring(line.Length - 9);
+            }
+            else
+            {
+                lineR =  line.PadLeft(9, '0');
+            }
+            string xxx = "12345678901";
+            string xxxFormated = Convert.ToInt64(xxx).ToString("D12");
+            Console.WriteLine(xxxFormated);
+
+            string seq = "fsfsaf{Banco}-{Agencia}";
+
+            while (seq.Contains("{"))
+            {
+                int openPosition = seq.IndexOf("{");
+                int closePosition = seq.IndexOf("}");
+                string field = seq.Substring(openPosition, closePosition - openPosition + 1);
+                seq = seq.Replace(field, string.Empty);
+            }
+
+            Console.WriteLine(seq);
+
+
+            string fbanco = "adfadf{Banco";
+
+            if (fbanco.Contains("{Banco}"))
+            {
+                Console.WriteLine("contem");
+            }
+            else
+            {
+                Console.WriteLine("nao contem");
+            }
+            string strConta = "12345678";
+            long conta =  Convert.ToInt64(strConta)/10;
+            long digConta = 0;
+            Math.DivRem(conta,10,out digConta);
+
+
+            string bn = 111031401014.ToString("D8").PadRight(15);
+            Console.WriteLine(bn);
+
+            string defaultComment = "Douglas";
+
+            var sf =  string.Format("{0}-{1:dd/MM/yyyy}", defaultComment, DateTime.Now);
+
+            Console.WriteLine(sf);
+
+            if (Convert.ToInt64("") == 6 || Convert.ToInt64("02") == 6)
+            {
+               string protest =  1.ToString("D2");
+            }
+             
+            string conv = FormatCovenant6("");
+
+            string n756 = "123412345678901234567";
+            long dac756 = CalcDAC756(n756.ToCharArray());
+            List<string> rejectionCodes = new List<string>()
+            {
+                "03","11", "13","14","21","23","42","43","44","45", "51","52","53","54","58"
+            };
+
+            foreach (string rejectionCode in rejectionCodes)
+            {
+                Console.WriteLine($"{rejectionCode}001");
+            }
+            string n748 = "123456789012";
+            long dac748 = CalcDAC748(n748.ToCharArray());
+            string n001 = "12345678922";
+            long dac001 = CalcDAC001(n001.ToCharArray());
+
+            string dddata = "00000000";
+            if (!string.IsNullOrWhiteSpace(dddata.Replace('0',' ')))
+            {
+                Console.WriteLine("data valida");
+            }
+            else
+            {
+                Console.WriteLine("data vazia");
+            }
+            string codbar = "1234567890123456789xx23456789012345678901234";
+            string freeField = codbar.Substring(codbar.Length - 25);
+
+            string banco = "BRAD".PadRight(30);
+            string bancoL = "BRAD".PadLeft(30);
+            Console.WriteLine(banco);
+            Console.WriteLine(bancoL);
+
+
             string cov = "123456789012345678901234567890";
             
 
@@ -267,6 +364,110 @@ namespace dgTesting
                 result = (11 - resultDigit).ToString();
             }
 
+            return result;
+        }
+
+        static long CalcDAC001(char[]code)
+        {
+            long sum = 0;
+            char[] multiplier = "78923456789".ToCharArray();
+
+            for (int i = 10; i >= 0; i--)
+            {
+                sum += (Convert.ToInt32(code[i].ToString()) * Convert.ToInt32(multiplier[i].ToString()));
+            }
+
+            long resultDigit;
+            Math.DivRem(sum, 11, out resultDigit);
+                         
+            return resultDigit;
+        }
+
+        static long CalcDAC748(char[] code)
+        {
+            long sum = 0;
+            long multiplier = 2;
+
+            for (int i = code.Length - 1; i >= 0; i--)
+            {
+                sum += (Convert.ToInt32(code[i].ToString()) * multiplier);
+                if (multiplier++ > 8)
+                {
+                    multiplier = 2;
+                }
+            }
+
+            long resultDigit;
+            Math.DivRem(sum, 11, out resultDigit);
+            if (resultDigit <= 1)
+            {
+                resultDigit = 0;
+            }
+            else
+            {
+                resultDigit = 11 - resultDigit;
+            }
+
+            return resultDigit;
+        }
+
+        static long CalcDAC756(char[] code)
+        {
+            long sum = 0;
+            char[] multiplier = "319731973197319731973".ToCharArray();
+
+            for (int i = 20; i >= 0; i--)
+            {
+                sum += (Convert.ToInt32(code[i].ToString()) * Convert.ToInt32(multiplier[i].ToString()));
+            }
+
+            long resultDigit;
+            Math.DivRem(sum, 11, out resultDigit);
+
+            if (resultDigit <= 1)
+            {
+                resultDigit = 0;
+            }
+            else
+            {
+                resultDigit = 11 - resultDigit;
+                if (resultDigit > 9)
+                {
+                    resultDigit = 0;
+                }
+            }
+
+            return resultDigit;
+        }
+
+
+        static private string FormatCovenant6(string data)
+        {
+            string result = "0".PadLeft(6, '0');
+            
+            double dblCovenant = 0;
+            try
+            {
+                dblCovenant = Convert.ToDouble(data);
+            }
+            catch
+            {
+                dblCovenant = 0;
+            }
+            finally
+            {
+                if (dblCovenant > 0)
+                {
+                    if (data.Length > 6)
+                    {
+                        result = data.Substring(0, 6);
+                    }
+                    else
+                    {
+                        result = data.PadLeft(6, '0');
+                    }
+                }
+            }
             return result;
         }
 
