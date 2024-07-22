@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 
 namespace dgRegex
@@ -128,6 +129,32 @@ namespace dgRegex
             TimeSpan.FromMilliseconds(150));
 
             MessageBox.Show(data);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string scriptSubject = "new AjaxJspTag.Callout(\\n\"/projudi/ajaxUtils.do?_tj=f8f4dd97473c8d00351e50dc9650f7c7050f66a9f4c8140474c186872421c652\", {\\noverlib: \"STICKY,CLOSECLICK,DELAY,0,VAUTO,HAUTO,CLOSETEXT,'X',CLOSETITLE,'";
+ 
+            if (scriptSubject != null)
+            {
+
+                // Define o padrão de regex para extrair o texto desejado
+                string pattern = @"title: ""(.*?)""";
+
+                // Cria um objeto Regex
+                Regex regex = new Regex(pattern);
+
+                // Procura por correspondências na entrada
+                Match match = regex.Match(scriptSubject);
+
+                // Verifica se houve correspondência e obtém o valor do grupo capturado
+                if (match.Success)
+                {
+                    string subject = match.Groups[1].Value;
+                    MessageBox.Show(subject);
+                }
+
+            }
         }
     }
 }
