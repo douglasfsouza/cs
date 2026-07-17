@@ -1,8 +1,0 @@
-specVersion: '1.0'
-metadata:
-  name: varsis.www.AccountsPayable
-type: application
-resources:
-  configuration:
-    paths:
-      webapp: AccountsPayable
